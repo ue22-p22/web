@@ -23,7 +23,7 @@ parts:
   - file: 22-css-media-rules
   - file: 23-flex-layout
   - file: 24-in-flow-out-of-flow
-  - file: 25-exo-cv
+  - file: 26-exo-cv
 - caption: "Course 3 - a bit of JS"
   chapters:
   - file: 30-js-by-examples

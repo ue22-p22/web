@@ -724,6 +724,8 @@ cell_style: split
 slideshow:
   slide_type: ''
 ---
+vector = {x: 1, y: 2}
+
 // it may be tempting to write
 console.log(`vector = ${vector}`)
 ```

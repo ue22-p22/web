@@ -217,7 +217,7 @@ function get_url1(url) {
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-let us observe this code running with a valid URL, and then an invalid, URL
+let us observe this code running with a valid URL, and then an invalid URL
 
 ```{code-cell}
 ---
@@ -242,8 +242,7 @@ console.log(p)
 // it is <fullfilled>
 ```
 
-```{code-cell}
-:cell_style: split
++++ {"cell_style": "split"}
 
 ```js
 // an invalid URL
