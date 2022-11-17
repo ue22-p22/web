@@ -1,0 +1,71 @@
+.chunk {
+    background-color: #ffc7c7;
+    margin: 20px;
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.chunk:hover {
+    background-color: #ff80b0;
+}
+  
+a {
+    transition: all 0.6s ease-in 0.15s; 
+}
+a:hover {
+    letter-spacing: 10px;
+    background-color: #fd5e53;
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: 900;
+}
+  
+.click {
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+.click:active {
+    letter-spacing: 10px;
+}
+
+.slow-in-out{
+    transition: all 1.5s ease-in-out;
+}
+
+.fast-linear{
+    transition: all 0.2s linear;
+}
+
+img {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 240px;
+}
+
+img:hover { 
+    width: 400px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+.outline {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#growing {
+    background-color: red;
+    height: 100px;
+    
+    /* the shorthand property would be this */
+    /* transition: all 0.5s ease-in-out; */
+    /* which is equivalent to */
+    transition-property: all; /* could specify a comma-separated
+                                finite set of properties */
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out; 
+    transition-delay: 0s;    /* how long to wait before triggering */
+ 
+}

@@ -1,0 +1,27 @@
+/* only cosmetic stuff in here 
+   just note that the svg elements like <circle>
+   can be styled in css too */
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+#button {
+  border: 1px solid blue;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+svg {
+  border: 5px solid #75b79e;
+}
+
+circle {
+  stroke: #6e5773;
+  fill: none;
+  stroke-width: 2;
+}

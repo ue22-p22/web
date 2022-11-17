@@ -1,0 +1,33 @@
+section {
+    background-color: #ffc7c7;
+    margin: 20px;
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+section:hover {
+    background-color: #ff80b0;
+}
+
+a {
+    transition: all 0.6s ease-in 0.15s;
+}
+a:hover {
+    letter-spacing: 10px;
+    background-color: #fd5e53;
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+button {
+    transition: all 0.4s ease-in-out;
+}
+button:active {
+    letter-spacing: 10px;
+    background-color: #ccf;
+}
+
+body {
+    font-size: 150%;
+}

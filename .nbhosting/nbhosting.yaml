@@ -1,0 +1,36 @@
+tracks:
+- description: web intro
+  id: web
+  name: 'html + css + js'
+  sections:
+  - name: introduction
+    notebooks:
+    - "notebooks/0*.md"
+  - name: "HTML\_basics"
+    notebooks:
+    - "notebooks/1*.md"
+  - name: layout with CSS
+    notebooks:
+    - "notebooks/2*.md"
+  - name: intro to JS
+    notebooks:
+    - "notebooks/3*.md"
+  - name: practising JS
+    notebooks:
+    - "notebooks/4*.md"
+  - name: optional content
+    notebooks:
+    - "notebooks/5*.md"
+
+static-mappings:
+- source: media
+  destination: media
+
+builds:
+  - id: handouts
+    name: format HTML
+    description: contenu statique et cherchable
+    directory: notebooks
+    script: |
+      pip install jupyter-book
+      jupyter-book build .

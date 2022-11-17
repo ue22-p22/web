@@ -1,0 +1,25 @@
+#line1, #line2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#line2 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
+
+#photo {
+    font-size: 120px;
+    color: #aabbcc;
+}

@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+    </head>
+    <body>
+
+    <!-- an example of grid-based responsive layout using 
+            bootstrap's grid model -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                with bootstrap it is
+            </div>
+            <div class="col-sm">
+                very easy to create
+            </div>
+            <div class="col-sm">
+                a responsive layout
+            </div>
+        </div>
+        <div class="row">
+            <!-- bootstrap grid system has 12 columns -->
+            <div class="col-sm-7">
+                with no need to mess
+                with grid CSS oneself
+            </div>
+            <div class="col-sm-5">
+                    check it out in a separate window
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- bootstrap grid system has 12 columns -->
+            <div class="col-sm-2">
+                same
+            </div>
+            <div class="col-sm-10">
+                    with a container-fluid
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- a basic component -->
+    <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+    </div>
+
+
+    <!-- a basic navbar example -->
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pure HTML</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dependencies</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Download Source</a>
+        </div>
+    </nav>
+    <!-- related contents -->
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            this page comes with almost zero CSS (except to outline the grid layout), and zero javascript of its own.</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            It does make use of jquery (js), as well as bootstrap (both css and js).</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            To read its source code, the recommended way is to open in an external window, 
+                       and then use your navigator's ability to show the source.
+            For example from Chrome on the mac, use <i>View</i> → <i>Developer</i> → <i>View Source</i> or <code>⌥⌘ U</code>
+        </div>
+    </div>
+
+</html>

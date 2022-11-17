@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <div class="message">
+            <div id="button-container">
+                <button class="continue">button from the file</button>
+            </div>
+
+            <div id="banner-message" style="display:none">
+                a hidden box that can be turned on from 
+                the button once the second snippet is run
+            </div>
+
+            <div id="xkcd-content"></div>
+        
+        </div>
+
+        <div class="instructions"> 
+            this page has jQuery loaded
+            <br>
+            open it in an <b>external window</b>, 
+            <br> and run the <b>following code in the console</b>
+<code><pre>
+
+///////////////
+
+// using selectors to apply treatments
+$("button.continue").html("Next Step...")
+
+///////////////
+
+// set event handlers
+$("#button-container button").on( 
+    "click",
+     function( event ) {
+        $("#banner-message").show();
+});
+$("button.continue").html("I am now active, click me...")
+
+///////////////
+
+// react to network events
+$.ajax({
+    url: "http://dynamic.xkcd.com/api-0/jsonp/comic?callback=?",
+    dataType: "json",
+    jsonpCallback: "xkcddata",
+    success: function(data) {
+        $("#xkcd-content").append(
+            $("&lt;h1/&gt;").text(data.title),
+            $("&lt;img/&gt;").attr({
+                src: data.img,
+                title: data.alt,
+                alt: data.title
+            })
+        );
+    }
+});
+
+</pre></code>     
+        </div>
+    </body>
+</html>

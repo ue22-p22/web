@@ -1,0 +1,16 @@
+.rendered_html img.inline {
+    display: inline;
+}
+div.prompt.input_prompt, div.prompt.output_prompt {
+    opacity: 0.6;
+}
+.rise-enabled div.prompt {
+    min-width: 10ex;
+    font-size: 0.6em;
+}
+div.output_area pre {
+    padding: 5pt;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: #335;
+}

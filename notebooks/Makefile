@@ -1,0 +1,2 @@
+book:
+	jupyter-book build .

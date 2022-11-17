@@ -1,0 +1,31 @@
+#container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "experience skills"
+      "education languages";
+}
+
+#header {
+    grid-area: header;
+}
+#experience {
+    grid-area: experience;
+}
+#skills {
+    grid-area: skills;
+}
+#education {
+    grid-area: education;
+}
+#languages {
+    grid-area: languages;
+}
+
+section {
+    border: 1px solid red;
+    padding: 20px;
+    margin: 10px;
+}
+
+h1 { font-size: 2em;}

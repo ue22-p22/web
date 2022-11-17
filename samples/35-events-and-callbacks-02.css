@@ -1,0 +1,37 @@
+/* just cosmetic, nothing fancy in here */
+
+body {
+    font-size: 30px;
+}
+
+#top {
+    display: grid;
+    grid-template-areas:
+        "result-title result-text"
+        "textual-title textual-input"
+        "graphic-title graphic-svg"
+        ;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+}
+
+#graphic-svg {
+    border: 2px solid #a0ffe6;
+    border-radius: 10px;
+    margin: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#textual-title { grid-area: textual-title; justify-self: end; }
+#textual-input { grid-area: textual-input; font-size: 100%; }
+#graphic-title { grid-area: graphic-title; justify-self: end; }
+#graphic-svg { grid-area: graphic-svg; }
+#result-title { grid-area: result-title; justify-self: end; }
+#result-text {
+    grid-area: result-text;
+    justify-self: center;
+    font-size: 150%;
+    padding-bottom: 10px;
+}

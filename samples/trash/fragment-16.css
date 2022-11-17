@@ -1,0 +1,13 @@
+.part2 a:hover:link {
+    font-size: x-large;
+    background-color: red;
+    text-decoration: none;
+}
+
+li:nth-child(2n+1) {
+  background-color: #fee;
+}
+
+li:nth-child(3n) {
+  background-color: #eef;
+}

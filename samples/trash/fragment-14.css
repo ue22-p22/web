@@ -1,0 +1,21 @@
+a {
+  color: magenta;
+  font-family: times;
+}
+p#only-me {
+    background-color: pink;
+}
+#me-too {
+    background-color: blue;
+    color: white;
+}
+p.yes {
+    color: green;
+}
+p.no {
+    background-color: red;
+}
+.inheritance {
+    color: maroon;
+    font-family: times;
+}

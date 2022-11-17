@@ -1,0 +1,16 @@
+svg {
+    border: 1pt solid deeppink ;
+}
+rect {
+  fill: blue;
+  stroke: pink;
+  stroke-width: 5;
+  fill-opacity: 0.1;
+  stroke-opacity: 0.8;
+}
+
+circle {
+  stroke: rgb(100, 200, 50);
+  stroke-width: 4;
+  fill: yellow;
+}

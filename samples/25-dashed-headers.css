@@ -1,0 +1,28 @@
+/* heavily inspired from
+ * https://codepen.io/t_afif/pen/bGYEMgG */
+
+h1.dashed {
+  --w: 20px;      /* the width of dashes */
+  --h: 0.2em;     /* the height of dashes */
+  --c: #4b9ed9;   /* the color */
+
+  padding-bottom: var(--h);
+  position: relative;
+}
+
+h1.dashed:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - var(--h)) 0 0;
+  border-radius: var(--h);
+  background:
+    radial-gradient(circle closest-side, var(--c) 90%, #0000 105%) 0/var(--w),
+    linear-gradient(90deg, var(--c) 50%, #0000 0) calc(var(--w)/2)/calc(2*var(--w));
+}
+
+/* observe how we can customize one element */
+#custom {
+  --w: 10px;
+  --h: 0.1em;
+  --c: #7cbb00;
+}

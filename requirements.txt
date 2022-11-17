@@ -1,0 +1,5 @@
+jupyter
+jupytext
+jupyter_contrib_nbextensions
+nb-courselevels
+rise

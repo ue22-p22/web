@@ -1,0 +1,15 @@
+#growing {
+    background-color: red;
+    height: 100px;
+    max-width: 400;
+
+    /* the shorthand property would be this */
+    /* transition: all 0.5s ease-in-out; */
+    /* which is equivalent to */
+    transition-property: all; /* could specify a comma-separated
+                                finite set of properties */
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;    /* how long to wait before triggering */
+
+}

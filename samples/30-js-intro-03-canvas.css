@@ -1,0 +1,12 @@
+/* cosmetic only */
+
+div {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    margin: 20px;
+}
+
+#shapes {
+    width: 100%;
+}

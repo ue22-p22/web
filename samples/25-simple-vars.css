@@ -1,0 +1,21 @@
+.frame {
+/*  here we define a variable
+    as the name starts with --
+    ↓↓↓↓↓↓ */
+    --size: 10px;
+    --color: blue;
+
+/* and we use it thanks to var()
+             ↓↓↓↓↓↓↓↓↓↓↓ */
+    padding: var(--size);
+    margin: var(--size);
+    color: var(--color);
+    border: 1px solid var(--color);
+}
+
+#custom {
+/* and here we redefine it locally
+    ↓↓↓↓↓↓ */
+    --size: 0px;
+    --color: red;
+}

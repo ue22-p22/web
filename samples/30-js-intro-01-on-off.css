@@ -1,0 +1,14 @@
+/* only cosmetic stuff in here */
+
+#button {
+  padding: 20px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  background-color: #ffb6b9;
+  width: fit-content;
+}
+
+#area {
+  padding: 10px;
+  background-color: #f5f0e3;
+}

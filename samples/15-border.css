@@ -1,0 +1,17 @@
+* {
+    border: 1px solid black;
+}
+div {
+    background: red; 
+    margin: 100px;
+}
+section {
+    margin: 20px; /* */
+    padding: 30px;
+    background: orange; 
+}
+h1, p {
+    padding: 8px;
+    /* or simply */
+    background-color: yellow; 
+}

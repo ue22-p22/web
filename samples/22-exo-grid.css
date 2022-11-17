@@ -1,0 +1,73 @@
+#cv {
+    display: grid;
+}
+
+/* small screen */
+@media only screen and (max-width: 512px) {
+    #cv {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "exp"
+            "edu"
+            "skills"
+            "lang";
+    }
+    div>div:not(#cv) {
+        background-color: rgb(252, 226, 222); /* pink-ish */
+    }
+}
+
+/* middle size screen */
+@media only screen and (min-width: 512px) and (max-width: 1024px) {
+    #cv {
+        grid-template-columns: 30% 30% 40%;
+        grid-template-areas:
+            "header header header"
+            "exp exp edu"
+            "lang skills skills"
+    }
+    div>div {
+        background-color: rgb(248, 250, 228); /* yellow-ish */
+    }
+}
+
+/* large screen */
+@media only screen and (min-width: 1024px) {
+    #cv {
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas:
+            "header header header header header header header edu edu edu"
+            ". exp exp exp exp exp . edu edu edu"
+            ". . skills skills skills skills skills skills . lang";
+    }
+    div>div:not(#cv) {
+        background-color: rgb(222, 234, 252); /* blue-ish */
+    }
+    #edu {
+        height: 300px;
+    }
+}
+
+#header { grid-area: header; }
+#exp { grid-area: exp; }
+#edu { grid-area: edu; }
+#lang { grid-area: lang; }
+#skills { grid-area: skills; }
+
+/*
+   another way to style div>div
+   i.e. divs whose id is not 'cv'
+*/
+div:not(#cv) {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#header {
+    height: 100px;
+}
+.fake {
+    height: 200px;
+}

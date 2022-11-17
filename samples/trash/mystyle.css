@@ -1,0 +1,9 @@
+a {
+    color: blue;
+    font-family: times;
+    font-size: large;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 8px;
+    text-decoration: none;
+}

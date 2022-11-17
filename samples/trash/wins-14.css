@@ -1,0 +1,13 @@
+p {
+  color: green;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.myclass {
+  color: red;
+}
+
+#myid {
+  color: blue;
+}

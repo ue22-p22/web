@@ -1,0 +1,188 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="cheatsheet.css">
+</head>
+
+<body>
+  <div id="overall">
+
+    <div id="globals" class="group">
+      <div class="title">
+        Global variables
+      </div>
+
+      <div class="bullet">
+        <code class="code">window</code>
+        <span class="what">execution context</span>
+      </div>
+      <div class="bullet">
+        <code class="code">document</code>
+        <span class="what">for accessing the DOM<br>shortcut to<code>window.document</code></span>
+      </div>
+      <div class="bullet">
+        <code class="code">console</code>
+        <span class="what">for issuing messages, typically with <code>console.log()</code><br>shortcut to<code>window.console</code></span>
+      </div>
+    </div>
+
+    <div id="DOM-locating" class="group">
+      <div class="title">DOM locating elements</div>
+
+      <div class="bullet">
+        <code class="code">elt = document.getElementById("foo")</code>
+          <span class="what">returns the DOM element whose <code>id</code> is 
+          <code>foo</code></span>
+      </div>
+
+      <div class="bullet bullet-sep">
+        <code class="code">elt = document.querySelector(".myclass")</code>
+          <span class="what">returns <b>the first</b> DOM element that matches
+          <br> a CSS selector
+          </span>
+      </div>
+
+      <div class="bullet bullet-sep">
+        <code class="code">elts = document.querySelectorAll(".myclass")</code>
+          <span class="what">returns all DOM elements that matches
+          <br> a CSS selector; see below for how to iterate over that.
+          </span>
+      </div>
+
+    </div>
+
+    <div id="DOM-changing" class="group">
+      <div class="title">DOM changing / inspecting elements</div>
+
+
+      <div class="bullet">
+        <code class="code">elt.style.display = "none"</code>
+        <span class="what">change property <code>display</code>
+          on <code>elt</code>
+          <br>to change a property whose name contains a dash,
+          <br> like <code>background-color</code>, use
+          <br><code>elt.style.backgroundColor = "none"</code>
+        </span>
+      </div>
+
+      <div class="bullet">
+        <code class="code">
+          elt.classList.add('my-class')
+        </code>
+        <span class="what">adds a class to an element</span>
+      </div>
+      <div class="bullet">
+        <code class="code">
+          elt.classList.remove('my-class')
+        </code>
+        <span class="what">remove a class from an element</span>
+      </div>
+
+      <div class="bullet">
+        <code class="code">elt.textContent = "text"</code>
+        <span class="what">change the text inside a HTML element
+          <br> see also <code>.innerHTML</code> to graft a whole tree instead
+        </span>
+      </div>
+
+    </div>
+
+    <div id="DOM-adding" class="group">
+      <div class="title">DOM adding elements</div>
+
+
+      <div class="bullet">
+        <code class="code">my_div = document.createElement('div');</code>
+        <span class="what">create a <code>div</code>element; <b>warning</b>
+          <br>it still needs to be inserted somewhere !
+        </span>
+      </div>
+
+      <div class="bullet bullet-sep">
+        <code class="code"><pre>const svgNS = "http://www.w3.org/2000/svg";
+my_circle.createElementNS(svgNS, 'circle');</pre></code>
+        <span class="what">same but for the tags
+          that belong
+          <br>in the SVG family (svg itself, circle, rect, etc...)
+          <br>likewise it needs to be grafted in the tree somewhere
+        </span>
+      </div>
+
+      <div class="bullet">
+        <code class="code">father.append(my_div);</code>
+        <span class="what">inserts element <code>my_div</code>
+          as the last child of element <code>parent</code>
+          <br>this is how the newly-created element can become<br>
+          part of the whole tree</span>
+      </div>
+
+    </div>
+
+    <div id="iterating" class="group">
+      <div class="title">DOM iterating over elements</div>
+
+      <div class="bullet">
+        <code class="code">for (let child of elt.children)</code>
+        <span class="what">iterates over the children of a given DOM element
+        </span>
+      </div>
+
+      <div class="bullet">
+        <code class="code">for (let element of document.querySelectorAll(selector))
+        </code>
+        <span class="what">iterates over a NodeList or HTMLCollection,
+          as returned by either <code>QuerySelectorAll</code> or
+          <code>getElementsByClassName</code>
+          <br>
+          <b><i>WARNING</i> DO NOT</b> use a <code>for (x <strike>in</strike> elements)</code>
+        </span>
+      </div>
+
+    </div>
+
+
+    <div id="callbacks" class="group">
+      <div class="title">arming callbacks <span class="normal">
+          <code>a_function</code> denotes a function object</code></span></div>
+
+      <div class="bullet">
+        <code class="code">window.addEventListener("load", a_function);</code>
+        <span class="what">registers <code>a_function()</code> to be triggered when document is fully loaded</span>
+      </div>
+
+      <div class="bullet">
+        <code class="code">elt.addEventListener("click", a_function);</code>
+        <span class="what">will cause <code>a_function(event)</code> to be called
+          <br>each time a user clicks on that element
+          <br>other event names are exposed as well</code>
+          <br>through <code>event</code> the function can access details on that event (see below)
+        </span>
+      </div>
+
+      <div class="bullet">
+        <code class="code">setInterval(a_function, 400);</code>
+        <span class="what">causes <code>a_function()</code> to be called
+          <br> every 400ms <b>forever</b></span>
+      </div>
+
+      <div class="bullet bullet-sep">
+        <code class="code">setTimeout(a_function, 400);</code>
+        <span class="what">causes <code>a_function()</code> to be called<br><b>once</b> in 400ms</span>
+      </div>
+
+    </div>
+
+    <div id="events" class="group">
+      <div class="title">using events
+        <span class="normal">assume you have attached a callback with, say,
+          <code>elt.addEventListener('click', (event) => {...})</code>
+          <br style="padding-top:6px">here's how to use the <code>event</code> object
+        </span>
+      </div>
+      <div class="bullet">
+        <code>event.target</code>
+        <span>locate the element that received the event</span>
+      </div>
+    </div>
+  </div>
+</body>
