@@ -8,7 +8,7 @@ jupytext:
     extension: .md
     format_name: myst
 kernelspec:
-  display_name: Javascript (Node.js)
+  display_name: JavaScript (Node.js)
   language: javascript
   name: javascript
 nbhosting:
@@ -23,19 +23,14 @@ rise:
 
 +++ {"slideshow": {"slide_type": ""}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # visualization tools
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": ""}}
@@ -82,6 +77,7 @@ it is pretty easy to get started with, if you [follow the tuto](https://threejs.
 
 * the gallery of examples  
   https://threejs.org/examples/#webgl_animation_cloth (you can move around with the mouse)
+
 * and tons of others,  
   * https://mixedreality.mozilla.org/hello-webxr/
   * http://chandlerprall.github.io/Physijs/examples/jenga.html

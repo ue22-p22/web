@@ -23,14 +23,15 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # JS builtin types
+
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -297,6 +298,7 @@ for (let x of array1) {
 
 * but make sure to use `for .. of` instead of `for .. in` to iterate over each **value**  
   we will see the `for .. in` construction below
+
 * also notice how to use `let` to define a variable **local** to the `for` loop
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -409,8 +411,10 @@ ref1
 
 * like in Python, when passing a composite object  
   (array, map, object, …) to a function
+
 * you pass a **reference** (not a copy),  
   so the function can alter its parameter
+
 * so this means **shared references** and possible side effects
 
 ```{code-cell}

@@ -8,7 +8,7 @@ jupytext:
     extension: .md
     format_name: myst
 kernelspec:
-  display_name: Javascript (Node.js)
+  display_name: JavaScript (Node.js)
   language: javascript
   name: javascript
 nbhosting:
@@ -21,14 +21,17 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
 # objectives of this course
+
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
+
+make sure to evaluate this cell above !
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -38,8 +41,10 @@ rise:
 
 * with traditional languages like Python, C++, and Java  
   building a decent UI quickly becomes awkward
+
 * but how much time do you spend on  
   facebook, twitter, what'sapp, … ?
+
 * as of 2022, **everything** runs on the Web
 * so this simply **cannot be ignored**
 
@@ -91,6 +96,7 @@ for instance
   * suitable to create content
   * everything that is visible on a web page  
     has been created as an HTML fragment
+
 * `CSS`: ***styling***
   * how the document gets rendered
   * suitable to customize visible aspect
@@ -141,8 +147,10 @@ this means that we will **not** address :
   * go way beyond the browsers per se 
 * there are many options to build a **standalone** app  
   (that runs **outside of the browser**)  
+
   * leveraging the same core technos  
     (again, HTML, CSS and JavaScript)
+
   * as a native mobile app (IOS or Android)
   * and/or on traditional computers  
     i.e. build a native MacOS or Windows  
@@ -158,8 +166,10 @@ this means that we will **not** address :
   * that is primarily famous for powering frontends
   * is becoming more and more popular  
     as a traditional programming tool (see node.js)
+
   * so it can be, and actually is, more and more  
     used for writing backends as well
+
   * and even for traditional computing
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -172,4 +182,5 @@ this means that we will **not** address :
 * outline some specific problems  
   esp. **asynchroneous** / non-sequential nature  
   of user interaction and network activity
+
 * start to build a **mental map** where you can place the current buzzwords

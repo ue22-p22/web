@@ -23,19 +23,14 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # bootstrap
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -61,6 +56,7 @@ tools.init()
 * and for this reason is a **must know** as well  
 * the grid system may be one of the reasons  
   that made bootstrap so popular
+
 * on next slide we give a very small glimpse at what  
   can be done with no CSS (our css just outlines the layout)
   and no JavaScript at all
@@ -125,6 +121,7 @@ again remember that you
 
 * make sure you use `git` to store the latest version of your resume  
   as this exercise may damage your work 
+
 * inject `bootstrap.css` into your resume
 * **try to** write a version of your resume that uses **the bootstrap grid system** to handle grid layout and responsiveness
 * which approach (with or without bootstrap) do you have better ? why ? 

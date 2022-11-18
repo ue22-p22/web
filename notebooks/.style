@@ -1,2 +1,1 @@
-// apply course style sheet
-$$.html(require('fs').readFileSync('_static/style.html', 'utf8'))
+tools = require('../js/tools'); tools.init()

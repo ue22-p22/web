@@ -23,16 +23,15 @@ rise:
 
 +++ {"slideshow": {"slide_type": ""}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # practice : a small networking app
 
-+++
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
 
 see on github
 

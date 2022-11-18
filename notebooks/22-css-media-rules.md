@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # CSS `@media` rules
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -179,8 +174,10 @@ remember that `<html>` contains 2 sons, a `<head>` and a `<body>`
 +++
 
 1. open the example below in a separate window
+
   * observe behaviour on narrow, mid-size, and large viewport
 1. write an HTML document and related CSS that mimicks it
+
   * at least for viewports smaller and larger than 512px
 
 ```{code-cell}

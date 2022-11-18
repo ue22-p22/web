@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # putting it all together
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -56,6 +51,7 @@ tools.init()
 * here is one example
   * please do not try to mimick this example too closely,  
     it is just there so you can get a sense of what is possible; 
+
   * plus, it is far from perfect anyway ...
   * but make sure to open it in a separate window  
     and observe its responsive behaviour
@@ -89,6 +85,7 @@ tools.sample_from_stem("../samples/26-monarque/resume", {sources_show: false})
 * once you're satisfied
 * and provided that you have no problem  
   with your resumé being **publicly available**
+
 * you can easily publish it on `github.io` (see next slide)
 * plus tons of other opportunities around as well
 
@@ -100,10 +97,12 @@ tools.sample_from_stem("../samples/26-monarque/resume", {sources_show: false})
 * only supports **public pages** though
 
 assuming your github is `myid`
+
 * create a repo on github `myid/myid.github.io`
 * make it public
 * your resume will be available at  
   `https://myid.github.io/`
+
 * simply push changes to have them published
 
 see <https://pages.github.com/> for details

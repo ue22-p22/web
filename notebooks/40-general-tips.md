@@ -14,7 +14,6 @@ kernelspec:
 nbhosting:
   title: coding tips
 rise:
-  autolaunch: true
   slideNumber: c/t
   start_slideshow_at: selected
   theme: sky
@@ -23,18 +22,22 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # how to code: general tips
 
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
+
++++ {"slideshow": {"slide_type": ""}}
+
 * first do not think on coding, but think about what do you want to achieve
 * decompose the thing you are trying to achieve into smaller things  
   e.g. in the case of the spinning wheel, you need:
+
   * a button
   * circles
   * to change the color of a circle

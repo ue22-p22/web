@@ -23,19 +23,14 @@ rise:
 
 +++ {"slideshow": {"slide_type": ""}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # practice : a calculator
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -73,6 +68,7 @@ tools.sample_from_stem("../samples/42-calculator", {sources_show: false})
 * first do not think on coding, but think about what do you want to achieve
 * decompose the thing you are trying to achieve into smaller things  
   e.g. in the case of the spinning wheel, you need:
+
   * a button
   * circles
   * to change the color of a circle

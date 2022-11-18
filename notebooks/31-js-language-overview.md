@@ -23,14 +23,15 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # 30,000 ft overview of JS
+
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -90,6 +91,7 @@ console.log(1, "two", [3, "four"])
 * unlike Python, indentation does not matter
 * `;` is commonly used at the end of each statement  
   (**but not mandatory**)
+
 * 2 styles of comments
 
 ```{code-cell}
@@ -365,6 +367,7 @@ foo(10, 20)
 +++
 
 like in Python:
+
 * **objects** are typed
 * but **variables** are not bound to a given type
 * members variable of object can change over time
@@ -507,6 +510,7 @@ vector.display()
 * modern JavaScript has a native notion of properties
 * i.e. expose an apparently mundane access  
   to an instance attribute
+
 * through **getter** and **setter** functions
 * that intercept read/write attempts  
   on the attribute

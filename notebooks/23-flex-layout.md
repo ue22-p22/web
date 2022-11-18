@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # `display: flex`
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -46,6 +41,7 @@ tools.init()
 * that tries to solve or at least alleviate  
 * the obvious deficiencies of the old-school  
  `block` model and related tools
+
 * as opposed to grids, it is concerned with **1-dimension** flow of data
 * it **complements nicely** what is doable with grids
 
@@ -159,10 +155,13 @@ tools.sample_from_strings({html: flex2_html, css: flex2_css}, {id: 'flex2', star
 
 * the `flex` display is an extremely powerful tool  
   for fine-grained control over your layout
+
 * it could clearly be the default behaviour  
   (but is not just for **legacy**)
+
 * when writing a new page from scratch,  
   using `flex` is almost always a good idea
+
 * rather recent (circa 2017) but [supported in all modern browsers](https://caniuse.com/#feat=flexbox)
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -189,6 +188,7 @@ tools.sample_from_strings({html: flex2_html, css: flex2_css}, {id: 'flex2', star
 * so **do not hesitate** to define **nested** layouts
 * with flex's in grid's in flex's in grid's
   or the other way around, of course
+
 * this is why the `<div>` tag is so all over the place
 
 +++ {"slideshow": {"slide_type": "slide"}}

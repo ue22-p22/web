@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # how to apply CSS
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -195,8 +190,10 @@ tools.sample_from_strings({html: embedded_html})
   * **keep it simple** for now, nothing too elaborate
   * make sure all the text gets attached to  
     adapted tags like `<div>` or `<li>` 
+
   * and **not** directly under `<body>`  
     like it was done in `hello.html`
+
   * make sure to insert at least one `<a href=...>` hyperlink
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -244,7 +241,9 @@ a couple hints and workarounds
   either with a mouse-click (&#x21bb;),  
   or keyboard shortcut (⌘-r on e.g. chrome/mac)  
   double-check that with the browser you actually use
+
 * devel tools have a *Sources* tab that let you check  
   the content of each individual loaded file
+
 * often browsers have more advanced tools to manage cache  
   e.g. Chrome : `⠸` menu → *More Tools* → *Clear Browsing Data*

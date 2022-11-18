@@ -23,19 +23,14 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # JavaScript events and callbacks
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -46,6 +41,7 @@ tools.init()
   * there is no main() function that runs forever
   * it is not either driven like a video game  
     by an infinite loop that eats all the CPU
+
   * instead JavaScript is driven by **events**
 * events can have different natures:
   * can come from the **user activity** such as mouse click
@@ -132,6 +128,7 @@ notice from the example :
 * how `addEventListener()` are cascaded,
 * how we display the events with `console.log()`  
   this is useful technique for debugging / inspecting data
+
 * how we inspect the event object to display meaningful data
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -171,11 +168,13 @@ for this reason, JavaScript has 2 convenient ways to create anonymous functions:
 ```javascript
 const mylambda0 = function (arg0, arg1) { /* some code here */ }
 ```
+
 * the modern one:
 
 ```javascript
 const mylambda0 = (arg0, arg1) => { /* some code here */ }
 ```
+
 * /!\ Both variants are valid, even if the new one looks nicer
 * also, there are subtle differences, not covered here
 

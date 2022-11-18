@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # CSS main properties
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -44,6 +39,7 @@ tools.init()
 
 * more than 100 properties defined  
   in the standard ([see full list here](https://www.w3schools.com/cssref/))
+
 * we just mention the most obviously needed
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -216,8 +212,10 @@ some characters can be inserted with the same `&...;` notation using nicknames i
 
 * `&lt;` for &lt; and `&gt;` for &gt;  
   sometimes useful to actually insert brackets like in &lt;code&gt;
+
 * `&nbsp;` for a non-breaking&nbsp;space
   which is more explicit/readable
+
 * `&hellip;` for &hellip;
 
 +++ {"slideshow": {"slide_type": "slide"}}

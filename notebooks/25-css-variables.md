@@ -21,10 +21,7 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
@@ -33,9 +30,7 @@ rise:
 *aka* **CSS variables**
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -52,6 +47,7 @@ tools.init()
 ## example 1: DRY
 
 imagine you'd like to define a custom class:
+
 * where the padding and margin properties are equal
 * where the text color matches the border color
 * and you want to be able to customize this on specific elements
@@ -72,6 +68,7 @@ tools.sample_from_stem('../samples/25-simple-vars', {'start_with': 'css'})
 ## example 2
 
 imagine you'd like to define a custom header class:
+
 * &lt;h1&gt; elements with the `dashed` class appear with a dashed underline
 * this underline has default attributes (width, height, color)
 * here again you want to be able to customize this on specific elements
@@ -99,7 +96,6 @@ tools.sample_from_stem('../samples/25-dashed-headers', {'start_with': 'css', hei
   * is the same as for regular properties
 * you can use `var()` to get the value of such a property
 * and - among others - `calc()` to perform computations
-  
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -107,6 +103,7 @@ tools.sample_from_stem('../samples/25-dashed-headers', {'start_with': 'css', hei
 
 * CSS-tricks' excellent summary on custom properties  
   <https://css-tricks.com/a-complete-guide-to-custom-properties/>
+
 * the original codepen that implements parametrized underlined headers  
   <https://codepen.io/t_afif/pen/bGYEMgG>
 

@@ -28,10 +28,24 @@ jupyter:
 ## init()
 
 ```javascript hide_input=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+// the code to force a reload
+delete require.cache[require.resolve('../js/tools')]
+```
+
+```javascript hide_input=false
+require('../js/tools').init()
 undefined
 ```
+
+<!-- #region -->
+for convenience (and to reduce the footprint of the recurring init cell), init() doe also load the common `style.css`.
+the code for doing so is
+```js
+$$.html(require('fs').readFileSync('_static/style.html', 'utf8'))
+```
+<!-- #endregion -->
+
+<div class="red-pill">is this a red pill</div>
 
 ```javascript hide_input=false
 tools.init()

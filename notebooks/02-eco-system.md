@@ -8,7 +8,7 @@ jupytext:
     extension: .md
     format_name: myst
 kernelspec:
-  display_name: Javascript (Node.js)
+  display_name: JavaScript (Node.js)
   language: javascript
   name: javascript
 nbhosting:
@@ -21,14 +21,15 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
 # introduction to web frontend
+
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -55,6 +56,7 @@ rise:
 * evolving **very quickly**, especially
   * in the tooling for integrating the pieces together  
     (e.g. JS loaders and transpilers and bundlers…)
+
 * many many over-layers that improve / mitigate some flaws
   * like ***less*** or ***sass*** above CSS,  
   * ***TypeScript*** or ***CoffeeScript*** above JavaScript, …

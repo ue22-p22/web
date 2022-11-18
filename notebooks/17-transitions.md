@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # CSS transitions and animations
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -49,6 +44,7 @@ tools.init()
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ### transitions (continued)
+
 * the browser has the ability to perform those changes **smoothly**
   * over a certain duration
   * in a continuous way
@@ -78,10 +74,13 @@ tools.sample_from_stem("../samples/17-transition1", {start_with: 'css'})
 * you need to define a `transition` property on the element
 * e.g. the `<section>` element has  
   `transition: all 0.4s ease-in-out`
+
 * then its `background-color` property changes somehow  
   here due to the `section:hover` selector
+
 * the transition is requested to apply to `all` properties  
   so here it triggers to implement the color change
+
 * and the `ease-in-out` algorithm is used  
   over a `0.4s` duration
 
@@ -94,6 +93,7 @@ tools.sample_from_stem("../samples/17-transition1", {start_with: 'css'})
 * is a **shorthand** property for setting in one rule
   * `transition-property` : comma separated names of properties  
      here we could/should have used `background-color` instead
+
   * `transition-duration`
   * `transition-timing-function`
   * `transition-delay` that we leave unchanged here (i.e. 0s)
@@ -107,6 +107,7 @@ tools.sample_from_stem("../samples/17-transition1", {start_with: 'css'})
 * `linear` is, well of course, linear interpolation 
 * the other 3: `ease-in`, `ease-out`, and `ease-in-out` make the move 
   smoother at one or two ends of the duration range 
+
 * see a more detailed explanation from the *see also* section below
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -186,6 +187,7 @@ for example :
 * see [one example on codepen](https://codepen.io/team/css-tricks/pen/EjaJNd) for a better idea of what can be achived
 * extracted [from this blog on CSS-Tricks](https://css-tricks.com/almanac/properties/a/animation/)  
   that is left to the interested reader as an exercise
+
 * **WARNING** like with transitions, and fun as they are,  
   these techniques should be used with extreme circumspection
 

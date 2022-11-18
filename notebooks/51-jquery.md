@@ -23,19 +23,14 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # jQuery
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -121,6 +116,7 @@ as per <https://jquery.com>
 * after importing jQuery, the module is available as  
   the global `$` variable  
   (and yes, this is legal in JavaScript)
+
 * you can use `jQuery` instead of `$` if you prefer
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -230,6 +226,7 @@ observe in the example above
 
 * selection of the target elements  
   (here just one, could have been many)
+
 * apply them the `html()` method to change their content
 * and on the same set of elements
 * change their css property
@@ -244,6 +241,7 @@ observe in the example above
 * as it was both **concise**
   * and **cross-browser**  
     (ensuring the API worked the same everywhere)
+
 * it has become a **de facto standard**
 * it is worth taking [a look at the API documentation](https://api.jquery.com/) to get a sense of all the possibilities
 * starting maybe with [the section on manipulation](https://api.jquery.com/category/manipulation/)

@@ -8,13 +8,12 @@ jupytext:
     extension: .md
     format_name: myst
 kernelspec:
-  display_name: Javascript (Node.js)
+  display_name: JavaScript (Node.js)
   language: javascript
   name: javascript
 nbhosting:
   title: course requirements
 rise:
-  autolaunch: true
   slideNumber: c/t
   start_slideshow_at: selected
   theme: sky
@@ -23,14 +22,15 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # run this course locally ?
+
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
 
 +++ {"slideshow": {"slide_type": ""}}
 

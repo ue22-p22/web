@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # more elaborate selectors
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -165,6 +160,7 @@ tools.sample_from_strings({html: sibling_html, css: sibling_css}, {start_with: '
 
 * pseudo-classes are set by the browser to expose  
   the status of some elements
+
 * e.g. `a:hover` allows to match `<a>` links  
   but only when the mouse is hovering above them
 
@@ -257,6 +253,7 @@ note that here we build a selector that applies on elements that have <b>both</b
 
 * `:first-child`, `:last-child` : pseudo-classes  
   for what you think they do
+
 * `:nth-child()` : can match for example the 4th child,  
   but also more usefully even/odd ranked  
   [see this page for details](https://css-tricks.com/useful-nth-child-recipies/)
@@ -306,11 +303,14 @@ tools.sample_from_strings({html: rank_html, css: rank_css}, {start_with: 'css'})
 
 * HTML elements can have arbitrary attributes,  
   not just `id`, `class`, `href`, ...
+
 * it is possible to write selectors that match  
   on the **value** of a given attribute
+
 * for example  
   `a[href="https://www.google.com/"]`  
   would match only the links to google
+
 * [read more on this here](https://css-tricks.com/almanac/selectors/a/attribute/)
 
 <div class="rise-footnote">

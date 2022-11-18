@@ -23,19 +23,14 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": "-"}}
 
 # manipulating the DOM
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -45,6 +40,7 @@ tools.init()
 * the DOM is the tree of the HTML code, as already seen
 * the DOM can be read and modified in JavaScript  
   using the global variable `document`
+
 * the DOM exposes a standard API, see the details on [Mozzila MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -61,6 +57,7 @@ tools.init()
  x.getElementsByTagName("div"); // will provide all 'div'
                                   // elements within x
  ```
+
  * read the attribute of an element `element.getAttribute("someattr")`
  * read the element style `element.style`
    * note: this is not the actual computed style, but the direct style of the element

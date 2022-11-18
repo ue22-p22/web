@@ -21,24 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # HTML basics
 
-+++
-
-bien évaluer cette cellule avant de lire le notebook
-
 ```{code-cell}
- // this line is to force a reload
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -124,6 +114,7 @@ without the presence of a server, this is what the <code>file://</code> URLs are
   * or use the *File → Open File* menu
   * or directly type a URL like  
     `file:///the/complete/path/to/hello.html`
+
 * you will see something like shown on the next slide
 
 +++ {"hide_input": false, "slideshow": {"slide_type": "slide"}, "cell_style": "split"}
@@ -157,6 +148,7 @@ tools.sample_from_strings(
 * all browsers come with development tools for debugging
 * as a first contact with these,  
   let us inspect the content of our HTML document
+
 * for that, the simplest way is to right-click on the 'Hello' text
 * and choose 'Inspect'
 
@@ -187,6 +179,7 @@ tools.sample_from_strings(
     * *File Edit View History Bookmarks **Develop** Window*
  * on Chrome: you should have a ***Developer*** submenu  
    in the *View* menu in the main menubar
+
  * on Firefox: you should have a ***Web Developer*** entry  
    in the *Tools* menu in the main menubar
 
@@ -216,6 +209,7 @@ from that view you can navigate the elements tree, although in this case it is v
 
 * another interesting part is the   
 (JavaScript) *Console* tab  
+
 * this is where **debug messages**  
   end up (if any; here of course  
   there are none)
@@ -228,6 +222,7 @@ from that view you can navigate the elements tree, although in this case it is v
 
 * the area with the `> ` is the REPL  
   i.e. Read, Eval, Print Loop
+
 * (juste like the `>>> ` with Python)
 
 
@@ -247,6 +242,7 @@ your first JavaScript code
 * the `<tag> ... </tag>` notation 
 * unambiguously maps to a tree structure  
   known as an Abstract Syntax Tree (AST)
+
 * referred to in all documentation as "*the DOM* "
 
 +++ {"cell_style": "split", "slideshow": {"slide_type": "slide"}}
@@ -287,7 +283,7 @@ in the *Elements* devel tools tab
 * and this may cause **huge headaches** down the road
 * so make sure to **always *close your tags* properly**
 
-+++ {"slideshow": {"slide_type": "slide"}, "tags": []}
++++ {"slideshow": {"slide_type": "slide"}}
 
 **do not do this !!**
 
@@ -304,7 +300,7 @@ fragment_unclosed = `<p> do not do this
 tools.sample_from_strings({html: fragment_unclosed}, {separate_show: false, width: '40em'})
 ```
 
-+++ {"tags": [], "slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 **do this instead**
 
@@ -336,4 +332,5 @@ tools.sample_from_strings({html: fragment_closed}, {separate_show: false})
   * typically with `⌘-tab` (or alt-tab or control-tab depending on your environment)
 * also make sure to know the keyboard shortcut  
   for your browser to reload a page
+
   * typically `⌘-r` (or 'ctrl-r' ...)

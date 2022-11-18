@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # responsiveness
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -45,8 +40,10 @@ tools.init()
 * as opposed to a Word document - designed for a fixed page size
   * a web page gets displayed on **many**   
     different devices (computer, phone, tablet)
+
   * even on the computer, windows  
     can be **resized** arbitrarily
+
 * a responsive page **adapts** its layout to the **device size**
   * technically the visible area is called the **viewport**
 
@@ -74,6 +71,7 @@ narrow viewport
 
 * be aware also that all browsers have a feature   
   that let users artificially zoom in and out
+
 * e.g. on Chrome on the mac, this is activated with `⌘ +` and `⌘ -`
 * this also triggers changes, to which  
   **responsive** pages are expected to **react** properly
@@ -87,11 +85,14 @@ narrow viewport
 * if you do not override  
   the `display:` property,  
   you use a **historical** layout policy 
+
 * very well summarized  
   in [this document on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)  
   (MDN = Mozilla Developer Network)
+
 * mostly fits a written document flow  
   (think, a **Word document**)
+
 * **not at all suited**  
   for a responsive design
 
@@ -107,8 +108,10 @@ narrow viewport
 
 * layout policy is primarily materialized  
   in the **`display` property**
+
 * values `inline`, `block` and `inline-block`  
   account for these legacy "document-oriented" policies
+
   * have been supported from the very beginning of the Web 
   * well illustrated [on this page on css-tricks.com](https://css-tricks.com/almanac/properties/d/display/)
 
@@ -122,6 +125,7 @@ more modern values include :
 
 * `grid` (**2-dimensional**)  like the name suggests,  
   allows to define a **rectangular area** as an array of rows and columns
+
 * `flex` (**1-dimensional**)  a flexible layout, with more control  
   on how children will **fill the available space**
 

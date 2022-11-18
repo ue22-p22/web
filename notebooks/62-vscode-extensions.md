@@ -8,7 +8,7 @@ jupytext:
     extension: .md
     format_name: myst
 kernelspec:
-  display_name: Javascript (Node.js)
+  display_name: JavaScript (Node.js)
   language: javascript
   name: javascript
 nbhosting:
@@ -23,10 +23,7 @@ rise:
 
 +++ {"slideshow": {"slide_type": ""}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
@@ -36,6 +33,10 @@ based on my experience and on this youtube video
 https://www.youtube.com/watch?v=Z5RkLrSDlFA
 
 in an opinionated order of usefulness
+
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
 
 +++ {"slideshow": {"slide_type": ""}}
 

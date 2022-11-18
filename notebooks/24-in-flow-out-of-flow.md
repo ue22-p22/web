@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # in-flow and out-of-flow
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -56,6 +51,7 @@ most of the elements we have seen so far are said to be *in-flow* :
 * there are ways to create elements out-of-flow 
 * a common practical example is a pinned header 
   (or navigation bar), illustrated below  
+
 * example 1 : using old-fashioned `position: fixed`
 * example 2 : using `position: sticky`
 
@@ -119,10 +115,13 @@ tools.sample_from_strings({html: fixed_html, css: fixed_css},
 * we set the header's height to a fixed value (120px)  
 * this way we can shift the regular content down by that amount  
   so they do not overlap at first
+
 * note the use of the `box-sizing` property  
   we want the 120px to be for the **full height** (padding + border included) of the header 
+
 * also note the `rgba()` function to define colors with a level of transparency  
   0: totally transparent, 1: totally opaque
+
 * we could have avoided the duplication of that `120px` thing
   using CSS so-called *custom properties* (aka variables)  
   but more on this later...
@@ -182,6 +181,7 @@ tools.sample_from_strings({html: sticky_html, css: sticky_css},
   * as mix-and-match of `display` and `position` settings  
     can quickly become rather confusing  
     not to mention the `float` property
+
   * see these as **last resort**,  
     only if grid/flex really won't work for you
 

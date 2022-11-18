@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # `display: grid`
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -46,6 +41,7 @@ tools.init()
 * historically a challenging task
   * the `<table>` tag has long been overused  
     to address that sort of needs
+
   * **do not use** `<table>`'s for that in 2022 !
 * `grid` is now available in [all popular modern browsers](https://caniuse.com/#feat=css-grid)
 
@@ -66,6 +62,7 @@ next slide demontrates this CSS:
 * a proportional grid of [3 rows ⨉ 4 columns]
 * with 4 areas defined, based on that tiling  
   `header`, `main`, `sidebar`, and `footer`
+
 * and 4 `<div>`s that are mapped on these areas  
   *e.g.*  `grid-area: header`
 
@@ -134,6 +131,7 @@ tools.sample_from_strings({html: grid1_html, css: grid1_css}, {id: 'grid-1'})
   * `fr` stands for 'free space'
   * so we can allocate fixed or proportional space  
     to some columns (or rows, for that matter)
+
   * and split the rest proportionally
 
 +++
@@ -230,6 +228,7 @@ in the previous examples :
 
 * it is also possible - although less often needed  
   to fix a height globally and arrange the rows accordingly
+
 * only change is to add on the grid:
   * `height: 100vh` to say we want to use all viewport height
   * `grid-template-rows: 50px 1fr 100px;`  
@@ -286,6 +285,7 @@ tools.sample_from_strings({html: grid3_html, css: grid3_css}, {start_with: 'css'
 
 * a very good introduction to Grids  
   [can be found on css-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
 * with many illustrations and examples
 
 +++
@@ -399,6 +399,7 @@ to do this easily under vs-code :
 * select the text you want to wrap
 * enter the palette - the swiss knife in vs-code  
   (mac: ⌘-⇧-p - Windows ⌃-⇧-p - in doubt, ask google)
+
 * type `Emmet wrap with abbreviation`
 * enter the tag name
 

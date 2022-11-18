@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # JavaScript by examples
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -142,11 +137,13 @@ Devel Tools can visualize the actual loading workflow
 
 * loading javascript is a bit tricky  
 and is **still an open topic** because of:
+
   * how networking works
   * complex dependency that can rise in real code  
     typically, you need module X  
     that in turns needs module Y, etc…  
     just like when a Python module does `import another`
+
   * the evolutions of the language over time  
     proper modules are available only since ES2015  
     and that takes time to get widely adopted
@@ -185,6 +182,7 @@ for our use case we only need to load one fragment of code
   * for that, use `<script src="some-url"></script>`
 * so e.g. to load a JS file **in the same folder**, simply do  
   `<script src="foo.js"></script>`
+
 * we can also use any URL in the `src` attribute  
   to load from other folders or locations  
   for example from `https://cdnjs.cloudflare.com/`
@@ -206,6 +204,7 @@ remember the slides on relative and absolute URLs
 * we can use the attribute **`defer`** to ensure  
   that the script runs **only once the entire page is loaded**  
   `<script src="foo.js" defer></script>`
+
 * which is a common practice
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -246,6 +245,7 @@ remember the slides on relative and absolute URLs
   console.log('loading.js')
   console.log(`body has ${document.body.childElementCount} children`)  
   ```
+
 * tweak the html header so that this file gets loaded
 * open the html page, look at the console
 * check the message properly displays the number of children of the `<body>` tag
@@ -315,8 +315,10 @@ in this further example :
 
 * we create two visible elements:  
   a button, and a graphic area `<svg>`
+
 * the page runs a cyclic task  
   that adds a random point
+
 * button to start / suspend
 
 ```{code-cell}
@@ -338,6 +340,7 @@ tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",
 * instances are built with `new Board(...)`  
   which in turn calls `constructor()`  
   much alike Python's `__init__()`, without the `self` thing
+
 * `the_board` is a JavaScript *object*  
   i.e. composite data keyed on `w`, `h`, etc…  
   (more on this later)
@@ -348,6 +351,7 @@ tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",
 
 * adding to the DOM to create new content  
   (createElementNS and append)
+
 * here we attach a callback from JS  
   using `object.addEventListener(event, function)`  
   (using another global objects `window`)
@@ -360,9 +364,11 @@ tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",
 * as opposed to a usual Python program  
   where there is an **entry point**  
   and the rest follows from there
+
 * in JS the program flow is made of  
   **several** actions taking place **at the same time**  
   with no clear starting point
+
 * so for example here in addition to the callbacks  
   we use `setInterval()` to register a cyclic task
 
@@ -388,6 +394,7 @@ in this further example :
 
 * we create two visible elements:  
   a `<div>` label, and this time a `<canvas>` graphic area
+
 * clicking in the canvas causes it to randomize itself
 
 ```{code-cell}
@@ -407,6 +414,7 @@ tools.sample_from_stem("../samples/30-js-intro-03-canvas",
 
 * the `() => {}` notation to define **anonymous** functions  
   (alike Python's `lambda`s)
+
 * impact of the JS code on **global variables** is zero !
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -417,8 +425,10 @@ tools.sample_from_stem("../samples/30-js-intro-03-canvas",
 
 * as opposed to more traditional languages,  
   (think `main()` in C++ or Java,  or the entry module in Python)
+
 * browser-hosted code has  
   **little control** on overall **order**
+
 * plus, apps need to **react to events** that can be
   * **user**-triggered (clicking, ...)
   * **network**-triggered (a page finished loading)

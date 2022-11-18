@@ -23,19 +23,14 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # JavaScript asynchronous behaviour
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -84,6 +79,7 @@ the issues known as either
 
 * the 'Callback Hell'
   <img src="../media/callback-hell.png" width="400px">
+
 * also known as the 'Pyramid of Doom' 
   <img src="../media/pyramid-of-doom.png" width="400px">
 
@@ -103,13 +99,16 @@ here's the gist of how to use promises
   ```js
   promise.then(function_ok, function_ko)
   ```
+
 * where 
 
   * `function_ok` is triggered if "all goes well"
   * `function_ko` is triggered otherwise  
     note that this second argument is sometimes missing
+
 * `function_ok` is a function that consumes the output of the promise  
   (once it is complete) and produces the output of the `.then()` call  
+
 * the `.then()` expression also returns .. a promise
   whose result is the result of `function_ok`
 
@@ -145,6 +144,7 @@ Promise.resolve(5)
 
 * running the promise usually takes some time  
   otherwise no need for promises, right ?
+
 * upon creation the promise is set is state ***`pending`***
 * the event loop will make it progress behind the scene
 * and it can either end well, in which case its state becomes ***`fulfilled`***
@@ -361,8 +361,10 @@ observe that the chained form is linear, which reflects the actual workflow here
 
 * more interestingly, let us observe what happens  
   if we create several promises at the same time
+
 * remember that promise creation returns *immediately*  
   (we've seen the repl working right after we had created our promise earlier)
+
 * for example here is how we could fetch these 3 URLS **simultaneously**
 * that's the main point of promises
 
@@ -384,6 +386,7 @@ for (let url of [URL_broken, URL_small, URL_large])
 
 * more to the point, when running several things in parallel like this,  
   we may need to retrieve their results
+
 * that is the point of `Promise.all()` - [and similar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#static_methods)
 * that create a promise from a collection of promises
 * and wait for some/all of them to complete
@@ -408,6 +411,7 @@ Promise.allSettled([URL_broken, URL_small, URL_large].map(get_url1))
 * from a function (the executor)
 * that accepts two functions in parameter  
   traditionnally called `resolve` and `reject`
+
 * the executor calls these functions to choose  
   the result of the promise (fullfilled or rejected, resp.)
 
@@ -531,6 +535,7 @@ async function succeed_or_fail(ms, success, what) {...}
 ## see also
 
 this is just an overview, refer to
+
 * <https://javascript.info/promise-basics> for a more thorough description of promises
 * also [this article on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) can come in handy about promises too
 * and <https://javascript.info/async-await> about `async/await`

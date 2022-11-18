@@ -17,6 +17,11 @@
 
 "use strict"
 
+function load_common_style() {
+  // make it usable from the tools/ folder too
+  $$.html(require('fs').readFileSync('../notebooks/_static/style.html', 'utf8'))
+}
+
 function hash(word) {
   const crypto = require('crypto')
   const sha1 = crypto.createHash('sha1')
@@ -387,6 +392,7 @@ function sample_from_strings(code, options) {
 
 
 function init() {
+  load_common_style()
   // the style that makes the in[] and out[] labels less conspicuous
   let embedded = read_style('../css/in-out.css')
   // we inject require here for when running under jupyter book

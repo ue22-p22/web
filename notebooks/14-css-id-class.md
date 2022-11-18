@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # HTML ids and classes
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -180,8 +175,10 @@ let's summarize
 
 * cascading : what happens if **several rules** define,  
   say, the 'color' property on one element ?
+
 * inheritance : what happens if **no rule** defines  
   the 'color' property on an element ?
+
 * in a nutshell :
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}

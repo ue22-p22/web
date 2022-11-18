@@ -23,19 +23,14 @@ rise:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # practice : blinking background
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": ""}}
@@ -227,8 +222,10 @@ as mentioned earlier already, you can
 
 * the place where lands the output of `console.log`  
   of course quite useful for naive debugging
+
 * **and** that lets you **run JavaScript** on the fly  
   much like the Python interpreter does  
+
 * known as a REPL ( = Read Eval Print Loop)
 * illustrated in the following slides
 
@@ -289,6 +286,7 @@ as mentioned earlier already, you can
   * others `ctrl+shift+J` (console) or `ctrl+shift+I` (your last tab)
 * a bit early for now, but be aware that  
   they come with a complete debugger
+
 * do not hesitate to search for some hands-on / video tuto
 
 +++ {"slideshow": {"slide_type": "slide"}}

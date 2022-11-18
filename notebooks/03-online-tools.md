@@ -21,14 +21,15 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
 # online tools
+
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -39,8 +40,10 @@ rise:
 * it is sometimes unconvenient to deal with  
   the 3 formalisms HTML - CSS - JavaScript
   in 3 separate files
+
 * esp. for working on, or sharing  
   code snippets that outline a specific trick
+
 * many online tools are available, most famous being
   * <https://codepen.io> 
   * also <https://jsfiddle.net> for collaborative work

@@ -21,19 +21,14 @@ rise:
   transition: cube
 ---
 
-<div class="licence">
-<span>Licence CC BY-NC-ND</span>
-<span>Thierry Parmentelat</span>
-</div>
+Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
 # CSS basics
 
 ```{code-cell}
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
-tools.init()
+tools = require('../js/tools'); tools.init()
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -48,6 +43,7 @@ tools.init()
   * to differents tastes (themes)
 * generally written by people with  
   different background and sensibility
+
   * engineers *vs* designers
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -131,8 +127,10 @@ tools.sample_from_strings({html: link_html, css: link_css}, {width: '40em'})
 * the names that appear  
   on the left hand side of the `:` colon   
   like `color`, `font-family`, …
+
 * are called **properties** 
 * also listed in the `Elements` tab of the devel tools,  
   in the `Computed` pane
+
 * [several hundreds of them](https://css-tricks.com/how-many-css-properties-are-there/)
 * note that not all properties are relevant on all elements
