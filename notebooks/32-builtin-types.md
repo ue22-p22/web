@@ -418,7 +418,7 @@ ref1
 * so this means **shared references** and possible side effects
 
 ```{code-cell}
-:cell_style: split
+:cell_style: center
 
 // on an array
 function side_effect(arg) {
@@ -428,19 +428,6 @@ function side_effect(arg) {
 /*let*/ list = [0, 1, 2]
 side_effect(list)
 list
-```
-
-```{code-cell}
-:cell_style: split
-
-// same with objects
-function change_object(obj) {
-    obj.first_name = 'BOOM'
-}
-
-/*let*/ person2 = new Person('John Doe')
-change_object(person2)
-person2
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -690,9 +677,10 @@ reminder : we had already seen array-based assignment which is a Python-style i
 ```{code-cell}
 // here let is mandatory
 
-let [a1, a2] = [100, 200]
-
-`a1 now is ${a1}, a2 is ${a2}`
+{
+    let [a1, a2] = [100, 200]
+    console.log(`a1 now is ${a1}, a2 is ${a2}`)
+}
 ```
 
 there a similar destructuring assignement on objects
@@ -755,7 +743,7 @@ rather a flat text representation that traditional languages have used us to
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## class instances are objects
+### class instances are objects
 
 ```{code-cell}
 class Person {
@@ -768,4 +756,21 @@ class Person {
 /*let*/ person = new Person("John", "Doe")
 
 typeof(person)
+```
+
+```{code-cell}
+---
+cell_style: split
+slideshow:
+  slide_type: slide
+---
+// objects are passed by reference too
+// so this function can modify its object argument
+function change_object(obj) {
+    obj.first_name = 'BOOM'
+}
+
+/*let*/ person2 = new Person('John Doe')
+change_object(person2)
+person2
 ```
