@@ -105,8 +105,10 @@ that of course <u><b><i>can be combined</i></b></u>
 tools.sample_from_strings({html: styling_fragment})
 ```
 
-<p class="rise-footnote">
-    here again the right way to go is often to use classes, that we study later on
+<p class="note">
+
+here again the right way to go is often to use classes, that we study later on
+
 <p>
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -244,10 +246,14 @@ and for that use a &lt;span&gt; tag.</p>
 tools.sample_from_strings({html: group_html})
 ```
 
-<p class="rise-footnote">this first example uses styling, 
-    that we have not studied yet,
-    to outline the &lt;span&gt; and &lt;div&gt; 
-    elements by changing their background color</p>
+<p class="note">
+
+this first example uses styling,
+that we have not studied yet,
+to outline the &lt;span&gt; and &lt;div&gt;
+elements by changing their background color
+
+</p>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -338,7 +344,9 @@ headers_fragment = `<h1> toplevel title </h1>
 tools.sample_from_strings({html: headers_fragment}, {width: '25em', height: '14em'})
 ```
 
-<p class="rise-footnote">
-    <b>note</b> that these tags are essentially <b>a legacy thing</b>; they are convenient, but not quite necessary,
-<br>you can easily write your own classes (more about classes later on) to get a similar outcome, with more control on the result.
-</p>
+<div class="note">
+
+these tags are essentially <b>a legacy thing</b>; they are convenient, but not quite necessary,  
+you can easily write your own classes (more about classes later on) to get a similar outcome, with more control on the result.
+
+</div>

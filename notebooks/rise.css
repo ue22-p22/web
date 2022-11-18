@@ -1,6 +1,4 @@
-/* this goes with my global default setting
- * that has rise use reveal's theme sky
- */
+/* this goes with our global default settings i.e. the sky theme */
 .reveal {
     font-family: "Quicksand", sans-serif;
 }
@@ -23,24 +21,18 @@ body.rise-enabled .reveal ol, body.rise-enabled .reveal dl, body.rise-enabled .r
     margin-top: 0.2em;
 }
 
-div.cell.text_cell .prompt.input_prompt {
-    display: none;
-}
-
-.rise-footnote {
-    font-size: medium;
-    line-height: 1;
-    margin: 0px 0px 0px 50px;
-}
-
-.rise-midsize {
-    font-size: normal;
-    line-height: 1;
-    margin: 3px;
+/* make the note appear distanced from the slide content */
+.note {
+    margin-top: 15px;
+    font-size: 80%;
 }
 
 /* raw code between ``` is too large */
 .text_cell code.language-js {
     font-size: 65%;
     line-height: 1.2em;
+}
+
+div.cell.text_cell .prompt.input_prompt {
+    display: none;
 }

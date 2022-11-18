@@ -136,10 +136,10 @@ tools.sample_from_strings({html: grid1_html, css: grid1_css}, {id: 'grid-1'})
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
-**note** on this specific example, we could have omitted `grid-template-columns` altogether
-    
+on this specific example, we could have omitted `grid-template-columns` altogether
+
 </div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -157,8 +157,8 @@ mostly the same, but :
 
 +++ {"hide_input": true}
 
-<div class="rise-footnote">
-    
+<div class="note">
+
 **btw** we could have written `repeat(4, 1fr)` instead of `1fr 1fr 1fr 1fr`
 
 </div>
@@ -301,10 +301,10 @@ tools.sample_from_strings({html: grid3_html, css: grid3_css}, {start_with: 'css'
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 you may also complete this game  <https://cssgridgarden.com/> at home if you feel like it
-            
+
 </div>
 
 +++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}

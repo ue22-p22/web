@@ -62,7 +62,7 @@ JavaScript
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 (♡) as mentioned earlier, one can also write "regular" programs in JS using the *node.js* &nbsp;runtime
 
@@ -150,7 +150,7 @@ and is **still an open topic** because of:
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 we will come back later on this topic, but for now let's keep it simple
 
@@ -189,7 +189,7 @@ for our use case we only need to load one fragment of code
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 remember the slides on relative and absolute URLs
 
@@ -287,7 +287,7 @@ tools.sample_from_stem("../samples/30-js-intro-01-on-off",
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 using `onclick` is the quick, but dirty, way to attach an event handler to an element  
 a cleaner way is to use `addEventListener` from the JS side, as we will see later on

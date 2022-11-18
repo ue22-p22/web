@@ -70,7 +70,11 @@ slideshow:
 tools.sample_from_stem("../samples/52-bootstrap", {height: "30em"})
 ```
 
-<p class="rise-footnote">many more effects are available - read the components page !</p>
+<div class="note">
+
+many more effects are available - read the components page !
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

@@ -46,7 +46,7 @@ tools = require('../js/tools'); tools.init()
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 **NOTE** on using **notebooks**  
 as mentioned earlier, all variables should be declared with either `let` or `const`  
@@ -85,7 +85,7 @@ let s2 = 'ab' + "cdef"
 s1 == s2
 ```
 
-<div class="rise-footnote">
+<div class="note">
 
 **beware** that `number` is similar to Python's `float` -- so **with imprecision !**  
 google for `bigint` for error-free calculus on integers - like Python's `int`
@@ -575,9 +575,12 @@ console.log(`my name is ${bond.last_name}`)
 'first_name' in bond
 ```
 
-<p class="rise-footnote"> 
-    the syntax for JavaScript objects, as well as the <i>key/value</i> vocabulary make them <b>look like</b> Python dictionaries, <b>do not get confused though</b>, JavaScript objects are much more like Python class instances.
-</p>
+<div class="note">
+
+the syntax for JavaScript objects, as well as the *key/value* vocabulary make them **look like** Python dictionaries,
+**do not get confused though**, JavaScript objects are much more like Python class instances.
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -732,7 +735,7 @@ slideshow:
 console.log("vector = ", vector)
 ```
 
-<div class="rise-footnote">
+<div class="note">
 
 try it out within the browser's console:  
 try to run `console.log(document)` or any other JS object  

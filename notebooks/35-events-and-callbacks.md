@@ -73,7 +73,7 @@ window.addEventListener("load", foo)
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 see also the `DOMContentLoaded` event that is subtly different
 <https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event>
@@ -95,11 +95,11 @@ see also the `DOMContentLoaded` event that is subtly different
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 also note that we have seen already several examples of a **callback** that was a function that **takes no parameter**  
 this is one of the reasons why JS is so flexible/lenient with respect to argument passing
-    
+
 </div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -277,13 +277,13 @@ slideshow:
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 again, so far we have seen a few types of events (e.g. `load`, `keydown`, `click`)
 
 * for more details and a more exhaustive list of available events  
   see [this section in javascript.info](https://javascript.info/event-details)
-    
+
 </div>
 
 +++ {"slideshow": {"slide_type": "slide"}}

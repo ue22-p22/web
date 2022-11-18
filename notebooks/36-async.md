@@ -161,7 +161,7 @@ try this in a browser console (*):
 +++
 
 ```js
-<div class="rise-footnote">
+<div class="note">
 
 (*) our JS code in Jupyter actually runs under a node.js kernel,
 that does not have the `fetch()` function predefined  
@@ -453,7 +453,7 @@ delayedSafeInverse(0).then(console.log).catch((error) => console.log(error.messa
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 here again, there are limitations with the Jupyter environment; this time the code does run in the notebook  
 but the notebook *hangs* until the promise is complete, so here again you may want to run this in a browser console
@@ -507,7 +507,7 @@ delayedSafeInverseAsync(0)
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
 
 the old-style syntax would read
 ```js

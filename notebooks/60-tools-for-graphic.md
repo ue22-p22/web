@@ -51,9 +51,11 @@ in this notebook we see a selection of 2 libraries for visualzation that are rea
 
 +++
 
-<p class="rise-footnote">
+<div class="note">
+
 this is a personal choice, there are **tons** of other interesting libraries available around
-</p>
+
+</div>
 
 +++ {"slideshow": {"slide_type": ""}}
 

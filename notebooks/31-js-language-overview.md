@@ -112,7 +112,12 @@ b = a * a
 */
 ```
 
-<span class="rise-footnote"> **NOTE** as we will see below, real code should **always** declare variables, so this would read `let a = 10;` instead, but let us keep it simple for now </span>
+<div class="note">
+
+as we will see below, real code should **always** declare variables,  
+so this would read `let a = 10;` instead, but let us keep it simple for now
+
+</span>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -176,7 +181,11 @@ switch (a) {
 }
 ```
 
-<p class="rise-footnote"> if the switch statement is new to you, please refer to this <a href="https://javascript.info/switch">full article on javascript.info</a></p>
+<div class="note">
+
+if the switch statement is new to you, please refer to this [full article on javascript.info](https://javascript.info/switch)
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -222,7 +231,11 @@ typeof(s)
 // s += ' john'
 ```
 
-<p class="rise-footnote"> use <code>const</code> instead of <code>let</code> when declaring a constant variable</p>
+<div class="note">
+
+use `const` instead of `let` when declaring a constant variable
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -288,14 +301,15 @@ foo()
 
 +++
 
-<p class="rise-footnote">
-    when declaring a variable with <code>let</code>,
-    it cannot be declared a second time within the same block;
-<br>
-    in the context of notebooks, a drawback of this is
-    that you cannot run a cell twice if
-    it uses a toplevel <code>let</code>
-</p>
+<div class="note">
+
+when declaring a variable with `let`,
+it cannot be declared a second time within the same block;  
+in the context of notebooks, a drawback of this is
+that you cannot run a cell twice if
+it uses a toplevel `let`
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -321,8 +335,10 @@ let y = "outermost";
 console.log("level 0", y);
 ```
 
-<div class="rise-footnote">
-    this is like in C/C++, and unlike Python where a variable's scope is the whole function
+<div class="note">
+
+this is like in C/C++, and unlike Python where a variable's scope is the whole function
+
 </div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -341,7 +357,12 @@ console.log("level 0", y);
 
 +++
 
-<p class="rise-footnote"> surprising as it may be, the notebook's JavaScript engine is an instance of <code>node</code>, and so is <b>not browser-related</b> <br> so we could not inspect the <code>document</code> or <code>window</code> variables in this context; of course you can do so from the browser's console though</p>
+<div class="note">
+
+surprising as it may be, the notebook's JavaScript engine is an instance of `node`, and so is not **browser-related**  
+so we could not inspect the `document` or `window` variables in this context; of course you can do so from the browser's console though
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -471,10 +492,13 @@ let vector = new Vector(10, 20)
 vector.display()
 ```
 
-<p class="rise-footnote"> here again, running this cell twice will cause an error; this is because, like with <code>let</code>,
-    <br>
-    the language won't let you define the same <code>Vector</code> class
-    twice in the same scope</p>
+<div class="note">
+
+here again, running this cell twice will cause an error; this is because  
+like with `let`, the language won't let you define  
+the same `Vector` class twice in the same scope
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -493,12 +517,14 @@ vector.display()
 
 +++
 
-<p class="rise-footnote">
-    also notice the string-formatting syntax
-    <code>`text ${variable}`</code>
-    similar to Python's f-strings,
-    <br>
-    except that an expression is inserted with <code>${expr}</code>, remember with f-strings it was just <code>{expr}</code>
+<div class="note">
+
+also notice the string-formatting syntax
+<code>`text ${variable}`</code>
+similar to Python's f-strings  
+except that an expression is inserted with <code>${expr}</code>  
+and remember with f-strings it was just <code>{expr}</code>
+
 </p>
 
 +++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}

@@ -419,9 +419,11 @@ several formats are supported to describe a color :
 
 +++ {"slideshow": {"slide_type": ""}}
 
-<p class="rise-footnote">
-    note that on colorhunt you can copy a color code by just clicking it
-</p>
+<div class="note">
+
+note that on colorhunt you can copy a color code by just clicking it
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -538,14 +540,13 @@ tools.sample_from_strings({html: background_html, css: background_css})
 
 +++ {"hide_input": true}
 
-<p class="rise-footnote">
-use the inspector to see how the space between the two and observe:
-<br>
-how the margin space gets filled by the parent
-<br>
+<div class="note">
+
+use the inspector to see how the space between the two and observe:  
+how the margin space gets filled by the parent  
 how the space between inner borders (h1 and p)  
-is actually the <b><i>max</i></b> of their margins
-<br>
-how the 2 other margins (the title's top-margin and the paragrapgh's bottom margin)
+is actually the <b><i>max</i></b> of their margins  
+how the 2 other margins (the title's top-margin and the paragrapgh's bottom margin)  
 are inherited from the default user agent stylesheet (here this is chrome)
-</p>
+
+</div>

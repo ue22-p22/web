@@ -1,5 +1,4 @@
 ---
-celltoolbar: Edit Metadata
 jupytext:
   cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
   formats: md:myst
@@ -95,9 +94,11 @@ files are local on your laptop
 
 +++
 
-<div class="rise-footnote">
+<div class="note">
+
 for your first practice, you will save your code on your hard drive, and check the result locally <br> 
 without the presence of a server, this is what the <code>file://</code> URLs are for
+
 </div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -136,8 +137,12 @@ tools.sample_from_strings(
     {id: 'fragment1', height: '12em', separate_show: false})
 ```
 
-<p class="rise-footnote">also observe the URL that the browser has used to fetch your file <br>
-    it should look like <code>file:///the/path/to/your/current/directory/hello.html</code> </p>
+<p class="note">
+
+also observe the URL that the browser has used to fetch your file <br>
+it should look like <code>file:///the/path/to/your/current/directory/hello.html</code>
+
+</p>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -158,10 +163,12 @@ tools.sample_from_strings(
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
-<p class="rise-footnote"> 
-  this should open your browser's devel tools, which depending on your browser
-    <br> may require additional preparation or  installation steps
-    <br> we recommend using Chrome in case it is not working as expected 
+<p class="note">
+
+this should open your browser's devel tools, which depending on your browser  
+may require additional preparation or  installation steps
+we recommend using Chrome in case it is not working as expected
+
 </p>
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -201,8 +208,10 @@ tools.sample_from_strings(
 
 +++ {"slideshow": {"slide_type": ""}}
 
-<p class="rise-footnote"> 
+<p class="note">
+
 from that view you can navigate the elements tree, although in this case it is very simple, with just 3 nodes
+
 </p>
 
 +++ {"slideshow": {"slide_type": "slide"}, "cell_style": "split"}

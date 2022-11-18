@@ -88,10 +88,12 @@ tools = require('../js/tools'); tools.init()
 
 +++
 
-<p class="rise-footnote">
-    <b>note</b>here we use <code>target='_'</code>
-to tell the browser to open the link in another tab/window<br>
+<p class="note">
+
+here we use `target='_'`
+to tell the browser to open the link in another tab/window  
 this is a detail, and for convenience only, so that unintentionally clicking on the link will keep you on this page
+
 </p>
 
 ```{code-cell}

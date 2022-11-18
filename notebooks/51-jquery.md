@@ -49,7 +49,11 @@ so it is a **must know** component
 
 +++
 
-<p class="rise-footnote"><i>cross-browser</i> means it provides abstractions that will work everywhere, even if the user's browser is old and lacks some features</p>
+<div class="note">
+
+*cross-browser* means it provides abstractions that will work everywhere, even if the user's browser is old and lacks some features
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -92,8 +96,12 @@ if you use only a handful of 3rd party tools
 
 +++
 
-<p class="rise-footnote"> jQuery being mostly <b>browser-oriented</b>,
-    running jQuery examples right in the notebook is not possible at this time</p>
+<div class="note">
+
+jQuery being mostly **browser-oriented**,
+running jQuery examples right in the notebook is not possible at this time
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -203,7 +211,7 @@ $(loaded)
 tools.sample_from_stem("../samples/51-jquery-colors", {start_with: 'js'})
 ```
 
-<div class="rise-footnote">
+<div class="note">
 
 for obscure security-related reasons, this example no longer works in the context of the notebook, but is otherwise valid
 
