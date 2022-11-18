@@ -1,3 +1,2 @@
 // apply course style sheet
-$$.async()
-require('fs').readFile('_static/style.html', 'utf8', (err, data) => $$.sendResult($$.html(data)))
+$$.html(require('fs').readFileSync('_static/style.html', 'utf8'))
