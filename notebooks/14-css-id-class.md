@@ -68,6 +68,7 @@ we need **more selective** mechanisms
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 id_html = `<p id="only-me">This paragraph has an id 'only-me'</p>
 
@@ -95,6 +96,7 @@ Note that in this case you do not really need to mention the element tag
 hide_input: true
 slideshow:
   slide_type: ''
+tags: [hide_input]
 ---
 id2_html = `<div id="an-id">
 This div element has its id set to <code>an-id</code>
@@ -131,6 +133,7 @@ tools.sample_from_strings({html: id2_html, css: id2_css}, {start_with: 'css'})
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 class_html = `<p class="yes">yes 1</p>
 <p class="no">no 1</p>
@@ -244,6 +247,7 @@ in the 4 examples below, the CSS is unchanged throughout; we will see
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 specificity1_html = `<!-- the style 
      attribute trumps all -->
@@ -281,6 +285,7 @@ tools.sample_from_strings({html: specificity1_html, css: specificity_css})
 hide_input: true
 slideshow:
   slide_type: ''
+tags: [hide_input]
 ---
 specificity2_html = `<!-- 
 if we drop the style=
@@ -305,6 +310,7 @@ tools.sample_from_strings({html: specificity2_html, css: specificity_css})
 hide_input: true
 slideshow:
   slide_type: ''
+tags: [hide_input]
 ---
 specificity3_html = `<!-- 
 if we further drop the id=
@@ -328,6 +334,7 @@ tools.sample_from_strings({html: specificity3_html, css: specificity_css})
 hide_input: true
 slideshow:
   slide_type: ''
+tags: [hide_input]
 ---
 specificity4_html = `<!--
 finally there is no ambiguity
@@ -347,6 +354,7 @@ tools.sample_from_strings({html: specificity4_html, css: specificity_css})
 ```{code-cell}
 :cell_style: center
 :hide_input: true
+:tags: [hide_input]
 
 inherit_html = `<div class="inheritance">
   <p> You can use inheritance to avoid setting</p>

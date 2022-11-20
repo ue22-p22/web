@@ -108,6 +108,7 @@ this is one of the reasons why JS is so flexible/lenient with respect to argumen
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 tools.sample_from_stem("../samples/35-events-and-callbacks-01",
                        {separate_show: true, width: '40em', start_with: 'js'})
@@ -198,6 +199,7 @@ window.addEventListener(
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 tools.sample_from_stem("../samples/35-events-and-callbacks-02",
                        {separate_show: true, width: '40em', start_with: 'js'})

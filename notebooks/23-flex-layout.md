@@ -68,6 +68,7 @@ by default, direction = row, wrap = nowrap
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 flex1_html = `<div class="container">
 <div class="item"> Dolor quiquia </div>
@@ -109,6 +110,7 @@ identical except for `flex-wrap: wrap`
 hide_input: true
 slideshow:
   slide_type: slide
+tags: [hide_input]
 ---
 flex2_html = `<div class="container">
 <div class="item"> Dolor quiquia </div>
@@ -199,6 +201,7 @@ tools.sample_from_strings({html: flex2_html, css: flex2_css}, {id: 'flex2', star
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 tools.sample_from_stem("../samples/23-exo-flex", {sources_show: false})
 ```

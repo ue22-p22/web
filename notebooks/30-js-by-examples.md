@@ -270,6 +270,7 @@ in the following example :
 hide_input: true
 slideshow:
   slide_type: slide
+tags: [hide_input]
 ---
 tools.sample_from_stem("../samples/30-js-intro-01-on-off",
                        {width: '35em', height: '25em', start_with: 'js'})
@@ -305,7 +306,7 @@ visibility of symbols (variable and function names) :
 * the `function toggle() ..` statement defines a **global** variable `toggle`
 * in HTML, we set the `onclick` property on `#button` it is a JavaScript fragment that refers to the global `toggle` function
 
-+++ {"slideshow": {"slide_type": "slide"}, "hide_input": true}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## example #2
 
@@ -326,6 +327,7 @@ in this further example :
 hide_input: true
 slideshow:
   slide_type: slide
+tags: [hide_input]
 ---
 tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",
                        {width: '35em', height: '20em',
@@ -384,7 +386,7 @@ tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",
   * => this is the purpose of `load` event sent to the global `window` object
   * The load event is fired once the entire document is loaded
 
-+++ {"slideshow": {"slide_type": "slide"}, "hide_input": true}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## example #3
 
@@ -402,6 +404,7 @@ in this further example :
 hide_input: true
 slideshow:
   slide_type: slide
+tags: [hide_input]
 ---
 tools.sample_from_stem("../samples/30-js-intro-03-canvas",
                        {width: '40em', height: '20em',

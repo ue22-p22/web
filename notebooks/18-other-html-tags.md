@@ -60,6 +60,7 @@ find out more on these by yourselves
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 svg_html=`<h1>my first SVG</h1>
 
@@ -121,6 +122,7 @@ out of scope for this course though, as it involves a backend
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 tools.sample_from_stem("../samples/18-sections")
 ```

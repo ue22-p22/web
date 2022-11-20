@@ -66,6 +66,7 @@ something like this
 hide_input: true
 slideshow:
   slide_type: ''
+tags: [hide_input]
 ---
 tools.sample_from_stem("../samples/41-resume-blinking", {sources_show: false})
 ```

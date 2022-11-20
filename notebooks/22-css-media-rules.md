@@ -55,6 +55,7 @@ as per [this article on w3schools](https://www.w3schools.com/cssref/css3_pr_medi
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 threshold = '500px'
 
@@ -106,6 +107,7 @@ tools.sample_from_strings({html: media_width_html, css: media_width_css}, {start
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 media_print_html = `<body class="media">
 It is often very useful to tweak the print
@@ -182,6 +184,7 @@ remember that `<html>` contains 2 sons, a `<head>` and a `<body>`
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 tools.sample_from_stem("../samples/22-exo-grid", {sources_show: false})
 ```

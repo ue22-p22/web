@@ -57,6 +57,7 @@ the assignment is to write the **javascript companion** so that
 hide_input: true
 slideshow:
   slide_type: ''
+tags: [hide_input]
 ---
 tools.sample_from_stem("../samples/42-calculator", {sources_show: false})
 ```

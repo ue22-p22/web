@@ -61,6 +61,7 @@ most of the elements we have seen so far are said to be *in-flow* :
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 fixed_html = `<div>scroll me up !</div>
 
@@ -132,6 +133,7 @@ tools.sample_from_strings({html: fixed_html, css: fixed_css},
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 sticky_html = `
 <div id="header">

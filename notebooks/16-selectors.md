@@ -80,6 +80,7 @@ here the <code>div</code> and the <code>p</code> parts are selectors themselves,
 hide_input: true
 slideshow:
   slide_type: slide
+tags: [hide_input]
 ---
 under_html = `<div>
   <span>
@@ -128,6 +129,7 @@ two elements are siblings iff they have the same parent
 hide_input: true
 slideshow:
   slide_type: slide
+tags: [hide_input]
 ---
 sibling_html = `<div>
   <p>paragraph 1</p>
@@ -178,6 +180,7 @@ a first, not-quite-working example (at least on Chrome)
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 hover1_html = `<div id="part1">
   <a href="https://nbhosting.inria.fr" target="_">
@@ -216,6 +219,7 @@ that is set only on `<a>` tags that have a `href=` attribute
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 hover2_html = `<div id="part1">
   <a href="https://nbhosting.inria.fr" target="_">
@@ -270,6 +274,7 @@ note that here we build a selector that applies on elements that have <b>both</b
 
 ```{code-cell}
 :hide_input: true
+:tags: [hide_input]
 
 rank_html = `<ul>
   <li>the first bullet</li>
