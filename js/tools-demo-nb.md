@@ -1,5 +1,6 @@
 ---
 jupyter:
+  celltoolbar: Edit Metadata
   jupytext:
     cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
     formats: md
@@ -27,29 +28,27 @@ jupyter:
 
 ## init()
 
-```javascript hide_input=false
+```javascript
 // the code to force a reload
 delete require.cache[require.resolve('../js/tools')]
 ```
 
 ```javascript hide_input=false
-require('../js/tools').init()
+tools = require('../js/tools'); tools.init()
 undefined
 ```
 
 <!-- #region -->
-for convenience (and to reduce the footprint of the recurring init cell), init() doe also load the common `style.css`.
-the code for doing so is
+for convenience (and to reduce the footprint of the recurring init cell), init() does also load the common `style.css` located in `notebooks/_static`
+
+the code for doing so is - could be useful for some simpler js-based course `.style` file -
 ```js
-$$.html(require('fs').readFileSync('_static/style.html', 'utf8'))
+$$.html(require('fs').readFileSync('../notebooks/_static/style.html', 'utf8'))
 ```
 <!-- #endregion -->
 
 <div class="red-pill">is this a red pill</div>
 
-```javascript hide_input=false
-tools.init()
-```
 
 ## sample_from_strings()
 
@@ -72,8 +71,8 @@ by default, the `id` option is computed from `html` - be wary to specify differe
 
 
 ```javascript hide_input=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools')
 undefined
 ```
 

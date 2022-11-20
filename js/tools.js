@@ -1,4 +1,5 @@
-// toolsv3
+// tools.js exports
+// init()
 // sample_from_strings({html: code, css:code, js:code}, options)
 // sample_from_stem(stem, options)
 
@@ -16,11 +17,6 @@
 // but for that to work we need a way to divide by 2 strings like 45em
 
 "use strict"
-
-function load_common_style() {
-  // make it usable from the tools/ folder too
-  $$.html(require('fs').readFileSync('../notebooks/_static/style.html', 'utf8'))
-}
 
 function hash(word) {
   const crypto = require('crypto')
@@ -169,7 +165,7 @@ function sample_from_strings(code, options) {
 	  </div>
 	  <div style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr;" id="output_${id}"></div>
 	</div>
-	<script defer>
+	<script>
   // see require config below in init()
 	require(
     ['codemirror/lib/codemirror',
@@ -178,7 +174,6 @@ function sample_from_strings(code, options) {
 		 'codemirror/mode/javascript/javascript'
 		 ], (CodeMirror) => {
   // console.log('codemirror loaded')
-  // console.log(CodeMirror)
 
 	let all_src = { }
 
@@ -392,13 +387,14 @@ function sample_from_strings(code, options) {
 
 
 function init() {
-  load_common_style()
   // the style that makes the in[] and out[] labels less conspicuous
-  let embedded = read_style('../css/in-out.css')
+  let embedded = ``
+  embedded += read_style('../css/in-out.css')
+  embedded += read_style('../notebooks/_static/style.css')
   // we inject require here for when running under jupyter book
   embedded += `
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script defer>
+<script>
 // we may be in a Jupyter runtime, or not (think, jupyter book)
 requirejs.config({
   paths: {
@@ -427,17 +423,17 @@ requirejs.config({
 })
 function execute_all_below() {
 	try {
-  		// if Jupyter is available, run all cells below
-  		const notebook = Jupyter.notebook
-		const current_selected = notebook.get_selected_cell()
-		// execute_cells_below() would execute the current cell,
-		// thus going into an infinite loop
-		notebook.execute_cell_range(notebook.get_selected_index()+1, notebook.ncells())
-		current_selected.ensure_focused()
-  		console.log("all cells below - current one excluded - have been executed")
-	} catch(err) {
-  		// if not (e.g. in jupyter-book), well, no big deal
-  		console.log("not in a Jupyter environment - not running all cells below")
+    // if Jupyter is available, run all cells below
+    const notebook = Jupyter.notebook
+    const current_selected = notebook.get_selected_cell()
+    // execute_cells_below() would execute the current cell,
+    // thus going into an infinite loop
+    notebook.execute_cell_range(notebook.get_selected_index()+1, notebook.ncells())
+    current_selected.ensure_focused()
+    console.log("all cells below - current one excluded - have been executed")
+  } catch(err) {
+    // if not (e.g. in jupyter-book), well, no big dea
+    console.log("not in a Jupyter environment - not running all cells below")
 	}
 }
 execute_all_below()
