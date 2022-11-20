@@ -27,12 +27,18 @@ body.rise-enabled .reveal ol, body.rise-enabled .reveal dl, body.rise-enabled .r
     font-size: 80%;
 }
 
-/* raw code between ``` is too large */
-.text_cell code.language-js {
+/* js raw code between ``` is too large */
+.text_cell code.language-js,
+.text_cell_render code.language-js {
     font-size: 65%;
     line-height: 1.2em;
 }
 
+/* less space for In/Out left area */
+.rise-enabled div.prompt {
+    min-width: 10ex;
+    font-size: 0.6em;
+}
 div.cell.text_cell .prompt.input_prompt {
     display: none;
 }

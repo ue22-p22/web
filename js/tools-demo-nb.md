@@ -35,7 +35,11 @@ delete require.cache[require.resolve('../js/tools')]
 
 ```javascript hide_input=false
 tools = require('../js/tools'); tools.init()
-undefined
+```
+
+```javascript
+/* customized look for output cells */
+20 * 300
 ```
 
 <!-- #region -->

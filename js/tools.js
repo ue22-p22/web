@@ -389,7 +389,6 @@ function sample_from_strings(code, options) {
 function init() {
   // the style that makes the in[] and out[] labels less conspicuous
   let embedded = ``
-  embedded += read_style('../css/in-out.css')
   embedded += read_style('../notebooks/_static/style.css')
   // we inject require here for when running under jupyter book
   embedded += `
