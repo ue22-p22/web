@@ -68,15 +68,15 @@ so it is a **must know** component
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](../media/cdnjs-search.png)
+![](media/cdnjs-search.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](../media/cdnjs-copy.png)
+![](media/cdnjs-copy.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](../media/cdnjs-paste.png)
+![](media/cdnjs-paste.png)
 
 +++
 

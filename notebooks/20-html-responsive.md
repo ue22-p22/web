@@ -55,13 +55,13 @@ this means for example :
 
 wide viewport
 
-![](../media/responsive-wide.svg)
+![](media/responsive-wide.svg)
 
 +++ {"cell_style": "split"}
 
 narrow viewport
 
-![](../media/responsive-narrow.svg)
+![](media/responsive-narrow.svg)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -98,7 +98,7 @@ narrow viewport
 
 +++ {"cell_style": "split"}
 
-![](../media/css-display-block-inline.png)
+![](media/css-display-block-inline.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

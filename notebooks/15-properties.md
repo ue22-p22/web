@@ -199,11 +199,11 @@ you can use that in a pure-ASCII source, and  write either
 
 +++ {"cell_style": "split"}
 
-<img src="../media/unicode-celsius.png" width="350px">
+<img src="media/unicode-celsius.png" width="350px">
 
 +++ {"cell_style": "split"}
 
-<img src="../media/convert-unicode.png" width="350px">
+<img src="media/convert-unicode.png" width="350px">
 
 +++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
 
@@ -232,7 +232,7 @@ as shown in the browser devel tools
 
 +++ {"cell_style": "split"}
 
-![](../media/box-model.png)
+![](media/box-model.png)
 
 +++ {"cell_style": "split", "slideshow": {"slide_type": ""}}
 
@@ -338,7 +338,7 @@ the trick is to remember this figure
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
-![](../media/box-sides-order.png)
+![](media/box-sides-order.png)
 
 +++
 
@@ -516,7 +516,7 @@ background_css = `* {
     border: 1px solid red;
 }
 div {
-    background: url(../media/texture.png);
+    background: url(media/texture.png);
     margin: 50px;
 }
 section {
@@ -543,7 +543,7 @@ tools.sample_from_strings({html: background_html, css: background_css})
 
 ## `background` and margins - demo explained
 
-![](../media/backgrounds-and-margins.png)
+![](media/backgrounds-and-margins.png)
 
 +++ {"hide_input": true}
 

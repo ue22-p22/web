@@ -213,7 +213,7 @@ as mentioned earlier already, you can
 
 +++
 
-![](../media/devel-tools-change-properties.png)
+![](media/devel-tools-change-properties.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -236,19 +236,19 @@ as mentioned earlier already, you can
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](../media/devel-tools-console-1.png)
+![](media/devel-tools-console-1.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](../media/devel-tools-console-2.png)
+![](media/devel-tools-console-2.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](../media/devel-tools-console-3.png)
+![](media/devel-tools-console-3.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](../media/devel-tools-console-4.png)
+![](media/devel-tools-console-4.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -260,7 +260,7 @@ as mentioned earlier already, you can
 
 +++ {"cell_style": "split"}
 
-![](../media/devel-tools-sources.png)
+![](media/devel-tools-sources.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -272,7 +272,7 @@ as mentioned earlier already, you can
 
 +++ {"cell_style": "split"}
 
-![](../media/devel-tools-debugging.png)
+![](media/devel-tools-debugging.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

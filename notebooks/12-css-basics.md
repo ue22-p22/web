@@ -70,11 +70,11 @@ tools = require('../js/tools'); tools.init()
 
 +++ {"cell_style": "center", "slideshow": {"slide_type": "slide"}}
 
-![](../media/list-properties-all.png)
+![](media/list-properties-all.png)
 
 +++ {"cell_style": "center", "slideshow": {"slide_type": "slide"}}
 
-![](../media/list-properties-filtered.png)
+![](media/list-properties-filtered.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

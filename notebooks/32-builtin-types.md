@@ -401,7 +401,7 @@ ref1
 
 ### pythontutor illustration
 
-![](../media/references-shared.png)
+![](media/references-shared.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

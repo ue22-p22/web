@@ -78,10 +78,10 @@ an alternative to callbacks (since ES2015) that tries to address
 the issues known as either
 
 * the 'Callback Hell'
-  <img src="../media/callback-hell.png" width="400px">
+  <img src="media/callback-hell.png" width="400px">
 
 * also known as the 'Pyramid of Doom' 
-  <img src="../media/pyramid-of-doom.png" width="400px">
+  <img src="media/pyramid-of-doom.png" width="400px">
 
 i.e. a programming technique where an essentially **sequential** business  
 ends up creating a **deeply nested** program structure
@@ -134,7 +134,7 @@ Promise.resolve(5)
 
 +++ {"cell_style": "split"}
 
-![](../media/promise-chaining.png)
+![](media/promise-chaining.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
