@@ -30,7 +30,7 @@ parts:
   - file: 31-js-language-overview
   - file: 32-builtin-types
   - file: 33-manipulating-the-DOM
-#  - file: 34-loading-javascript
+# there is no 34- notebook for historical reasons
   - file: 35-events-and-callbacks
   - file: 36-async
 - caption: "Practicing JS"
