@@ -3,13 +3,13 @@
  * which, let's just say, is not optimal
  * let's cancel that
  */
- .rendered_html * + ol,
- .rendered_html * + ul {
+.rendered_html *+ol,
+.rendered_html *+ul {
     margin-top: initial !important;
- }
+}
 
 
- /*
+/*
   * jupyter-book: outline cell outputs
   * for a more legible book
   * and it is also easier to check for proper execution
@@ -17,6 +17,7 @@
 div.cell div.cell_output .output pre {
     background-color: #fee;
 }
+
 div.output_area pre {
     padding: 5pt;
     border-width: 1px;
@@ -35,13 +36,16 @@ div.prompt.input_prompt, div.prompt.output_prompt {
     display: flex;
     flex-direction: column;
 }
+
 .column.center {
     align-items: center;
 }
+
 .row {
     display: flex;
     flex-direction: row;
 }
+
 /* inline images */
 .rendered_html img.inline {
     display: inline;
@@ -52,12 +56,15 @@ div.prompt.input_prompt, div.prompt.output_prompt {
 .grey {
     background-color: #eee;
 }
+
 .blue {
     background-color: rgb(223, 235, 251);
 }
+
 .red {
     background-color: rgb(234, 125, 110);
 }
+
 .pink {
     background-color: pink;
 }
@@ -70,24 +77,26 @@ div.prompt.input_prompt, div.prompt.output_prompt {
     border-radius: 5px;
     padding: 5px 0px 0px 10px;
 }
+
 .note p {
     line-height: 1.3;
 }
+
 .note>p:first-child::before {
     content: "note : ";
     font-weight: 900;
 }
 
 .outline {
-    background-color:#ddd;
+    background-color: #ddd;
     border-radius: 6px;
-    margin:12px;
+    margin: 12px;
     padding: 12px;
 }
 
 .red-pill {
-    background-color:red;
-    padding:4px 10px;
+    background-color: red;
+    padding: 4px 10px;
     border-radius: 4px;
 }
 
@@ -98,7 +107,7 @@ div.prompt.input_prompt, div.prompt.output_prompt {
 .frame {
     border: 1px solid blue;
     padding: 5px;
-    border-radius:5px
+    border-radius: 5px
 }
 
 
@@ -112,10 +121,10 @@ div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h1:first-child,
 div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h2:first-child,
 div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h3:first-child,
 div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h4:first-child {
-        color: purple;
-        text-decoration-line: underline;
-        text-decoration-color: rgb(227, 129, 227);
-        text-decoration-style: double;
+    color: purple;
+    text-decoration-line: underline;
+    text-decoration-color: rgb(227, 129, 227);
+    text-decoration-style: double;
 }
 
 
