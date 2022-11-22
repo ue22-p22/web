@@ -33,7 +33,6 @@ parts:
 #  - file: 34-loading-javascript
   - file: 35-events-and-callbacks
   - file: 36-async
-#  - file: 37-fetch
 - caption: "Practicing JS"
   chapters:
   - file: 40-general-tips
@@ -42,6 +41,7 @@ parts:
   - file: 43-exo-spinning-wheel
   - file: 44-exos-miscell
   - file: 45-exo-grid
+  - file: 46-exo-xkcd
 - caption: "Optional content"
   chapters:
   - file: 51-jquery

@@ -33,6 +33,8 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
+or: how to use a backend from JS
+
 see on github
 
-<https://github.com/ue22-p21/web-xkcd.git>
+<https://github.com/ue22-p22/web-xkcd.git>
