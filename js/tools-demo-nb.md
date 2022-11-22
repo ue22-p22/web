@@ -104,8 +104,8 @@ tools.sample_from_strings(
 # from plain strings
 
 ```javascript scrolled=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools')
 undefined
 ```
 
@@ -130,8 +130,8 @@ tools.sample_from_strings({html: fragment1})
 ## without the separate button
 
 ```javascript hide_input=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools')
 undefined
 ```
 
@@ -146,8 +146,8 @@ tools.sample_from_stem(
 ## with the separate button
 
 ```javascript hide_input=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools')
 undefined
 ```
 
@@ -163,8 +163,8 @@ tools.sample_from_stem(
 ## no code, just the result - with separate
 
 ```javascript hide_input=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools')
 undefined
 ```
 
@@ -183,8 +183,8 @@ tools.sample_from_stem(
 **beware** because we re-use the same stem twice, we need to provide our own id
 
 ```javascript hide_input=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools')
 undefined
 ```
 
@@ -199,15 +199,15 @@ tools.sample_from_stem(
 ```
 
 ```javascript scrolled=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3'); null
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools'); null
 ```
 
 ## the calculator
 
 ```javascript hide_input=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools')
 undefined
 ```
 
@@ -220,8 +220,8 @@ tools.sample_from_stem(
 # escaping
 
 ```javascript hide_input=false
-delete require.cache[require.resolve('../js/toolsv3')]
-tools = require('../js/toolsv3')
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools')
 undefined
 ```
 
