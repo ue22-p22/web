@@ -136,3 +136,13 @@ div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h4:first-child {
     font-size: 180%;
     line-height: 1.2;
 }
+
+/* Deep selection to take precedence from sphinx */
+div.CodeMirror-lines div.CodeMirror-code pre.CodeMirror-line {
+    border: unset;
+    border-radius: unset;
+    font-size: 0.9em;
+    line-height: 1.1em;
+    background-color: unset;
+}
+
