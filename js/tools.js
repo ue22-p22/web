@@ -168,11 +168,11 @@ function sample_from_strings(code, options) {
 	<script>
   // see require config below in init()
 	require(
-    ['codemirror/lib/codemirror',
-	 	 'codemirror/mode/htmlmixed/htmlmixed',
-		 'codemirror/mode/css/css',
-		 'codemirror/mode/javascript/javascript'
-		 ], (CodeMirror) => {
+    ['codemirror',
+		'codemirror/mode/htmlmixed/htmlmixed.min',
+		'codemirror/mode/css/css.min',
+		'codemirror/mode/javascript/javascript.min'
+    ], (CodeMirror) => {
   // console.log('codemirror loaded')
 
 	let all_src = { }
@@ -396,29 +396,14 @@ function init() {
 <script>
 // we may be in a Jupyter runtime, or not (think, jupyter book)
 requirejs.config({
-  paths: {
-    'codemirror/lib/codemirror': [
-      'codemirror/lib/codemirror',
-      'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min',
-    ],
-    'codemirror/mode/htmlmixed/htmlmixed': [
-      'codemirror/mode/htmlmixed/htmlmixed',
-      'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/htmlmixed/htmlmixed.min',
-    ],
-    'codemirror/mode/css/css': [
-      'codemirror/mode/css/css',
-      'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/css/css.min',
-    ],
-    'codemirror/mode/javascript/javascript': [
-      'codemirror/mode/javascript/javascript',
-      'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/javascript/javascript.min',
-    ],
-    // required by htmlmixed
-    'codemirror/mode/xml/xml': [
-      'codemirror/mode/xml/xml',
-      'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/xml/xml.min',
-    ],
-  } // paths
+  packages: [{
+	name: "codemirror",
+	location: 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10',
+	main: "codemirror.min"
+  }],
+  map: {
+	'*': { 'codemirror/lib/codemirror': 'codemirror' }
+  }
 })
 function execute_all_below() {
 	try {
