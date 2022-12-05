@@ -405,6 +405,19 @@ requirejs.config({
 	'*': { 'codemirror/lib/codemirror': 'codemirror' }
   }
 })
+
+// Inject https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css
+
+function append_css(url) {
+	const link = document.createElement('link');
+	link.setAttribute('rel', 'stylesheet');
+	link.setAttribute('href', url);
+	document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+append_css('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css');
+append_css('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/theme/elegant.min.css');
+
 function execute_all_below() {
 	try {
     // if Jupyter is available, run all cells below
