@@ -143,6 +143,15 @@ tools.sample_from_stem(
     }) 
 ```
 
+```javascript slideshow={"slide_type": ""} hide_input=false scrolled=true
+// same but without the sizes, let the tools figure it out
+tools.sample_from_stem(
+    "../samples/30-js-intro-01-on-off", 
+    {
+     start_with: 'css', separate_show: false, id: 'autosize', height: 'css'
+    }) 
+```
+
 ## with the separate button
 
 ```javascript hide_input=false
