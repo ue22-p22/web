@@ -98,8 +98,7 @@ you can find a cheatsheet that summarizes most of this
 :hide_input: true
 :tags: [hide_input]
 
-tools.sample_from_stem("../cheatsheet/cheatsheet",
-                      {width: '10em', height: '10em'})
+tools.sample_from_stem("../cheatsheet/cheatsheet", {sources_show: false})
 ```
 
 ***

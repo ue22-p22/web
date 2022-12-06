@@ -353,7 +353,7 @@ headers_fragment = `<h1> toplevel title </h1>
 <h3> other subsublevel </h3>
 <h2> second sublevel title </h2>`
 
-tools.sample_from_strings({html: headers_fragment}, {width: '25em', height: '14em'})
+tools.sample_from_strings({html: headers_fragment}, {height: '18em'})
 ```
 
 <div class="note">

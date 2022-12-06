@@ -76,15 +76,15 @@ id_html = `<p id="only-me">This paragraph has an id 'only-me'</p>
 
 <p id="another-id">this one has id 'another-id'</p>
 `
-id_css = `/* will apply ONLY to 
- * elements that are tagged <p> 
- * AND whose id is 'only-me' 
+id_css = `/* will apply ONLY to
+ * elements that are tagged <p>
+ * AND whose id is 'only-me'
  */
 
 p#only-me {
     background-color: pink;
 }`
-tools.sample_from_strings({html: id_html, css: id_css}, {start_with: 'css', width: '40em'})
+tools.sample_from_strings({html: id_html, css: id_css}, {start_with: 'css'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}, "hide_input": true}

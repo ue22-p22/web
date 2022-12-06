@@ -111,7 +111,7 @@ this is one of the reasons why JS is so flexible/lenient with respect to argumen
 :tags: [hide_input]
 
 tools.sample_from_stem("../samples/35-events-and-callbacks-01",
-                       {separate_show: true, width: '40em', start_with: 'js'})
+                       {separate_show: true, start_with: 'js', separate_width: "600px"})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -202,7 +202,7 @@ window.addEventListener(
 :tags: [hide_input]
 
 tools.sample_from_stem("../samples/35-events-and-callbacks-02",
-                       {separate_show: true, width: '40em', start_with: 'js'})
+                       {separate_show: true, start_with: 'js', separate_width: "600px"})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}

@@ -272,8 +272,7 @@ slideshow:
   slide_type: slide
 tags: [hide_input]
 ---
-tools.sample_from_stem("../samples/30-js-intro-01-on-off",
-                       {width: '35em', height: '25em', start_with: 'js'})
+tools.sample_from_stem("../samples/30-js-intro-01-on-off", {start_with: 'js'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -329,9 +328,7 @@ slideshow:
   slide_type: slide
 tags: [hide_input]
 ---
-tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",
-                       {width: '35em', height: '20em',
-                        min_width: '15em'})
+tools.sample_from_stem("../samples/30-js-intro-02-svgcircles")
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -407,8 +404,7 @@ slideshow:
 tags: [hide_input]
 ---
 tools.sample_from_stem("../samples/30-js-intro-03-canvas",
-                       {width: '40em', height: '20em',
-                        min_width: '15em', separate_show: true, start_with: 'js'})
+                       {separate_show: true, start_with: 'js'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
