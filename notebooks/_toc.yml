@@ -42,6 +42,7 @@ parts:
   - file: 44-exos-miscell
   - file: 45-exo-grid
   - file: 46-exo-xkcd
+  - file: 47-exo-react
 - caption: "Optional content"
   chapters:
   - file: 51-jquery
