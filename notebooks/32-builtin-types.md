@@ -669,9 +669,40 @@ for (let key in bond) {
 }
 ```
 
++++ {"tags": ["level_advanced"], "slideshow": {"slide_type": "slide"}}
+
+and also, because there is no difference between
+
+```{code-cell}
+:cell_style: split
+:tags: [level_advanced]
+
+/* const */ with_quotes = {'a': 1}
+```
+
+```{code-cell}
+:cell_style: split
+:tags: [level_advanced]
+
+/* const */ without_quotes = {a: 1}
+```
+
+```{code-cell}
+:tags: [level_advanced]
+
+// we need a way to express that a field name is actually a variable
+/* const */ fieldname = 'a'
+/*                 ↓         ↓
+/* const */ obj = {[fieldname]: 1}
+```
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
-### assignment based on objects
+### unpacking objects
+
+there are a lot of fancy ways to deal with objects; this is also known as deconstructing / reconstructing
+
+and these are truly all over the place in modern JavScript code, so you'd better have heard of these
 
 +++
 
@@ -686,23 +717,62 @@ reminder : we had already seen array-based assignment which is a Python-style i
 }
 ```
 
++++ {"slideshow": {"slide_type": "slide"}}
+
 there a similar destructuring assignement on objects
 
 ```{code-cell}
 function demo() {
-    let example_obj = {name: "doe", 
-                       phone: '0123456',
-                       other: 'some stuff'}
+    const example_obj = {name: "doe", 
+                         phone: '0123456',
+                         other: 'some stuff'}
 
     // extract only a subset of the object
     // and assign them into variables 
     // with the same names
-    let {name, phone} = example_obj
+    const {name, phone} = example_obj
 
-    console.log(`variable name now is ${name}, phone is ${phone}`)
+    console.log(`variable name is ${name}, phone is ${phone}`)
 }
 
 demo()
+```
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+### typical usage for optional parameters 
+
+the parameter-passing mechanism is not as powerful as Python; but here's a common pattern to define optional parameters with default values
+
+```{code-cell}
+---
+slideshow:
+  slide_type: ''
+---
+// one mandatory parameter, the other ones 
+// - say width and height - are optional
+
+function foo(mandatory, options) {
+    // the default values
+    const default_options = {width: 10, height: 10}
+    const {width, height} = {...default_options, ...options}
+    console.log(`mandatory=${mandatory}, width=${width}, height=${height}`)
+}
+```
+
+```{code-cell}
+---
+cell_style: split
+slideshow:
+  slide_type: ''
+---
+foo("something")
+```
+
+```{code-cell}
+:cell_style: split
+
+foo("else", {height: 800})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -731,7 +801,7 @@ cell_style: split
 slideshow:
   slide_type: ''
 ---
-// but it is better like this
+// but it is a lot better like this
 console.log("vector = ", vector)
 ```
 
@@ -740,7 +810,7 @@ console.log("vector = ", vector)
 try it out within the browser's console:  
 try to run `console.log(document)` or any other JS object  
 and observe that you can navigate the inner structure of the object  
-rather a flat text representation that traditional languages have used us to
+rather than a flat text representation that traditional languages have used us to
 
 </div>
 
@@ -749,6 +819,8 @@ rather a flat text representation that traditional languages have used us to
 ### class instances are objects
 
 ```{code-cell}
+:cell_style: split
+
 class Person {
     constructor(first, last) {
         this.first_name = first
@@ -765,7 +837,7 @@ typeof(person)
 ---
 cell_style: split
 slideshow:
-  slide_type: slide
+  slide_type: ''
 ---
 // objects are passed by reference too
 // so this function can modify its object argument
