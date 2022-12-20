@@ -15,7 +15,7 @@ the git repo for this app is <https://github.com/parmentelat/react-counters>
 
 ## your assignment
 
-(read until the section '**app #1**' section entirely before you start anything
+**Note:** read the section '**app #1: the dual counters app**' section entirely before you start anything
 
 * clone the repo
 * get it to work in your laptop
@@ -27,7 +27,7 @@ the git repo for this app is <https://github.com/parmentelat/react-counters>
 
 the simplest way to get started is
 
-<details><summary>you will need nodejs installed</summary>
+<details open><summary>you will need nodejs installed</summary>
 
   * you can for example leverage `conda` for that
     ```shell
@@ -44,13 +44,13 @@ the simplest way to get started is
 
   </details>
 
-<details><summary>clone the repo, and `cd` in there</summary>
+<details open><summary>clone the repo, and `cd` in there</summary>
 
   * *you know how to do this, right ?*
 
   </details>
 
-<details><summary>install the dependencies</summary>
+<details open><summary>install the dependencies</summary>
 
   * you need to run this only once, of course
     ```shell
@@ -60,7 +60,7 @@ the simplest way to get started is
 
   </details>
 
-<details><summary>start the development server</summary>
+<details open><summary>start the development server</summary>
 
   * to run the app in devel mode
     ```shell
