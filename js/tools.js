@@ -478,23 +478,18 @@ if ('require' in globalThis) {
 	document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-
-function execute_all_below() {
-	try {
+// Run all cells below the last selected cell, i.e. this cell
+if ('Jupyter' in globalThis) {
     // if Jupyter is available, run all cells below
-    const notebook = Jupyter.notebook
-    const current_selected = notebook.get_selected_cell()
+    const notebook = globalThis.Jupyter.notebook;
+    const current_selected = notebook.get_selected_cell();
     // execute_cells_below() would execute the current cell,
     // thus going into an infinite loop
-    notebook.execute_cell_range(notebook.get_selected_index()+1, notebook.ncells())
-    current_selected.ensure_focused()
-    console.log("all cells below - current one excluded - have been executed")
-  } catch(err) {
-    // if not (e.g. in jupyter-book), well, no big dea
-    console.log("not in a Jupyter environment - not running all cells below")
-	}
+    notebook.execute_cell_range(notebook.get_selected_index()+1, notebook.ncells());
+    current_selected.ensure_focused();
+    console.log("all cells below - current one excluded - have been executed");
 }
-execute_all_below()
+
 </script>`
   $$.html(embedded)
 }
