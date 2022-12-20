@@ -166,14 +166,9 @@ function sample_from_strings(code, options) {
 	  <div style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr;" id="output_${id}"></div>
 	</div>
 	<script>
-  // see require config below in init()
-	require(
-    ['codemirror',
-		'codemirror/mode/htmlmixed/htmlmixed.min',
-		'codemirror/mode/css/css.min',
-		'codemirror/mode/javascript/javascript.min'
-    ], (CodeMirror) => {
-  // console.log('codemirror loaded')
+
+	run_when_codemirror_is_ready(
+    (CodeMirror) => {
 
 	let all_src = { }
 
@@ -378,7 +373,7 @@ function sample_from_strings(code, options) {
 
 	all_src['${start_with}'].refresh()
 
-	}) /* End of all requirements */
+	}); /* End of all requirements */
   </script>
 	`
 
@@ -392,21 +387,17 @@ function init() {
   embedded += read_style('../notebooks/_static/style.css')
   // we inject require here for when running under jupyter book
   embedded += `
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 <script>
-// we may be in a Jupyter runtime, or not (think, jupyter book)
-requirejs.config({
-  packages: [{
-	name: "codemirror",
-	location: 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10',
-	main: "codemirror.min"
-  }],
-  map: {
-	'*': { 'codemirror/lib/codemirror': 'codemirror' }
-  }
-})
+// Run this script imediatly
 
-// Inject https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css
+function run_when_codemirror_is_ready(f) {
+	if ('CodeMirror' in globalThis) {
+		// Run immediatly
+		f(globalThis.CodeMirror);
+	} else {
+		window.addEventListener('codemirror_is_ready', e => f(e.detail));
+	}
+}
 
 function append_css(url) {
 	const link = document.createElement('link');
@@ -415,8 +406,78 @@ function append_css(url) {
 	document.getElementsByTagName('head')[0].appendChild(link);
 }
 
-append_css('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css');
-append_css('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/theme/elegant.min.css');
+
+function initialize_codemirror() {
+
+	if ('Jupyter' in globalThis) {
+		// Require should be available, and already setup
+
+		// Load missing peace of codemirror from Jupyter
+		require([
+			'codemirror/lib/codemirror',
+			'codemirror/mode/htmlmixed/htmlmixed',
+			'codemirror/mode/css/css',
+			'codemirror/mode/javascript/javascript'
+		], (CodeMirror) => {
+			// Tell waiting script that CodeMirror is ready
+			const e = new CustomEvent('codemirror_is_ready', { detail: CodeMirror });
+			window.dispatchEvent(e);
+		});
+	} else {
+
+		// Inject css only if we are in jupyter-book that do not load codemirror
+		append_css('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css');
+		append_css('https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/theme/elegant.min.css');
+
+		require.config({
+		  packages: [{
+			name: "codemirror",
+			location: 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10',
+			main: "codemirror.min"
+		  }],
+		  map: {
+			'*': { 'codemirror/lib/codemirror': 'codemirror' }
+		  }
+		});
+
+		require([
+			'codemirror',
+			'codemirror/mode/htmlmixed/htmlmixed.min',
+			'codemirror/mode/css/css.min',
+			'codemirror/mode/javascript/javascript.min'
+		], (CodeMirror) => {
+			// Tell waiting script that CodeMirror is ready
+			globalThis.CodeMirror = CodeMirror;
+			const e = new CustomEvent('codemirror_is_ready', { detail: CodeMirror });
+			window.dispatchEvent(e);
+		});
+	}
+
+}
+
+</script>
+<script defer>
+// Run this script when the entire page was loaded
+
+// we may be in a Jupyter runtime, or not (think, jupyter book)
+
+if ('require' in globalThis) {
+	initialize_codemirror();
+} else {
+
+	const script = document.createElement('script');
+	script.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js');
+	script.setAttribute('crossorigin', 'anonymous');
+	script.setAttribute('referrerpolicy', 'no-referrer');
+	script.setAttribute('integrity', 'sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==');
+
+	// when require is loaded , ensure code mirror
+	script.addEventListener('load', () => {
+		initialize_codemirror();
+	});
+	document.getElementsByTagName('head')[0].appendChild(script);
+}
+
 
 function execute_all_below() {
 	try {
