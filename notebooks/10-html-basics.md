@@ -219,7 +219,7 @@ from that view you can navigate the elements tree, although in this case it is v
 +++ {"slideshow": {"slide_type": "slide"}, "cell_style": "split"}
 
 * another interesting part is the   
-(JavaScript) *Console* tab  
+(JavaScript) ***Console*** tab  
 
 * this is where **debug messages**  
   end up (if any; here of course  
@@ -280,7 +280,7 @@ will result in this tree
 
 nodes in this tree are called **Elements**  
 it is the basis for navigating the document  
-in the *Elements* devel tools tab
+in the ***Elements*** devel tools tab
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
