@@ -5,7 +5,7 @@ all: book
 include Makefile.style
 
 # the style cell comes third
-NBNORMFLAGS = -l1 -s3 -t h1
+NBNORMFLAGS = -l1 -L 'licen[cs]e' -s3 -S 'js/tools' -t h1
 include Makefile.norm
 
 book:

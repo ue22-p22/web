@@ -1,9 +1,13 @@
+Licence CC BY-NC-ND, Thierry Parmentelat
+
+
 # simple React apps
 
 in this notebook we will see 2 small React apps
 
 * one that is a toy really, that show 2 counters; each counter has a pair of
   buttons + / - to modify the counter
+
 * another a little more elaborate, that implements a calculator
 
 there is also a looooong list of examples here <https://reactjsexample.com>
@@ -35,6 +39,7 @@ the simplest way to get started is
     conda create -n react-calc -c conda-forge nodejs
     conda activate react-calc
     ```
+
   * this will give you the `node` and the `npm` commands
     ```shell
     # to check that you're all set
@@ -131,6 +136,7 @@ You should notice at least things like
   // explicit import of css
   import './App.css'
   ```
+
 * how JSX allows to mix HTML in the js side:
   ```js
   // some sort of mix between JS and HTML
@@ -141,9 +147,11 @@ You should notice at least things like
     </div>
   )
   ```
+
 * also the notion of **components** is at work in the above fragment; here the
   `<Counter>` thing denotes a piece of the app defined in another js file; that
   makes the code written in this paradigm much more reusable
+
 * and of course a component can refer to other components, like here
   ```js
   // here we have a mix of actual HTML tags (in lowercase)
@@ -169,9 +177,14 @@ section when mentioned between `{}`, like in the fragment just above
 
 so another very useful feature of React is `useState`; this line
 ```js
+tools = require('../js/tools'); tools.init()
+```
+
+```js
 const [counter, setCounter] = useState(0)
 ```
 declares 2 JS variables:
+
 * the first one `counter` being a storage variable (here initialized to 0),
 * and the second one `setCounter` being the function to use for modifying this variable
 
@@ -195,6 +208,7 @@ about this app:
   which I actually forked from
   <https://github.com/vasilykhromykh/React-Calculator-With-React-Hooks>
   with purely cosmetic changes
+
 * you can also [check out the live demo](https://vasilykhromykh.github.io/React-Calculator-With-React-Hooks/)
 
 ## your assignment
@@ -204,6 +218,7 @@ about this app:
 * implement a new feature
   * for example: add a (global) 'Clear' button that is missing  
     (as the backspace-like icon only clears one character in the expression)
+
   * or add more operations like // and %
   * or whatever you deem interesting
 
@@ -230,10 +245,13 @@ around, here we've picked SASS - see https://sass-lang.com/guide for more
 details (it could have been any other CSS preprocessor)
 
 the most visible differences are
+
 * there's no `{` or `}` or `;`, a bit like with Python, it's the indentation
   that is meaningful
+
 * you can use nesting (see the 'Nesting' section in
   https://sass-lang.com/guide), which makes the overall presentation easier to grasp
+
 * support for variables; it's also in plain CSS, but in the old days it was not
 * and a lot more; but on the other hand, that's not the point here that much
 
