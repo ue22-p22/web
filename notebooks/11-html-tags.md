@@ -101,7 +101,7 @@ tools.sample_from_strings({html: ol_fragment})
 :tags: [hide_input]
 
 styling_fragment = `<p>
-tags for <b>bold</b> or <i>italics</i> 
+tags for <b>bold</b> or <i>italics</i>
 or <u>underline</u> or <s>strike-through</s>
 <br>
 that of course <u><b><i>can be combined</i></b></u>
@@ -190,7 +190,7 @@ tools.sample_from_strings({html: anchor_fragment})
 
 * you can then refer to that anchor from any other webpage using a URL that ends with `#the-anchor-name`
 * so if this page is published as `https://example.com/some/page.html`
-* then you can create a direct access to *the magic location* 
+* then you can create a direct access to *the magic location*
 * with a `<a href="https://example.com/some/page.html#the-anchor-name">`
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -203,13 +203,13 @@ tools.sample_from_strings({html: anchor_fragment})
 
 redirect_fragment = `<p>it is easy to craft a local URL
 <br>
-when clicked, the hyperlink below would bring you 
+when clicked, the hyperlink below would bring you
 <br>to the location of
-<a href="#the-anchor-name">the anchor named 
+<a href="#the-anchor-name">the anchor named
 <code>the-anchor-name</code></a>
 <br>in the same document
 <br>
-(but not in this notebook though, 
+(but not in this notebook though,
 because of the page structure)
 `
 tools.sample_from_strings({html: redirect_fragment})
@@ -224,7 +224,7 @@ tools.sample_from_strings({html: redirect_fragment})
 * one **very common** tag is `<div>`
  * it is used to group together elements inside a single tree
  * `<div>` stands for *division*
-* there is also `<span>` that serves a similar purpose 
+* there is also `<span>` that serves a similar purpose
  * except for the linebreaking behaviour
 * an **essential tool** in any page design
 
@@ -243,12 +243,12 @@ group_html = `<p> a paragraph may
 <span style="background-color: #ddd;">
       contain a fragment</span>
 that we want to keep together,
-typically for styling purposes, 
+typically for styling purposes,
 but that is inline (no linebreak),
 and for that use a &lt;span&gt; tag.</p>
 
 <div style="background-color: #ddd;">
-  <p> when you need to create a group that 
+  <p> when you need to create a group that
       contain several paragraphs</p>
   <p> then a &lt;div&gt; tag is more suitable</p>
 </div>`
@@ -275,12 +275,12 @@ slideshow:
   slide_type: ''
 tags: [hide_input]
 ---
-group2_html = `<div> 
+group2_html = `<div>
 the &amp;lt;div&amp;gt; tag is an essential unit brick for creating a page layout
 </div>
 <div style="position: absolute;
             bottom: 20px; right: 20px;
-            background-color: aquamarine;"> 
+            background-color: aquamarine;">
   <div style="margin: 20px">if you inspect a real page, you will see </div>
   <div style="padding: 10px">that <b>div</b> elements are
      typically all over the place</div>
@@ -311,8 +311,8 @@ slideshow:
   slide_type: slide
 tags: [hide_input]
 ---
-table_html = `Use a &amp;lt;table&amp;gt; tag <b>only for data</b> 
-and not for layouts, there are other, 
+table_html = `Use a &amp;lt;table&amp;gt; tag <b>only for data</b>
+and not for layouts, there are other,
 and much better tools, for creating fancy layouts
 <table>
   <thead>

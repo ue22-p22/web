@@ -49,7 +49,7 @@ tools = require('../js/tools'); tools.init()
 
 * write your CSS in a separate file, e.g. `mystyle.css`
 * which, assuming it is in the same directory as your `hello.html`
-* can be kind-of included in `hello.html` 
+* can be kind-of included in `hello.html`
 * by inserting the following <link> line
 * in the `<head>` part of your html
 
@@ -107,7 +107,7 @@ and the same goes with the <code>file:///</code> URL scheme
 
 ##### notes on self-closing tags
 
-* note also the absence of a `</link>`, 
+* note also the absence of a `</link>`,
 * which may remind you of `<br>`
 * such elements are called **void** or **empty** elements
 * among others : `<br>`, `<hr>`, `<link>`, `<img>`,...
@@ -134,7 +134,7 @@ slideshow:
   slide_type: ''
 tags: [hide_input]
 ---
-embedded_html = `<div> CSS can be inlined right into the HTML 
+embedded_html = `<div> CSS can be inlined right into the HTML
     as a &amp;lt;style&amp;gt; tag
 </div>
 
@@ -164,13 +164,13 @@ tools.sample_from_strings({html: embedded_html})
 :tags: [hide_input]
 
 embedded_html = `<div
-style="background-color: red; 
-font-size: x-large; 
+style="background-color: red;
+font-size: x-large;
 line-height: 50px;
 padding:30px;" >
 
 If you attach styling to a HTML tag with a
-<code>style=</code> attribute, it will 
+<code>style=</code> attribute, it will
 <b>take precedence</b> on
 everything else
 <br>
@@ -192,7 +192,7 @@ tools.sample_from_strings({html: embedded_html})
   * with 4 sections 'experience', 'education', 'skills' and 'languages'
   * **keep it simple** for now, nothing too elaborate
   * make sure all the text gets attached to  
-    adapted tags like `<div>` or `<li>` 
+    adapted tags like `<div>` or `<li>`
 
   * and **not** directly under `<body>`  
     like it was done in `hello.html`

@@ -186,7 +186,7 @@ const mylambda0 = (arg0, arg1) => { /* some code here */ }
 in this context, it is common to create functions **on the fly**, e.g.
 ```javascript
 window.addEventListener(
-    "load", 
+    "load",
     // the expression on the following line
     // returns a function object
     () => console.log("page loaded")  
@@ -218,9 +218,9 @@ tools.sample_from_stem("../samples/35-events-and-callbacks-02",
 ```{code-cell}
 // here the 'context' variable is not visible
 
-{ 
+{
   let context = {a:1, b:2};
-  setTimeout( 
+  setTimeout(
     function() {
       // here the 'context' variable is visible and remain valid
       // even if we leave the block
@@ -228,7 +228,7 @@ tools.sample_from_stem("../samples/35-events-and-callbacks-02",
     },
     2000);
   console.log("NOW timeout armed");
-} 
+}
 
 // here neither, let us prove it:
 
@@ -239,7 +239,7 @@ try {
 }
 
 // BUT: wait for 2s and see the callback still triggers properly
-// it means that the 'context' variable is still alive 
+// it means that the 'context' variable is still alive
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -252,7 +252,7 @@ cell_style: split
 slideshow:
   slide_type: ''
 ---
-{ 
+{
   let context = {a:1, b:2};
   setTimeout(() => console.log(context), 2000)
   console.log("armed");
@@ -306,7 +306,7 @@ again, so far we have seen a few types of events (e.g. `load`, `keydown`, `click
 function ko() {
   // DO NOT USE var IN YOUR CODE !
   for (var i=1; i<=3; i++) {
-     setTimeout(() => console.log("ko", i), 
+     setTimeout(() => console.log("ko", i),
                 100*i)
     }
 }

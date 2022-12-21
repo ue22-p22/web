@@ -37,8 +37,8 @@ tools = require('../js/tools'); tools.init()
 
 +++
 
-* as a conclusion of this overview on CSS, 
-* review your resume to create fancier layouts 
+* as a conclusion of this overview on CSS,
+* review your resume to create fancier layouts
 * and so it becomes responsive
   * it should display properly on a phone, tablet, and laptop
 * hint : each section of course remains untouched no matter the device
@@ -50,7 +50,7 @@ tools = require('../js/tools'); tools.init()
 
 * here is one example
   * please do not try to mimick this example too closely,  
-    it is just there so you can get a sense of what is possible; 
+    it is just there so you can get a sense of what is possible;
 
   * plus, it is far from perfect anyway ...
   * but make sure to open it in a separate window  

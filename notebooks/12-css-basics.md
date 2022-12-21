@@ -38,7 +38,7 @@ tools = require('../js/tools'); tools.init()
 +++ {"slideshow": {"slide_type": ""}}
 
 * keep contents and presentation separate
-* allow to adapt same contents 
+* allow to adapt same contents
   * to different media
   * to differents tastes (themes)
 * generally written by people with  
@@ -118,7 +118,7 @@ a {
     border-radius: 8px;
     text-decoration: none;
 }`
-tools.sample_from_strings({html: link_html, css: link_css}, {width: '40em'})
+tools.sample_from_strings({html: link_html, css: link_css})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -131,7 +131,7 @@ tools.sample_from_strings({html: link_html, css: link_css}, {width: '40em'})
   on the left hand side of the `:` colon   
   like `color`, `font-family`, …
 
-* are called **properties** 
+* are called **properties**
 * also listed in the `Elements` tab of the devel tools,  
   in the `Computed` pane
 

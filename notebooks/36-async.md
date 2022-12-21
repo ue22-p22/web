@@ -80,7 +80,7 @@ the issues known as either
 * the 'Callback Hell'
   <img src="media/callback-hell.png" width="400px">
 
-* also known as the 'Pyramid of Doom' 
+* also known as the 'Pyramid of Doom'
   <img src="media/pyramid-of-doom.png" width="400px">
 
 i.e. a programming technique where an essentially **sequential** business  
@@ -100,7 +100,7 @@ here's the gist of how to use promises
   promise.then(function_ok, function_ko)
   ```
 
-* where 
+* where
 
   * `function_ok` is triggered if "all goes well"
   * `function_ko` is triggered otherwise  

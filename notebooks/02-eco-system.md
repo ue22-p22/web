@@ -61,7 +61,7 @@ tools = require('../js/tools'); tools.init()
   * like ***less*** or ***sass*** above CSS,  
   * ***TypeScript*** or ***CoffeeScript*** above JavaScript, …
   * frameworks like vue, react, angular
-  * tools for mobile depl. [expo](https://expo.io), 
+  * tools for mobile depl. [expo](https://expo.io),
     [svelte](https://svelte.dev), [ionic](https://ionicframework.com) …
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -110,7 +110,7 @@ tools = require('../js/tools'); tools.init()
   * TCP/IP : low-level communication protocol of the Internet
   * HTTP : HyperText Transfer Protocol
   * WebSocket : full-duplex communication channel  
-    over a single TCP connection 
+    over a single TCP connection
 
-you can see our focus is 
+you can see our focus is
 a small fraction of the whole spectrum

@@ -49,7 +49,7 @@ most of the elements we have seen so far are said to be *in-flow* :
 +++
 
 * there are ways to create elements out-of-flow 
-* a common practical example is a pinned header 
+* a common practical example is a pinned header
   (or navigation bar), illustrated below  
 
 * example 1 : using old-fashioned `position: fixed`
@@ -66,7 +66,7 @@ most of the elements we have seen so far are said to be *in-flow* :
 fixed_html = `<div>scroll me up !</div>
 
 <div id="header">
-  I am a header with <code>position: fixed</code>. My height better 
+  I am a header with <code>position: fixed</code>. My height better
   be configured statically, so that the body's top margin
   can be tailored accordingly.
 </div>
@@ -85,7 +85,7 @@ fixed_css = `body {
     top: 0px;
     right: 0px;
   /* the 80 px is for the whole box */
-    box-sizing: border-box; 
+    box-sizing: border-box;
 
   /* everything below is just cosmetic */
     font-size: 20px;    
@@ -103,7 +103,7 @@ div:not(#header) {
     background-color: #fafafa;
 }`
 
-tools.sample_from_strings({html: fixed_html, css: fixed_css}, 
+tools.sample_from_strings({html: fixed_html, css: fixed_css},
                           {start_with: 'css', height: '19em'})
 ```
 
@@ -118,7 +118,7 @@ tools.sample_from_strings({html: fixed_html, css: fixed_css},
   so they do not overlap at first
 
 * note the use of the `box-sizing` property  
-  we want the 120px to be for the **full height** (padding + border included) of the header 
+  we want the 120px to be for the **full height** (padding + border included) of the header
 
 * also note the `rgba()` function to define colors with a level of transparency  
   0: totally transparent, 1: totally opaque

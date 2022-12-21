@@ -108,7 +108,7 @@ cleanup the code, and cleanup again
 
 for example (but that's entirely up to you)
 
-* write a JavaScript class `SpinningWheel` 
+* write a JavaScript class `SpinningWheel`
 * that can be created from :
   * a `svg` element
   * the circle's center and radius `cx`, `cy`, `cr`,
@@ -119,7 +119,7 @@ for example (but that's entirely up to you)
   * `start()`
   * `stop()`
   * `resume()`
-  * `clear()` 
+  * `clear()`
   
 * it may be helpful to create a convenience function that creates an SVG element inside a container that is found through its id;  
   e.g. `create_spinning_wheel("spin-container")` would create (and return) a `SpinningWheel` instance inside (the element found by selector) `#spin-container`
@@ -186,7 +186,7 @@ SpinningWheel(radius, options) {
 and allow callers to set specific parameters in the `options` object; for examples one could call
 
 ```javascript
-let spin = SpinningWheel(100, 
+let spin = SpinningWheel(100,
                          { bg_color: [200, 100, 50], period=500})
 ```
 and have the `SpinningClass` code provide default for missing parameters.

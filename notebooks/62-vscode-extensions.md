@@ -40,9 +40,9 @@ tools = require('../js/tools'); tools.init()
 
 +++ {"slideshow": {"slide_type": ""}}
 
-##  live server 
+##  live server
 
-see your code changes as soon as you save 
+see your code changes as soon as you save
 
 * to activate, use `⌘L ⌘O` control-click in an html file and select **Open with Live Server**
 * will open the file in chrome, with no need to reload
@@ -92,5 +92,5 @@ you can control-click a file in the browser left pane, this gives you the option
 
 ## auto close tag
 
-when you type, say <code>&lt;div&gt;</code>, it will automatically add the closing tag; 
+when you type, say <code>&lt;div&gt;</code>, it will automatically add the closing tag;
 I feel like this was working for me already before I installed this extension, so it's my feeling that it is not (no longer ?) needed

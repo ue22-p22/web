@@ -85,7 +85,7 @@ flex1_css = `/* the important part is just this */
 }
 
 /* cosmetic: outline borders */
-body { 
+body {
     border: none;
 }
 * { border: 1px solid red;

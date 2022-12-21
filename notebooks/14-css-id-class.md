@@ -41,7 +41,7 @@ there is a need for more accurate / selective settings
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
-remember our first CSS clause 
+remember our first CSS clause
 
 ```
 a {
@@ -63,7 +63,7 @@ we need **more selective** mechanisms
 
 +++ {"slideshow": {"slide_type": ""}}
 
-* an element that is unique in your document 
+* an element that is unique in your document
 * can be attached a unique identifier
 
 ```{code-cell}
@@ -159,7 +159,7 @@ tools.sample_from_strings({html: class_html, css: class_css})
 
 +++ {"slideshow": {"slide_type": ""}}
 
-let's summarize 
+let's summarize
 
 | selector | applies to elements |
 |----------|:------------|
@@ -232,7 +232,7 @@ specificity can be reasonably approximated as follows :
 
 +++ {"slideshow": {"slide_type": ""}}
 
-in the 4 examples below, the CSS is unchanged throughout; we will see 
+in the 4 examples below, the CSS is unchanged throughout; we will see
 
 1. the `<p>` element with a `style`, an `id` and a `class` attributes  
    so it would match all the CSS rules
@@ -249,11 +249,11 @@ in the 4 examples below, the CSS is unchanged throughout; we will see
 :hide_input: true
 :tags: [hide_input]
 
-specificity1_html = `<!-- the style 
+specificity1_html = `<!-- the style
      attribute trumps all -->
 
 <p class="myclass"
-   id="myid" 
+   id="myid"
    style="color: purple">
 
 Lorem ipsum dolor sit amet.
@@ -287,7 +287,7 @@ slideshow:
   slide_type: ''
 tags: [hide_input]
 ---
-specificity2_html = `<!-- 
+specificity2_html = `<!--
 if we drop the style=
 then id wins
 -->
@@ -312,7 +312,7 @@ slideshow:
   slide_type: ''
 tags: [hide_input]
 ---
-specificity3_html = `<!-- 
+specificity3_html = `<!--
 if we further drop the id=
 then class wins
 -->
@@ -381,8 +381,8 @@ tools.sample_from_strings({html: inherit_html, css: inherit_css})
 the point is that
 
 * we **do not** style the `<p>` and `<li>` elements specifically
-* so in this case the properies are fetched 
-  * from their parent (the `<div>` element) 
+* so in this case the properies are fetched
+  * from their parent (the `<div>` element)
   * that **is targetted** by our CSS rule
 * note that not all properties behave that way though
 

@@ -47,7 +47,7 @@ the sample app is not responsive, you will need to open it in a separate window
 :hide_input: true
 :tags: [hide_input]
 
-tools.sample_from_stem("../samples/44-pythagore/pythagore", 
+tools.sample_from_stem("../samples/44-pythagore/pythagore",
                        {sources_show: false, separate_height: '1000px', separate_width: '800px'})
 ```
 
@@ -66,7 +66,7 @@ here again the sample app is not responsive, you will need to open it in a separ
 :tags: [hide_input]
 
 // the minified version somehow was not working...
-tools.sample_from_stem("../samples/44-fibonacci/fibonacci", 
+tools.sample_from_stem("../samples/44-fibonacci/fibonacci",
                        {sources_show: false, separate_height: '1000px', separate_width: '900px'})
 ```
 

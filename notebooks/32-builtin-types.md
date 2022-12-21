@@ -383,7 +383,7 @@ ref2
 ```{code-cell}
 :cell_style: split
 
-// changing data from ref2 
+// changing data from ref2
 ref2[0][0] = "from 2 - deep"
 ref2[1] = "from 2 - shallow"
 ref2
@@ -594,7 +594,7 @@ the syntax for JavaScript objects, as well as the *key/value* vocabulary make th
 // note that the values MUST BE
 // valid JS expressions
 
-/*let*/ options = { 
+/*let*/ options = {
     // quotes are not needed in the key
     // if it looks like a variable
     margin_left: '10px',
@@ -723,12 +723,12 @@ there a similar destructuring assignement on objects
 
 ```{code-cell}
 function demo() {
-    const example_obj = {name: "doe", 
+    const example_obj = {name: "doe",
                          phone: '0123456',
                          other: 'some stuff'}
 
     // extract only a subset of the object
-    // and assign them into variables 
+    // and assign them into variables
     // with the same names
     const {name, phone} = example_obj
 
@@ -740,7 +740,7 @@ demo()
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-### typical usage for optional parameters 
+### typical usage for optional parameters
 
 the parameter-passing mechanism is not as powerful as Python; but here's a common pattern to define optional parameters with default values
 
@@ -749,7 +749,7 @@ the parameter-passing mechanism is not as powerful as Python; but here's a commo
 slideshow:
   slide_type: ''
 ---
-// one mandatory parameter, the other ones 
+// one mandatory parameter, the other ones
 // - say width and height - are optional
 
 function foo(mandatory, options) {

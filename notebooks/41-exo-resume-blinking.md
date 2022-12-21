@@ -45,13 +45,13 @@ in this notebook :
 
 ## assignment
 
-* create a HTML document as a collection of 3 files, 
+* create a HTML document as a collection of 3 files,
 * say : `resume.html`, `resume.css`, `resume.js`
 * make sure the html `<head>` loads **both** the css and js companions
 
 +++
 
-then 
+then
 
 * edit the JavaScript code
 * so that your resume background alternates  
@@ -79,7 +79,7 @@ tools.sample_from_stem("../samples/41-resume-blinking", {sources_show: false})
 
 so, you want to start some code, say call function `start()`   
 right **after the page loads**  
-**BUT** it is **unsafe** to do something like 
+**BUT** it is **unsafe** to do something like
 
 ```html
 <!-- DO NOT DO THIS -->
@@ -135,7 +135,7 @@ function one_step() {
         console.log("beep");
 }
 
-// make sure you use 'let' 
+// make sure you use 'let'
 // and not 'var' in your code
 var interval = setInterval(one_step, 1000)
 ```
@@ -143,7 +143,7 @@ var interval = setInterval(one_step, 1000)
 ```{code-cell}
 :cell_style: split
 
-// note that our JS interpreter 
+// note that our JS interpreter
 // is still responsive
 // we can stop the endless loop
 active = false
@@ -201,7 +201,7 @@ as mentioned earlier already, you can
 
 * navigate the DOM
 * '*Inspect* ' an element (find an element from a position in the page)
-* see the CSS rules that apply to an element 
+* see the CSS rules that apply to an element
 * find out where these styles come from
 * see the computed values for each property
 * interactively change a property and  

@@ -91,9 +91,9 @@ grid1_html = `<div class="container">
 
 grid1_css = `.container {
   display: grid;
-  grid-template-columns: 
+  grid-template-columns:
     1fr 1fr 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header header"
     "main   main   .      sidebar"
     "footer footer footer sidebar";
@@ -189,9 +189,9 @@ grid2_html = `<div class="container">
 
 grid2_css = `.container {
   display: grid;
-  grid-template-columns: 
+  grid-template-columns:
     100px 1fr 5% 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header header"
     "main   main   .      sidebar"
     "footer footer footer footer";
@@ -252,7 +252,7 @@ grid3_html = `<div class="container">
 grid3_css = `.container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header header"
     "main main . sidebar"
     "footer footer footer footer";
@@ -297,7 +297,7 @@ tools.sample_from_strings({html: grid3_html, css: grid3_css}, {start_with: 'css'
 
 +++
 
-* **strongly recommended** 
+* **strongly recommended**
   * to **bookmark that page**
   * and browse it (but entirely)  
     to get a grip of what's achievable
@@ -320,7 +320,7 @@ you may also complete this game  <https://cssgridgarden.com/> at home if you fee
 * is its ability to auto-organize the grid
 * using an idiom based on
   * `repeat`
-  * `auto-fit` 
+  * `auto-fit`
   * `minmax`
 
 +++ {"cell_style": "split", "tags": ["level_intermediate"]}
@@ -338,12 +338,12 @@ you may also complete this game  <https://cssgridgarden.com/> at home if you fee
 :tags: [level_intermediate, hide_input]
 
 autosize_html = `<div class="container">
-  <section> 
+  <section>
     <h1>Section 1</h1>
-    <p>Here we say that we want 3 same-width 
-       columns in the viewport width, 
+    <p>Here we say that we want 3 same-width
+       columns in the viewport width,
        provided that they are at least 250px wide.
-    </p> 
+    </p>
   </section>
   <section>
     <h1>Section 2</h1>
@@ -364,7 +364,7 @@ autosize_css = `section {
 
 .container {
   display: grid;
-  grid-template-columns: 
+  grid-template-columns:
     repeat(auto-fit, minmax(250px, 1fr));
 }`
 
@@ -377,7 +377,7 @@ tools.sample_from_strings({html: autosize_html, css: autosize_css}, {start_with:
 
 +++
 
-* the devel tools - on chrome at least 
+* the devel tools - on chrome at least
 * allow to simulate other devices
 * like popular phones and tablets
 

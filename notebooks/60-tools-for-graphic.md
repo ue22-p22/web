@@ -43,7 +43,7 @@ tools = require('../js/tools'); tools.init()
 * **BUT** it does kill all competition as soon as a User-Interface is involved
 * so bottom line is, all the common needs are covered
 
-**example** 
+**example**
 
 * I just picked a topic at random; say I need to display a calendar; I googled it and [found this](https://fullcalendar.io/)
 
@@ -98,7 +98,7 @@ I strongly recommend a thorough visit of their [Gallery of examples](https://git
 
 d3 is based on a mental model that graphical objects (for example, elements in a <svg>) can be bound to the data, so that any change in the data automatically propagates to the graphical objects.
 
-**WARNING** 
+**WARNING**
 `d3.js` admittedly has a rather steep learning curve, and is maybe not recommended as a first programming experience with js; keep it for the second shot :)
 
 

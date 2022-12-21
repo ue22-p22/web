@@ -149,7 +149,7 @@ in a jumble :
 
 * as a conclusion of this first basic course
   * with all the knowledge you now have about HTML and CSS,
-* write your complete resume; you should have 2 files 
+* write your complete resume; you should have 2 files
   * `resume.html`
   * `resume.css`
 * at this point, you may think of it as (if it were) a word document

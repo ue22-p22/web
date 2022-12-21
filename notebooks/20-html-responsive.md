@@ -84,7 +84,7 @@ narrow viewport
 
 * if you do not override  
   the `display:` property,  
-  you use a **historical** layout policy 
+  you use a **historical** layout policy
 
 * very well summarized  
   in [this document on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)  
@@ -112,7 +112,7 @@ narrow viewport
 * values `inline`, `block` and `inline-block`  
   account for these legacy "document-oriented" policies
 
-  * have been supported from the very beginning of the Web 
+  * have been supported from the very beginning of the Web
   * well illustrated [on this page on css-tricks.com](https://css-tricks.com/almanac/properties/d/display/)
 
 +++ {"slideshow": {"slide_type": "slide"}}

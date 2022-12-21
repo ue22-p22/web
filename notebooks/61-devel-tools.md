@@ -149,7 +149,7 @@ and, in the same exercise
 
 * we have gone to `cdnjs` to manually determine version numbers
 
-with `npm`, we could instead 
+with `npm`, we could instead
 
 * have created a file **`package.json`** that said essentially that we need `bootstrap`  
 * optionnally by pinning a version number for that
@@ -162,7 +162,7 @@ with `npm`, we could instead
 several other areas where tooling is important :
 
 * **transpiling** : you want to support as many users as you can, including with - possibly very - old browsers; but you want to write code with up-to-date technology; you need a transpiler like e.g. `babel` that can produce equivalent code but for older generations of browsers (4-5 years being close to infinity…)
-* **minimizing** : you want to make your code smaller, and less readable 
+* **minimizing** : you want to make your code smaller, and less readable
 * **bundling** : you need a tool to automate your dependencies
 
 +++ {"slideshow": {"slide_type": "slide"}}

@@ -25,7 +25,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
-# CSS custom properties 
+# CSS custom properties
 
 *aka* **CSS variables**
 

@@ -125,9 +125,9 @@ again remember that you
 +++
 
 * make sure you use `git` to store the latest version of your resume  
-  as this exercise may damage your work 
+  as this exercise may damage your work
 
 * inject `bootstrap.css` into your resume
 * **try to** write a version of your resume that uses **the bootstrap grid system** to handle grid layout and responsiveness
-* which approach (with or without bootstrap) do you have better ? why ? 
+* which approach (with or without bootstrap) do you have better ? why ?
 * are there other aspects of bootstrap that you can leverage to improve the look of your resume ?

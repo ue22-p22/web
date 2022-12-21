@@ -97,7 +97,7 @@ files are local on your laptop
 
 <div class="note">
 
-for your first practice, you will save your code on your hard drive, and check the result locally <br> 
+for your first practice, you will save your code on your hard drive, and check the result locally <br>
 without the presence of a server, this is what the <code>file://</code> URLs are for
 
 </div>
@@ -237,7 +237,7 @@ from that view you can navigate the elements tree, although in this case it is v
 * (juste like the `>>> ` with Python)
 
 
-where you can type and run 
+where you can type and run
 your first JavaScript code
 
 +++ {"cell_style": "split"}
@@ -250,7 +250,7 @@ your first JavaScript code
 
 +++ {"slideshow": {"slide_type": ""}}
 
-* the `<tag> ... </tag>` notation 
+* the `<tag> ... </tag>` notation
 * unambiguously maps to a tree structure  
   known as an Abstract Syntax Tree (AST)
 
@@ -308,7 +308,7 @@ fragment_unclosed = `<p> do not do this
 <li> but they will hurt eventually
 `
 
-tools.sample_from_strings({html: fragment_unclosed}, {separate_show: false, width: '40em'})
+tools.sample_from_strings({html: fragment_unclosed}, {separate_show: false})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -344,5 +344,4 @@ tools.sample_from_strings({html: fragment_closed}, {separate_show: false})
   * typically with `⌘-tab` (or alt-tab or control-tab depending on your environment)
 * also make sure to know the keyboard shortcut  
   for your browser to reload a page
-
   * typically `⌘-r` (or 'ctrl-r' ...)

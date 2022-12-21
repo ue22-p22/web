@@ -1,4 +1,4 @@
-/* la calculette de 
+/* la calculette de
 https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
 */
 
@@ -17,7 +17,7 @@ function Calculator() {
     let needs_clear = true;
 
     keys.addEventListener(
-        'click', 
+        'click',
         function(event) {
             // locating the display DOM node
             let display = document.querySelector(".calculator__display");
@@ -28,9 +28,9 @@ function Calculator() {
                 // the DOM node that was clicked
                 let key = event.target;
                 // if you wonder why the author has chosen to name
-                // its attribute 'data-action', see 
-                // https://www.w3schools.com/tags/att_global_data.asp 
-                // and 
+                // its attribute 'data-action', see
+                // https://www.w3schools.com/tags/att_global_data.asp
+                // and
                 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/dataset
                 let action = key.dataset.action;
                 if (! action) {
@@ -38,9 +38,9 @@ function Calculator() {
                     // this will be e.g. string '7'
                     let digit = key.textContent;
                     // append that text to the display,
-                    // except if it is '0', or if we just 
+                    // except if it is '0', or if we just
                     // ran '='
-                    if (needs_clear || displayed == "0") { 
+                    if (needs_clear || displayed == "0") {
                         display.textContent = digit;
                         needs_clear = false;
                     } else {
@@ -64,13 +64,13 @@ function Calculator() {
                     if (! operator) {
                         console.log("do not know what to compute");
                     }
-                    let result = operator(parseFloat(operand), 
+                    let result = operator(parseFloat(operand),
                                           parseFloat(displayed));
                     display.textContent = `${result.toPrecision(6)}`;
                     operator = undefined;
                     needs_clear = true;
-                // operation buttons just reset display, 
-                // and record operator to function 
+                // operation buttons just reset display,
+                // and record operator to function
                 // to call later on when doing '='
                 } else if (action == 'divide') {
                     operand = displayed;

@@ -44,7 +44,7 @@ JavaScript comes in addition to
 
 JavaScript
 
-* it is a full-fledged **programming language** 
+* it is a full-fledged **programming language**
 * and provides for **behaviour**
 
 +++ {"slideshow": {"slide_type": "slide"}}

@@ -105,9 +105,9 @@ tools.sample_from_stem("../samples/17-transition1", {start_with: 'css'})
 
 +++ {"slideshow": {"slide_type": ""}}
 
-* `linear` is, well of course, linear interpolation 
-* the other 3: `ease-in`, `ease-out`, and `ease-in-out` make the move 
-  smoother at one or two ends of the duration range 
+* `linear` is, well of course, linear interpolation
+* the other 3: `ease-in`, `ease-out`, and `ease-in-out` make the move
+  smoother at one or two ends of the duration range
 
 * see a more detailed explanation from the *see also* section below
 
@@ -137,7 +137,7 @@ as a piece of advice
 * but **do not overuse them**
 * too many moving pieces quickly become more confusing than helpful
 
-also notice that this starts to have to do with **responsiveness** 
+also notice that this starts to have to do with **responsiveness**
 
 * that deals with defining layouts that cope with geometry changes
 * that we will cover later

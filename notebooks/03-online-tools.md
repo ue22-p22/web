@@ -45,7 +45,7 @@ tools = require('../js/tools'); tools.init()
   code snippets that outline a specific trick
 
 * many online tools are available, most famous being
-  * <https://codepen.io> 
+  * <https://codepen.io>
   * also <https://jsfiddle.net> for collaborative work
 
 +++ {"slideshow": {"slide_type": "slide"}}

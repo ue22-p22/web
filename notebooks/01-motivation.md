@@ -67,7 +67,7 @@ for instance
   * whose purpose is to serve network requests
 * issued by traditional browsers (Chrome, Firefox, Edge, Safari, …)
   * and mobile apps running on phones and tablets
-  * that are all *frontends* 
+  * that are all *frontends*
   * in the sense that they face the end user
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -144,7 +144,7 @@ this means that we will **not** address :
 +++ {"slideshow": {"slide_type": ""}}
 
 * keep in mind that web frontend techologies
-  * go way beyond the browsers per se 
+  * go way beyond the browsers per se
 * there are many options to build a **standalone** app  
   (that runs **outside of the browser**)  
 
