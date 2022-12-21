@@ -1,6 +1,5 @@
 ---
 jupyter:
-  celltoolbar: Edit Metadata
   jupytext:
     cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
     formats: md
@@ -34,6 +33,7 @@ delete require.cache[require.resolve('../js/tools')]
 ```
 
 ```javascript hide_input=false
+// this will evaluate all cells, and inject the global css style
 tools = require('../js/tools'); tools.init()
 ```
 
@@ -60,9 +60,9 @@ the signature is
 
 ```
 sample_from_strings(
-  // le code
+  // code(s) - html/css/js
     {html: 'le html', ...},
-  // les options
+  // and options
     { ... }
 )
 ```
@@ -75,6 +75,7 @@ by default, the `id` option is computed from `html` - be wary to specify differe
 
 
 ```javascript hide_input=false
+// clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
@@ -104,6 +105,7 @@ tools.sample_from_strings(
 # from plain strings
 
 ```javascript scrolled=false
+// clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
@@ -130,48 +132,42 @@ tools.sample_from_strings({html: fragment1})
 ## without the separate button
 
 ```javascript hide_input=false
+// clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
 ```javascript slideshow={"slide_type": ""} hide_input=false scrolled=true
+// in general, no need to worry about sizes, provided that the sources
+// take a reasonable space
 tools.sample_from_stem(
-    "../samples/30-js-intro-01-on-off", 
-    {height: '19em', width: '35em', min_width: '100px',
-     start_with: 'css', separate_show: false,
-    }) 
-```
-
-```javascript slideshow={"slide_type": ""} hide_input=false scrolled=true
-// same but without the sizes, let the tools figure it out
-tools.sample_from_stem(
-    "../samples/30-js-intro-01-on-off", 
-    {
-     start_with: 'css', separate_show: false, id: 'autosize', height: 'css'
-    }) 
+    "../samples/30-js-intro-01-on-off",
+    {start_with: 'css', separate_show: false})
 ```
 
 ## with the separate button
 
 ```javascript hide_input=false
+// clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
 ```javascript slideshow={"slide_type": ""} hide_input=false scrolled=false
+// here the autosizing mode would pick a very high window
+// because the JS script is very large
+// so we keep this under control
 tools.sample_from_stem(
-    "../samples/30-js-intro-02-svgcircles", 
-    {height: '20em', width: '40em', min_width: '100px',
-//     separate_label: 'In new window',
-     separate_show: true,
-    }) 
+    "../samples/30-js-intro-02-svgcircles",
+    {separate_label: 'In new window', separate_show: true, start_with: 'js', height: '22em'})
 ```
 
 ## no code, just the result - with separate
 
 ```javascript hide_input=false
+// clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
@@ -181,9 +177,11 @@ undefined
 // the default is separate_show = true
 
 tools.sample_from_stem(
-    "../samples/43-spinning-wheel/spinning-wheel", 
-    {sources_show: false, height: '300px', separate_label: 'In new window',
-}) 
+    "../samples/43-spinning-wheel/spinning-wheel",
+    {sources_show: false,
+//     height: '300px',  // not really needed
+     separate_label: 'In new window',
+})
 ```
 
 ## no code, just the result - truly basic, no separate
@@ -192,6 +190,7 @@ tools.sample_from_stem(
 **beware** because we re-use the same stem twice, we need to provide our own id
 
 ```javascript hide_input=false
+// clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
@@ -203,18 +202,14 @@ undefined
 // otherwise we mess with the previous sample
 
 tools.sample_from_stem(
-    "../samples/43-spinning-wheel/spinning-wheel", 
+    "../samples/43-spinning-wheel/spinning-wheel",
     {id: 'duplicate', height: '20em', sources_show: false, separate_show: false})
-```
-
-```javascript scrolled=false
-delete require.cache[require.resolve('../js/tools')]
-tools = require('../js/tools'); null
 ```
 
 ## the calculator
 
 ```javascript hide_input=false
+// clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
@@ -222,13 +217,14 @@ undefined
 
 ```javascript slideshow={"slide_type": ""} hide_input=false scrolled=false
 tools.sample_from_stem(
-    "../samples/42-calculator", 
-    {sources_show: false, separate_show: false, height: '500px'}) 
+    "../samples/42-calculator",
+    {sources_show: false, separate_show: false, height: '500px'})
 ```
 
 # escaping
 
 ```javascript hide_input=false
+// clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
@@ -259,3 +255,5 @@ tools.sample_from_strings(
     {css_show: false, js_show: false, id: 'escaped'}
 )
 ```
+
+***
