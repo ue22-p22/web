@@ -1,49 +1,49 @@
 format: jb-book
-root: 01-motivation
+root: 01-motivation-nb
 parts:
 - caption: "Intro - Web frontend"
   chapters:
-  - file: 02-eco-system
-  - file: 03-online-tools
+  - file: 02-eco-system-nb
+  - file: 03-online-tools-nb
 - caption: "Course 1 - HTML & CSS basics"
   chapters:
-  - file: 10-html-basics
-  - file: 11-html-tags
-  - file: 12-css-basics
-  - file: 13-css-loading
-  - file: 14-css-id-class
-  - file: 15-properties
-  - file: 16-selectors
-  - file: 17-transitions
-  - file: 18-other-html-tags
+  - file: 10-html-basics-nb
+  - file: 11-html-tags-nb
+  - file: 12-css-basics-nb
+  - file: 13-css-loading-nb
+  - file: 14-css-id-class-nb
+  - file: 15-properties-nb
+  - file: 16-selectors-nb
+  - file: 17-transitions-nb
+  - file: 18-other-html-tags-nb
 - caption: "Course 2 - CSS layouts"
   chapters:
-  - file: 20-html-responsive
-  - file: 21-grid-layout
-  - file: 22-css-media-rules
-  - file: 23-flex-layout
-  - file: 24-in-flow-out-of-flow
-  - file: 26-exo-cv
+  - file: 20-html-responsive-nb
+  - file: 21-grid-layout-nb
+  - file: 22-css-media-rules-nb
+  - file: 23-flex-layout-nb
+  - file: 24-in-flow-out-of-flow-nb
+  - file: 26-exo-cv-nb
 - caption: "Course 3 - a bit of JS"
   chapters:
-  - file: 30-js-by-examples
-  - file: 31-js-language-overview
-  - file: 32-builtin-types
-  - file: 33-manipulating-the-DOM
+  - file: 30-js-by-examples-nb
+  - file: 31-js-language-overview-nb
+  - file: 32-builtin-types-nb
+  - file: 33-manipulating-the-DOM-nb
 # there is no 34- notebook for historical reasons
-  - file: 35-events-and-callbacks
-  - file: 36-async
+  - file: 35-events-and-callbacks-nb
+  - file: 36-async-nb
 - caption: "Practicing JS"
   chapters:
-  - file: 40-general-tips
-  - file: 41-exo-resume-blinking
-  - file: 42-exo-calculator
-  - file: 43-exo-spinning-wheel
-  - file: 44-exos-miscell
-  - file: 45-exo-grid
-  - file: 46-exo-xkcd
+  - file: 40-general-tips-nb
+  - file: 41-exo-resume-blinking-nb
+  - file: 42-exo-calculator-nb
+  - file: 43-exo-spinning-wheel-nb
+  - file: 44-exos-miscell-nb
+  - file: 45-exo-grid-nb
+  - file: 46-exo-xkcd-nb
   - file: 47-exo-react
 - caption: "Optional content"
   chapters:
-  - file: 51-jquery
-  - file: 52-bootstrap
+  - file: 51-jquery-nb
+  - file: 52-bootstrap-nb
