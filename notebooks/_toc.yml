@@ -1,49 +1,21 @@
 format: jb-book
-root: 01-motivation-nb
 parts:
-- caption: "Intro - Web frontend"
+- caption: intro - Web frontend
   chapters:
-  - file: 02-eco-system-nb
-  - file: 03-online-tools-nb
-- caption: "Course 1 - HTML & CSS basics"
+  - glob: 0*-nb
+- caption: HTML & CSS basics
   chapters:
-  - file: 10-html-basics-nb
-  - file: 11-html-tags-nb
-  - file: 12-css-basics-nb
-  - file: 13-css-loading-nb
-  - file: 14-css-id-class-nb
-  - file: 15-properties-nb
-  - file: 16-selectors-nb
-  - file: 17-transitions-nb
-  - file: 18-other-html-tags-nb
-- caption: "Course 2 - CSS layouts"
+  - glob: 1*-nb
+- caption: layout with CSS
   chapters:
-  - file: 20-html-responsive-nb
-  - file: 21-grid-layout-nb
-  - file: 22-css-media-rules-nb
-  - file: 23-flex-layout-nb
-  - file: 24-in-flow-out-of-flow-nb
-  - file: 26-exo-cv-nb
-- caption: "Course 3 - a bit of JS"
+  - glob: 2*-nb
+- caption: intro to JS
   chapters:
-  - file: 30-js-by-examples-nb
-  - file: 31-js-language-overview-nb
-  - file: 32-builtin-types-nb
-  - file: 33-manipulating-the-DOM-nb
-# there is no 34- notebook for historical reasons
-  - file: 35-events-and-callbacks-nb
-  - file: 36-async-nb
-- caption: "Practicing JS"
+  - glob: 3*-nb
+- caption: practising JS
   chapters:
-  - file: 40-general-tips-nb
-  - file: 41-exo-resume-blinking-nb
-  - file: 42-exo-calculator-nb
-  - file: 43-exo-spinning-wheel-nb
-  - file: 44-exos-miscell-nb
-  - file: 45-exo-grid-nb
-  - file: 46-exo-xkcd-nb
-  - file: 47-exo-react
-- caption: "Optional content"
+  - glob: 4*-nb
+- caption: optional content
   chapters:
-  - file: 51-jquery-nb
-  - file: 52-bootstrap-nb
+  - glob: 5*-nb
+root: 01-motivation-nb

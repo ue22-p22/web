@@ -1,0 +1,10 @@
+
+# update the jb toc from nbhosting
+toc: _toc.yml
+
+_toc.yml: ../.nbhosting/nbhosting.yaml
+    echo WARNING: the nbh-to-jb-toc.py script needs a tweak
+    echo WARNING: to allow to rewrite notebooks/ into void
+    echo WARNING: which is not needed in flotpython-exos where
+    echo WARNING: this script was first used
+	$$HOME/git/nbhosting/scripts/nbh-to-jb-toc.py $< $@

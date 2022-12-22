@@ -8,7 +8,6 @@ include Makefile.style
 NBNORMFLAGS = -l1 -L 'licen[cs]e' -s3 -S 'js/tools' -t h1
 include Makefile.norm
 
-book:
-	jupyter-book build .
+include Makefile.book
 
-.PHONY: all book
+include Makefile.toc

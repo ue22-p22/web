@@ -3,24 +3,24 @@ tracks:
   id: web
   name: 'html + css + js'
   sections:
-  - name: introduction
+  - name: intro - Web frontend
     notebooks:
-    - "notebooks/0*.md"
-  - name: "HTML\_basics"
+    - "notebooks/0*-nb.md"
+  - name: "HTML & CSS basics"
     notebooks:
-    - "notebooks/1*.md"
+    - "notebooks/1*-nb.md"
   - name: layout with CSS
     notebooks:
-    - "notebooks/2*.md"
+    - "notebooks/2*-nb.md"
   - name: intro to JS
     notebooks:
-    - "notebooks/3*.md"
+    - "notebooks/3*-nb.md"
   - name: practising JS
     notebooks:
-    - "notebooks/4*.md"
+    - "notebooks/4*-nb.md"
   - name: optional content
     notebooks:
-    - "notebooks/5*.md"
+    - "notebooks/5*-nb.md"
 
 static-mappings:
 - source: media
