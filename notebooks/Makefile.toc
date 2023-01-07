@@ -1,10 +1,11 @@
-
 # update the jb toc from nbhosting
 toc: _toc.yml
 
+ifeq ($(TOCDIR),)
+TOCDIR = notebooks
+endif
+
+# update jupyter book toc from the nbhosting one
+# (need to remove the 'notebooks/' part from the nbhosting toc)
 _toc.yml: ../.nbhosting/nbhosting.yaml
-    echo WARNING: the nbh-to-jb-toc.py script needs a tweak
-    echo WARNING: to allow to rewrite notebooks/ into void
-    echo WARNING: which is not needed in flotpython-exos where
-    echo WARNING: this script was first used
-	$$HOME/git/nbhosting/scripts/nbh-to-jb-toc.py $< $@
+	$$HOME/git/nbhosting/scripts/nbh-to-jb-toc.py -p '$(TOCDIR)/->' $< $@
