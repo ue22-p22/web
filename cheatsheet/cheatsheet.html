@@ -92,15 +92,15 @@
 
 
       <div class="bullet">
-        <code class="code">my_div = document.createElement('div');</code>
-        <span class="what">create a <code>div</code>element; <b>warning</b>
+        <code class="code">my_div = document.createElement('div')</code>
+        <span class="what">create a <code>div</code>element <b>warning</b>
           <br>it still needs to be inserted somewhere !
         </span>
       </div>
 
       <div class="bullet bullet-sep">
-        <code class="code"><pre>const svgNS = "http://www.w3.org/2000/svg";
-my_circle.createElementNS(svgNS, 'circle');</pre></code>
+        <code class="code"><pre>const svgNS = "http://www.w3.org/2000/svg"
+my_circle = document.createElementNS(svgNS, 'circle')</pre></code>
         <span class="what">same but for the tags
           that belong
           <br>in the SVG family (svg itself, circle, rect, etc...)
@@ -109,7 +109,7 @@ my_circle.createElementNS(svgNS, 'circle');</pre></code>
       </div>
 
       <div class="bullet">
-        <code class="code">father.append(my_div);</code>
+        <code class="code">father.append(my_div)</code>
         <span class="what">inserts element <code>my_div</code>
           as the last child of element <code>parent</code>
           <br>this is how the newly-created element can become<br>
@@ -128,8 +128,7 @@ my_circle.createElementNS(svgNS, 'circle');</pre></code>
       </div>
 
       <div class="bullet">
-        <code class="code">for (let element of document.querySelectorAll(selector))
-        </code>
+        <code class="code">for (let element of document.querySelectorAll(selector))</code>
         <span class="what">iterates over a NodeList or HTMLCollection,
           as returned by either <code>QuerySelectorAll</code> or
           <code>getElementsByClassName</code>
@@ -146,12 +145,12 @@ my_circle.createElementNS(svgNS, 'circle');</pre></code>
           <code>a_function</code> denotes a function object</code></span></div>
 
       <div class="bullet">
-        <code class="code">window.addEventListener("load", a_function);</code>
+        <code class="code">window.addEventListener("load", a_function)</code>
         <span class="what">registers <code>a_function()</code> to be triggered when document is fully loaded</span>
       </div>
 
       <div class="bullet">
-        <code class="code">elt.addEventListener("click", a_function);</code>
+        <code class="code">elt.addEventListener("click", a_function)</code>
         <span class="what">will cause <code>a_function(event)</code> to be called
           <br>each time a user clicks on that element
           <br>other event names are exposed as well</code>
@@ -160,13 +159,13 @@ my_circle.createElementNS(svgNS, 'circle');</pre></code>
       </div>
 
       <div class="bullet">
-        <code class="code">setInterval(a_function, 400);</code>
+        <code class="code">setInterval(a_function, 400)</code>
         <span class="what">causes <code>a_function()</code> to be called
           <br> every 400ms <b>forever</b></span>
       </div>
 
       <div class="bullet bullet-sep">
-        <code class="code">setTimeout(a_function, 400);</code>
+        <code class="code">setTimeout(a_function, 400)</code>
         <span class="what">causes <code>a_function()</code> to be called<br><b>once</b> in 400ms</span>
       </div>
 
@@ -176,7 +175,7 @@ my_circle.createElementNS(svgNS, 'circle');</pre></code>
       <div class="title">using events
         <span class="normal">assume you have attached a callback with, say,
           <code>elt.addEventListener('click', (event) => {...})</code>
-          <br style="padding-top:6px">here's how to use the <code>event</code> object
+          <br style="padding-top:6px">here's how to use the <code>event</code> object inside the callback
         </span>
       </div>
       <div class="bullet">
@@ -186,3 +185,4 @@ my_circle.createElementNS(svgNS, 'circle');</pre></code>
     </div>
   </div>
 </body>
+
