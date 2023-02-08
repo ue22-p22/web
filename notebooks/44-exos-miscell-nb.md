@@ -74,7 +74,7 @@ tools.sample_from_stem("../samples/44-fibonacci/fibonacci",
 
 +++
 
-* clone the github repo from https://github.com/patorjk/JavaScript-Snake.git
+* clone the github repo from <https://github.com/patorjk/JavaScript-Snake.git>
 * open `index.html` in your browser - check that the game works for you
 * could you read the code ?  
   if not what percentage can you read ?

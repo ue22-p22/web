@@ -332,7 +332,7 @@ ok()
 
 ## see also
 
-* thorough article on closures https://javascript.info/closure
+* thorough article on closures <https://javascript.info/closure>
 
 +++
 

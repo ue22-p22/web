@@ -78,11 +78,11 @@ it is pretty easy to get started with, if you [follow the tuto](https://threejs.
 ### a selection
 
 * the gallery of examples  
-  https://threejs.org/examples/#webgl_animation_cloth (you can move around with the mouse)
+  <https://threejs.org/examples/#webgl_animation_cloth> (you can move around with the mouse)
 
 * and tons of others,  
-  * https://mixedreality.mozilla.org/hello-webxr/
-  * http://chandlerprall.github.io/Physijs/examples/jenga.html
+  * <https://mixedreality.mozilla.org/hello-webxr/>
+  * <http://chandlerprall.github.io/Physijs/examples/jenga.html>
 
 +++ {"slideshow": {"slide_type": ""}}
 
@@ -90,7 +90,7 @@ it is pretty easy to get started with, if you [follow the tuto](https://threejs.
 
 +++
 
-`d3.js` is a library for dataviz, its website is on https://d3js.org/
+`d3.js` is a library for dataviz, its website is on <https://d3js.org/>
 
 I strongly recommend a thorough visit of their [Gallery of examples](https://github.com/d3/d3/wiki/Gallery), where you will see mind-boggling examples of all kinds of ways to transform data into moving pixels
 

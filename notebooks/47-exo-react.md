@@ -241,7 +241,7 @@ the new thing here is the use of SASS instead of CSS
 ### not CSS, but SASS
 
 CSS is sometimes considered tedious and boring; so there are a few alternatives
-around, here we've picked SASS - see https://sass-lang.com/guide for more
+around, here we've picked SASS - see <https://sass-lang.com/guide> for more
 details (it could have been any other CSS preprocessor)
 
 the most visible differences are
@@ -250,7 +250,7 @@ the most visible differences are
   that is meaningful
 
 * you can use nesting (see the 'Nesting' section in
-  https://sass-lang.com/guide), which makes the overall presentation easier to grasp
+  <https://sass-lang.com/guide>), which makes the overall presentation easier to grasp
 
 * support for variables; it's also in plain CSS, but in the old days it was not
 * and a lot more; but on the other hand, that's not the point here that much

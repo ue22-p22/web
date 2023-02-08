@@ -421,7 +421,7 @@ several formats are supported to describe a color :
 
 * like always, many online sites can help pick a decent color palette
 * personnally I like this one  
-  https://colorhunt.co/palette
+  <https://colorhunt.co/palette>
 
 +++ {"slideshow": {"slide_type": ""}}
 
@@ -457,7 +457,7 @@ not often needed, but typical use case is
 * so the borders and paddings *push content inside*
 * then use `box-sizing: border-box`
 
-see also https://css-tricks.com/box-sizing/
+see also <https://css-tricks.com/box-sizing/>
 that has a live demo
 
 +++ {"slideshow": {"slide_type": "slide"}}

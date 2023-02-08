@@ -72,7 +72,7 @@ tools.sample_from_stem("../samples/26-monarque/resume", {sources_show: false})
 
 * previous example can be found together with the course   
   in the git repo
-  https://github.com/ue22-p21/web-intro
+  <https://github.com/ue22-p21/web-intro>
 
 * specifically in the `samples/26-monarque` folder
 

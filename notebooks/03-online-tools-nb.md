@@ -52,7 +52,7 @@ tools = require('../js/tools'); tools.init()
 
 ## codepen
 
-take a quick look at https://codepen.io/spark
+take a quick look at <https://codepen.io/spark>
 for great examples
 (may require log in)
 

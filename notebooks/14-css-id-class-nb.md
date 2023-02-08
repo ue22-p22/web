@@ -410,12 +410,12 @@ body {
 +++
 
 * list of properties and terms
-  * https://www.w3schools.com/cssref/
+  * <https://www.w3schools.com/cssref/>
 
 * reference (hard to read) : detailed description of cascading and inheritance
-  * https://www.w3.org/TR/css-cascade-3/
+  * <https://www.w3.org/TR/css-cascade-3/>
 
 +++
 
 * more readable explanations on specificity :
-  * https://pawelgrzybek.com/css-specificity-explained/
+  * <https://pawelgrzybek.com/css-specificity-explained/>

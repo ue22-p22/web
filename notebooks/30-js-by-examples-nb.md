@@ -109,7 +109,7 @@ when loading the simplest possible page, contents get scattered into packets, so
 in the case of a page  
 that has **a nested page**  
 (e.g. a CSS style)  
-there are 2 http requests at work
+there are 2 HTTP requests at work
 
 +++ {"cell_style": "split"}
 
