@@ -26,12 +26,28 @@ function hash(word) {
 }
 
 // helper to compute default height
-function number_lines(code) {
+function number_lines(code_s) {
   let max = 0
-  for (code of Object.values(code)) {
+  for (let code of Object.values(code_s)) {
     if (code)
       max = Math.max(max, code.split(/\r\n|\r|\n/).length)
   }
+  return max
+}
+
+// longer line in one code
+function max_line_width(text) {
+  if ( ! text) return 0
+  let max = 0
+  for (let line of text.split(/\r\n|\r|\n/))
+    max = Math.max(max, line.length)
+  return max
+}
+// longer line in an array of code
+function max_line_width_s(code_s) {
+  let max = 0
+  for (let code of Object.values(code_s))
+    max = Math.max(max, max_line_width(code))
   return max
 }
 
@@ -106,14 +122,24 @@ function sample_from_strings(code, options) {
   if (html_show) formats.push('html')
   if (css_show) formats.push('css')
   if (js_show) formats.push('js')
-  if (formats.indexOf(start_with) < 0) start_with = formats[0]
+  if (formats.indexOf(start_with) < 0)
+    start_with = formats[0]
 
-  let width = options.width || "35em"
   // default height:
   // header is approx. 4 lignes
-  let height = options.height || (sources_show ? `${number_lines(code)+4}em` : "300px")
+  const default_height = (sources_show ? `${number_lines(code)+4}em` : "300px")
+  let height = options.height || default_height
+
+  // default width
+  // compute from content, but cap to - arbitrarily - 55 chars
+  const computed_width = Math.min(max_line_width_s(code), 55)
+  // here again we need more space for the decoration
+  const default_width = (sources_show ? `${computed_width+8}ch` : "400px")
+  let width = options.width || default_width
   let min_width = options.min_width || csslength_fraction(width, 0.5)
   let min_height = options.min_height || csslength_fraction(height, 0.5)
+
+  const output_min_width = options.output_min_width || "300px"
 
   let id = options.id || hash(html)
 
@@ -152,6 +178,9 @@ function sample_from_strings(code, options) {
 		#btns_right_${id} {
 			align-items: center;
 		}
+    #output_${id} {
+      min-width: ${output_min_width}
+    }
 	</style>
 	<div style="display: grid; grid-template-columns: ${output_show ? 'auto 1fr' : '1fr'}; grid-template-rows: auto 1fr;">
     <div id="btns_left_${id}"
@@ -163,7 +192,7 @@ function sample_from_strings(code, options) {
              overflow: auto; resize: both; z-index: 100; ${width_style}; ${height_style};" >
 	  ${textareas}
 	  </div>
-	  <div style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr;" id="output_${id}"></div>
+	  <div id="output_${id}" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr;"></div>
 	</div>
 	<script>
 
