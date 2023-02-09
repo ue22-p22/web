@@ -199,11 +199,11 @@ you can use that in a pure-ASCII source, and  write either
 
 +++ {"cell_style": "split"}
 
-<img src="media/unicode-celsius.png" width="350px">
+![](media/unicode-celsius.png)
 
 +++ {"cell_style": "split"}
 
-<img src="media/convert-unicode.png" width="350px">
+![](media/convert-unicode.png)
 
 +++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
 
@@ -516,7 +516,7 @@ background_css = `* {
     border: 1px solid red;
 }
 div {
-    background: url(media/texture.png);
+    background: url(_static/texture.png);
     margin: 50px;
 }
 section {
