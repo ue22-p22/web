@@ -141,7 +141,11 @@ div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h4:first-child {
 div.CodeMirror-lines div.CodeMirror-code pre.CodeMirror-line {
     border: unset;
     border-radius: unset;
-    font-size: 0.9em;
+    /* do NOT shrink down, this would ruin the computation of a
+       decent default width for our samples
+       if needed change the size upper in the tree
+       */
+    font-size: 1em;
     line-height: 1.1em;
     background-color: unset;
 }
