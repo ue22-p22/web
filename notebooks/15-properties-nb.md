@@ -131,11 +131,18 @@ tools.sample_from_stem("../samples/15-font-demo")
   ```html
   <span class="fas fa-mobile-alt">
   ```
-  that I [found in this page](https://fontawesome.com/v5.15/icons/mobile-alt?style=solid) after browsing [the fontawesome catalog](https://fontawesome.com/v5.15/icons)
+
+  that I found [browsing the fontawesome catalog](https://fontawesome.com/v6/icons)
 
 * these symbols are more convenient than bitmap pictures  
   in particular can be safely scaled / colorized
   using CSS
+
+<div class=note>
+
+**BEWARE** the names may change with the version of *fontawesome*, and so of course you must pick a name that is defined in the version of fontawesome that you have imported in your page
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
