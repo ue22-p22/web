@@ -45,7 +45,7 @@ make sure to evaluate this cell above !
 * but how much time do you spend on  
   facebook, twitter, what'sapp, … ?
 
-* as of 2022, **everything** runs on the Web
+* as of 202x, **everything** runs on the Web
 * so this simply **cannot be ignored**
 
 +++ {"slideshow": {"slide_type": "slide"}}

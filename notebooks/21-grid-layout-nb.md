@@ -42,7 +42,7 @@ tools = require('../js/tools'); tools.init()
   * the `<table>` tag has long been overused  
     to address that sort of needs
 
-  * **do not use** `<table>`'s for that in 2022 !
+  * **do not use** `<table>`'s for that in 202x !
 * `grid` is now available in [all popular modern browsers](https://caniuse.com/#feat=css-grid)
 
 +++ {"slideshow": {"slide_type": "slide"}}
