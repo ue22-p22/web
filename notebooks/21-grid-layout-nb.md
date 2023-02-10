@@ -1,5 +1,4 @@
 ---
-celltoolbar: Slideshow
 jupytext:
   cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
   formats: md:myst
@@ -73,19 +72,18 @@ slideshow:
   slide_type: slide
 tags: [hide_input]
 ---
-grid1_html = `<div class="container">
-  <div class="item-a">the header
-    <div>blabla</div>
+grid_html = `<div class="container">
+  <div id="item-a">
+    the header<br>blabla
   </div>
-  <div class="item-b">main area
-     <div>blabla</div>
-     <div>blabla</div>
+  <div id="item-b">
+    main area<br>blabla<br>blabla
   </div>
-  <div class="item-c">side bar
-     <div>blabla</div>
+  <div id="item-c">
+    side bar<br>blabla
   </div>
-  <div class="item-d">a footer
-     <div>blabla</div>
+  <div id="item-d">
+    a footer<br>blabla
   </div>
 </div>`
 
@@ -99,23 +97,23 @@ grid1_css = `.container {
     "footer footer footer sidebar";
 }
 
-.item-a {
+#item-a {
     grid-area: header;
     background-color: #ffba5a;
 }
-.item-b {
+#item-b {
     grid-area: main;
     background-color: #3282b8;
 }
-.item-c {
+#item-c {
     grid-area: sidebar;
     background-color: #db3056;
 }
-.item-d {
+#item-d {
     grid-area: footer;
     background-color: #7fa998;
 }`
-tools.sample_from_strings({html: grid1_html, css: grid1_css}, {id: 'grid-1'})
+tools.sample_from_strings({html: grid_html, css: grid1_css}, {id: 'grid-1', start_with: 'css'})
 ```
 
 +++ {"cell_style": "split", "slideshow": {"slide_type": "slide"}}
@@ -171,22 +169,6 @@ slideshow:
   slide_type: slide
 tags: [hide_input]
 ---
-grid2_html = `<div class="container">
-  <div class="item-a">the header
-    <div>blabla</div>
-  </div>
-  <div class="item-b">main area
-    <div>blabla</div>
-    <div>blabla</div>
-  </div>
-  <div class="item-c">side bar
-    <div>blabla</div>
-  </div>
-  <div class="item-d">a footer
-    <div>blabla</div>
-  </div>
-</div>`
-
 grid2_css = `.container {
   display: grid;
   grid-template-columns:
@@ -197,24 +179,24 @@ grid2_css = `.container {
     "footer footer footer footer";
 }
 
-.item-a {
+#item-a {
     grid-area: header;
     background-color: #ffba5a;
 }
-.item-b {
+#item-b {
     grid-area: main;
     background-color: #3282b8;
 }
-.item-c {
+#item-c {
     grid-area: sidebar;
     background-color: #db3056;
 }
-.item-d {
+#item-d {
     grid-area: footer;
     background-color: #7fa998;
 }`
 
-tools.sample_from_strings({html: grid2_html, css: grid2_css}, {id: 'grid-2', start_with: 'css'})
+tools.sample_from_strings({html: grid_html, css: grid2_css}, {id: 'grid-2', start_with: 'css'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -243,12 +225,6 @@ slideshow:
   slide_type: slide
 tags: [hide_input]
 ---
-grid3_html = `<div class="container">
-<div class="item-a">the header</div>
-<div class="item-b">main area</div>
-<div class="item-c">side bar</div>
-<div class="item-d">a footer</div>
-</div>`;
 grid3_css = `.container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -260,24 +236,24 @@ grid3_css = `.container {
   height: 100vh;
 }
 
-.item-a {
+#item-a {
     grid-area: header;
     background-color: #ffba5a;
 }
-.item-b {
+#item-b {
     grid-area: main;
     background-color: #3282b8;
 }
-.item-c {
+#item-c {
     grid-area: sidebar;
     background-color: #db3056;
 }
-.item-d {
+#item-d {
     grid-area: footer;
     background-color: #7fa998;
 }
-`;
-tools.sample_from_strings({html: grid3_html, css: grid3_css}, {start_with: 'css'})
+`
+tools.sample_from_strings({html: grid_html, css: grid3_css}, {start_with: 'css'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
