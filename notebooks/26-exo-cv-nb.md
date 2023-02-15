@@ -101,6 +101,7 @@ assuming your github is `myid`
 
 * create a repo on github `myid/myid.github.io`
 * make it public
+* name the entry point as `index.html`
 * your resume will be available at  
   `https://myid.github.io/`
 
