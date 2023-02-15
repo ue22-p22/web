@@ -40,8 +40,9 @@ tools = require('../js/tools'); tools.init()
 * historically a challenging task
   * the `<table>` tag has long been overused  
     to address that sort of needs
-
-  * **do not use** `<table>`'s for that in 202x !
+  * twitter's `bootstrap` has been used for this too at some point
+  * **do not use** these tools for that in 202x !
+  
 * `grid` is now available in [all popular modern browsers](https://caniuse.com/#feat=css-grid)
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -67,10 +68,10 @@ next slide demontrates this CSS:
 
 ```{code-cell}
 ---
-hide_input: true
+hide_input: false
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: []
 ---
 grid_html = `<div class="container">
   <div id="item-a">
@@ -164,10 +165,10 @@ mostly the same, but :
 
 ```{code-cell}
 ---
-hide_input: true
+hide_input: false
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: []
 ---
 grid2_css = `.container {
   display: grid;
@@ -220,10 +221,10 @@ in the previous examples :
 
 ```{code-cell}
 ---
-hide_input: true
+hide_input: false
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: []
 ---
 grid3_css = `.container {
   display: grid;
@@ -310,8 +311,8 @@ you may also complete this game  <https://cssgridgarden.com/> at home if you fee
 ## auto-sizing example
 
 ```{code-cell}
-:hide_input: true
-:tags: [level_intermediate, hide_input]
+:hide_input: false
+:tags: [level_intermediate]
 
 autosize_html = `<div class="container">
   <section>
