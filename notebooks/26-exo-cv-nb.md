@@ -115,4 +115,4 @@ see <https://pages.github.com/> for details
 
 see a **much more** elaborated example below ;)
 
-http://www.rleonardi.com/interactive-resume/
+<http://www.rleonardi.com/interactive-resume/>
