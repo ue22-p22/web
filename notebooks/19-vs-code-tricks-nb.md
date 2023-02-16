@@ -39,9 +39,14 @@ tools = require('../js/tools'); tools.init()
 
 with this command (use the palette to reach it) you can ask vs-code to re-format the whole document
 
-**tip**: it may be wise to stage your file first; you can also easily undo of course
+<div class=note>
+    
+**tip**: it may be wise to stage your file first  
+you can also easily undo of course
+    
+</div>
 
-+++
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## `Indent Line` and `Outdent Line`
 
@@ -95,8 +100,34 @@ you can easily wrap a piece of html inside a newly-created tag
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+## multiple cursors
+
++++
+
+you can set multiple cursors, and then everything you type is done multiple times at once
+
+several ways to use this feature
+
+* manually add/remove cursors using `⌥ click` (⌥ is Option)
+* use `⌥⌘↓` or `⌥⌘↑` to add more cursors up or down
+* select a block and use `Add cursors to Line Ends` 
+  to get one cursor on each of the selected lines
+
+for more info, check out this page <https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor>
+
+and/or on youtube, search for `vscode multiple cursor` 
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 ## keyboard shortcuts
 
 +++
 
-it is easy to assign these functions to a keyboard shortcut, search in the vs-code documentation, or ask google or chatgpt
+it is easy to assign these functions to a keyboard shortcut
+
+* search the function in the palette
+* move the mouse over the function name  
+  a gear icon `⚙` appears on the right hand side
+* click that
+
+and/or search in the vs-code documentation, or ask google or chatgpt
