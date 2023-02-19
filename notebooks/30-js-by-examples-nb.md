@@ -125,7 +125,7 @@ Devel Tools can visualize the actual loading workflow
 
 +++
 
-<img src="media/loading-3-google.png" width="1000px">
+![](media/loading-3-google.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
