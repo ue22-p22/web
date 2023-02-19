@@ -1,11 +1,13 @@
 h3 {
     text-align: center;
 }
-#container_pythagore {
+
+#container-pythagore {
     margin: auto;
+    font-family: 'Courier New', Courier, monospace
 }
 
-#container_pythagore svg {
+#container-pythagore svg {
     margin: 30px;
     padding: 3px;
     border: solid 1px;
