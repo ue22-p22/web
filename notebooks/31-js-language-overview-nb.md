@@ -41,7 +41,7 @@ tools = require('../js/tools'); tools.init()
 
 * from now on, we will very briefly cover **some** features of the language
 * for a more thorough study, refer to [this excellent tutorial on javascript.info](https://javascript.info/)
-* we will point at a selection of fragments as we go
+* as we go, we will point at a selection of chapters in that tuto
 * students interested should probably read it through
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -101,21 +101,21 @@ console.log(1, "two", [3, "four"])
 // but must be repeated on each line
 
 // you may end all statements with a ;
-a = 10;
+a = 10
 
 // but that's not mandatory
 b = a * a
 
 /* this is another comment
    everything including newlines
-   is ignored until matching
+   is ignored until the matching
 */
 ```
 
 <div class="note">
 
 as we will see below, real code should **always** declare variables,  
-so this would read `let a = 10;` instead, but let us keep it simple for now
+so this would read `let a = 10` instead, but let us keep it simple for now
 
 </span>
 
@@ -126,14 +126,14 @@ so this would read `let a = 10;` instead, but let us keep it simple for now
 +++
 
 * `if` and `while` statements are similar to C
-* `for` are a little more awkward - more on iterations as we go
+* `for` are a little more awkward - we'll come back to that
 
 ```{code-cell}
 :cell_style: split
 
 // conditional if
 if (a == 10) {
-    console.log("YES 10");
+    console.log("YES 10")
 } else if (a == 12) {
     //
 } else {
@@ -145,8 +145,8 @@ if (a == 10) {
 :cell_style: split
 
 while (a >= 5) {
-    console.log(a);
-    a -= 3;
+    console.log(a)
+    a -= 3
 }
 ```
 
@@ -157,7 +157,7 @@ while (a >= 5) {
 +++ {"cell_style": "split"}
 
 the switch statement in JavaScript
-is similar to the ones in C++ and Java
+is similar to the ones in C++ and Java  
 it will branch your control flow into a
 location that depends on the subject's value
 
@@ -168,16 +168,16 @@ location that depends on the subject's value
 
 switch (a) {
     case 0:
-        console.log("ZERO");
-        break;
+        console.log("ZERO")
+        break
     case 10:
-        console.log("TEN");
-        break;
+        console.log("TEN")
+        break
     case 20:
-        console.log("TWENTY");
-        break;
+        console.log("TWENTY")
+        break
     default:
-        console.log("NONE");
+        console.log("NONE")
 }
 ```
 
@@ -199,7 +199,7 @@ if the switch statement is new to you, please refer to this [full article on jav
 
 ```{code-cell}
 for (let i=0; i<3; i++) {
-    console.log(i);
+    console.log(i)
 }
 ```
 
@@ -225,7 +225,7 @@ n += 20
 ```{code-cell}
 :cell_style: split
 
-const s = "hello world";
+const s = "hello world"
 typeof(s)
 // we could not do this
 // s += ' john'
@@ -245,7 +245,7 @@ use `const` instead of `let` when declaring a constant variable
 // there is a form of parallel assignment
 // similar to what Python offers
 
-let [py, thon] = [10, 20];
+let [py, thon] = [10, 20]
 
 py + thon
 ```
@@ -274,16 +274,16 @@ slideshow:
 tags: [raises-exception]
 ---
 // this is a global variable
-let a = "global";
+let a = "global"
 
 function foo() {
     // this local declaration
     // hides the global variable
-    let a = "local";
-    console.log("in foo():", a);
+    let a = "local"
+    console.log("in foo():", a)
 }
 
-console.log("in global context:", a);
+console.log("in global context:", a)
 foo()
 ```
 
@@ -293,11 +293,11 @@ foo()
 
 +++
 
-* you should **always** declare your variables with **`let`**
-  * even though (a lot of) legacy code does not
-  * or uses `var` instead - which is not recommended
+* (a lot of) legacy code uses the ~~`var`~~ construct  
+  to declare variables - but **this is dangerous !!**
 
-* for new code, just **always** use `let` (or `const`)
+* you should **always** declare your variables  
+  with **`let`** or **`const`**
 
 +++
 
@@ -323,16 +323,16 @@ it uses a toplevel `let`
 ```{code-cell}
 :tags: [raises-exception]
 
-let y = "outermost";
+let y = "outermost"
 {
-    let y = "intermediate";
+    let y = "intermediate"
     {
-        let y = "innermost";
-        console.log("level 2", y);
+        let y = "innermost"
+        console.log("level 2", y)
     }
-    console.log("level 1", y);
+    console.log("level 1", y)
 }
-console.log("level 0", y);
+console.log("level 0", y)
 ```
 
 <div class="note">
@@ -359,10 +359,28 @@ this is like in C/C++, and unlike Python where a variable's scope is the whole f
 
 <div class="note">
 
-surprising as it may be, the notebook's JavaScript engine is an instance of `node`, and so is not **browser-related**  
-so we could not inspect the `document` or `window` variables in this context; of course you can do so from the browser's console though
+surprising as it may be, the notebook's JavaScript engine is an instance of `node.js`,  
+and so is not **browser-related**, so we could not inspect 
+the `document` or `window` variables here  
+of course you can do so from the browser's console though
 
 </div>
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## formatting
+
+```{code-cell}
+let [x, y] = [100, 200]
+```
+
+```{code-cell}
+// the `` is very similar to Python's f-strings
+// except that you use ${expression} 
+// note the extra $ as compared to Python
+
+console.log(`x = ${x} and x+y = ${x+y}`)
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -374,11 +392,24 @@ so we could not inspect the `document` or `window` variables in this context; of
 * we have seen examples already
 
 ```{code-cell}
+// the old way
+
 function foo(x, y) {
-    console.log(x, '+', y, '=', x+y);
+    console.log(`${x} + ${y} = ${x+y}`)
 }
 
 foo(10, 20)
+```
+
+```{code-cell}
+// a more fashionable way
+
+const bar = (x, y) => console.log(`${x} + ${y} = ${x+y}`)
+
+// can use { } if the code is more than one-line
+const bar2 = (x, y) => { console.log(`${x} + ${y} = ${x+y}`) }
+
+bar(10, 20)
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -391,12 +422,11 @@ like in Python:
 
 * **objects** are typed
 * but **variables** are not bound to a given type
-* members variable of object can change over time
 
 ```{code-cell}
 function foo(x, y) {
-    console.log('x is a ', typeof(x));
-    console.log(x, '+', y, '=', x+y);
+    console.log('x is a ', typeof(x))
+    console.log(`${x} + ${y} = ${x+y}`)
 }
 
 // like in Python, function arguments
@@ -415,7 +445,7 @@ foo('abc', 'def')
 
 ```{code-cell}
 function fuzzy(x, y, z) {
-    console.log("x = ", x, " y = ", y, " z = ", z);
+    console.log(`x = ${x}  y = ${y} z = ${z}`)
 }
 fuzzy(10)
 fuzzy(10, 20)
@@ -437,7 +467,7 @@ fuzzy("abc", "def", "ghi")
 
 ```{code-cell}
 function show_this() {
-    console.log(typeof(this));
+    console.log(typeof(this))
 }
 
 show_this()
@@ -457,9 +487,9 @@ show_this()
 ```{code-cell}
 try {
     // referring to an unknown variable
-    unknown;
+    unknown
 } catch (err) {
-    console.log(`OOPS name=${err.name}, message=${err.message}`);
+    console.log(`OOPS name=${err.name}, message=${err.message}`)
 }
 ```
 
@@ -478,8 +508,8 @@ class Vector {
     // just like Python's __init__
     // NO NEED to pass 'self' in JavaScript
     constructor(x, y) {
-        this.x = x;
-        this.y = y;
+        this.x = x
+        this.y = y
     }
 
     // same for a regular method
@@ -515,18 +545,6 @@ the same `Vector` class twice in the same scope
 * objects get created with `new Vector()` - Java and C++ style
   * not just plain Python-style `Vector()`
 
-+++
-
-<div class="note">
-
-also notice the string-formatting syntax
-<code>`text ${variable}`</code>
-similar to Python's f-strings  
-except that an expression is inserted with <code>${expr}</code>  
-and remember with f-strings it was just <code>{expr}</code>
-
-</p>
-
 +++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
 
 ### properties
@@ -551,21 +569,20 @@ and remember with f-strings it was just <code>{expr}</code>
 
 class Temperature {
     constructor(temperature) {
-        this.kelvin = temperature;
+        this.kelvin = temperature
         // "set kelvin(temperature)" will be called
     }
 
     get kelvin() {
-        return this._kelvin;
+        return this._kelvin
     }
 
     set kelvin(temperature) {
         if (temperature < 0) {
-            console.log("negative");
-            return;
-            // this.kelvin will be undefined
+            console.log("negative - refusing to set")
+            return
         }
-        this._kelvin = temperature;
+        this._kelvin = temperature
 
         // we must use the hidden variable this._kelvin
         // that will store the value entered
