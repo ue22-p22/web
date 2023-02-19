@@ -12,9 +12,19 @@ parts:
 - caption: intro to JS
   chapters:
   - glob: 3*-nb
+# last minute: reordering the exos in a more progressive order
+# do not change numbering though becaus it's too intrusive
+# as we're in the middle of the course
 - caption: practising JS
   chapters:
-  - glob: 4*-nb
+  - file: 40-general-tips-nb
+  - file: 41-exo-resume-blinking-nb
+  - file: 45-exo-grid-nb
+  - file: 43-exo-spinning-wheel-nb
+  - file: 42-exo-calculator-nb
+  - file: 44-exos-miscell-nb
+  - file: 46-exo-xkcd-nb
+  - file: 47-exo-react-nb
 - caption: optional content
   chapters:
   - glob: 5*-nb
