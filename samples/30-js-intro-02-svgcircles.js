@@ -15,7 +15,7 @@ class Board {
     this.active = !this.active
   }
 
-  draw() {
+  add_random_circle() {
     // create a circle
     let c = document.createElementNS(svgNS, 'circle')
     // change its attributes
@@ -34,7 +34,7 @@ class Board {
   heart_beat() {
     console.log(`in RUN, active=${this.active}`)
     if (this.active) {
-      this.draw()
+      this.add_random_circle()
     }
   }
 

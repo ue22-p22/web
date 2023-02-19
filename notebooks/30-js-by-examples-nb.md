@@ -64,7 +64,7 @@ JavaScript
 
 <div class="note">
 
-(♡) as mentioned earlier, one can also write "regular" programs in JS using the *node.js* &nbsp;runtime
+(♡) as mentioned earlier, one can also write "regular" programs in JS using the `node.js` &nbsp;runtime
 
 </div>
 
@@ -185,7 +185,7 @@ for our use case we only need to load one fragment of code
 
 * we can also use any URL in the `src` attribute  
   to load from other folders or locations  
-  for example from `https://cdnjs.cloudflare.com/`
+  see for example <https://cdnjs.org/>
 
 +++
 
@@ -206,6 +206,12 @@ remember the slides on relative and absolute URLs
   `<script src="foo.js" defer></script>`
 
 * which is a common practice
+
+<div class="note">
+    
+we will talk about that again later on  
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -303,7 +309,8 @@ visibility of symbols (variable and function names) :
 * **global** variables `document` and `console` allow to access browser components
 * **local** variables inside `toggle` are declared with `let`  (there's a `const` too)
 * the `function toggle() ..` statement defines a **global** variable `toggle`
-* in HTML, we set the `onclick` property on `#button` it is a JavaScript fragment that refers to the global `toggle` function
+* in HTML, we set the `onclick` property on `#button`  
+  it is a JavaScript fragment that refers to the global `toggle` function
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -328,7 +335,7 @@ slideshow:
   slide_type: slide
 tags: [hide_input]
 ---
-tools.sample_from_stem("../samples/30-js-intro-02-svgcircles")
+tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",  {height: "30em"})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -338,11 +345,14 @@ tools.sample_from_stem("../samples/30-js-intro-02-svgcircles")
 * we can also define **classes** in JS
 * instances are built with `new Board(...)`  
   which in turn calls `constructor()`  
-  much alike Python's `__init__()`, without the `self` thing
-
+  much alike Python's `__init__()`
 * `the_board` is a JavaScript *object*  
   i.e. composite data keyed on `w`, `h`, etc…  
   (more on this later)
+* methods do not need to define a `self` parameter  
+  instead the object to which the method was sent  
+  can be accessed through the magical `this` variable
+  
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -381,7 +391,7 @@ tools.sample_from_stem("../samples/30-js-intro-02-svgcircles")
   * so, the `<svg>` element must have been created **beforehand**
 * we need to ensure that init code is executed **after** html elements are created
   * => this is the purpose of `load` event sent to the global `window` object
-  * The load event is fired once the entire document is loaded
+  * the load event is fired once the entire document is loaded
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -470,7 +480,8 @@ as far as Web frontend, JavaScript :
 
 * runs **in the browser**  <span style="font-size: 60%">(and also increasingly used as a regular programming language)</span>
 * **full-fledged** modern language, with objects, classes, modules…
-* Some globals are specific to web pages in the browser such as `document`, `window`, `console`
+* some globals are specific to web pages in the browser  
+  such as `document`, `window`, `console`
 * highly influenced by **asynchronicity** / reactive programming
 
 +++ {"slideshow": {"slide_type": "slide"}}
