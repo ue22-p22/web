@@ -1,6 +1,5 @@
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-
 # simple React apps
 
 in this notebook we will see 2 small React apps
@@ -32,47 +31,54 @@ the simplest way to get started is
 
 <details open><summary>you will need nodejs installed</summary>
 
-  * you can for example leverage `conda` for that
-    ```shell
-    # react-calc is just one arbitrary name
-    conda create -n react-calc -c conda-forge nodejs
-    conda activate react-calc
-    ```
+* you can for example leverage `conda` for that
 
-  * this will give you the `node` and the `npm` commands
-    ```shell
-    # to check that you're all set
-    node --version
-    npm --version
-    ```
+  ```shell
+  # react-calc is just one arbitrary name
+  conda create -n react-calc -c conda-forge nodejs
+  conda activate react-calc
+  ```
 
-  </details>
+* this will give you the `node` and the `npm` commands
+
+  ```shell
+  # to check that you're all set
+  node --version
+  npm --version
+  ```
+
+</details>
 
 <details open><summary>clone the repo, and `cd` in there</summary>
 
-  * *you know how to do this, right ?*
+* *you know how to do this, right ?*
 
-  </details>
+</details>
 
 <details open><summary>install the dependencies</summary>
 
-  * you need to run this only once, of course
-    ```shell
-    npm install
-    ```
-    which will fetch a whole bunch of libraries in the `node_modules` folder (expect several hundreds of MB..)
+* you need to run this only once, of course
 
-  </details>
+  ```shell
+  npm install
+  ```
+
+  which will fetch a whole bunch of libraries in the `node_modules` folder (expect several hundreds of MB..)
+
+</details>
 
 <details open><summary>start the development server</summary>
 
-  * to run the app in devel mode
-    ```shell
-    npm start
-    ```
-  </details>
+* to run the app in devel mode
+
+  ```shell
+  npm start
+  ```
+
+</details>
 
 <br>
+
 at that point you should have the application running in your browser (and executing in your laptop)
 
 be aware that the `npm start` command will not return: it keeps monitoring
@@ -84,7 +90,8 @@ reflects them immediately, not need to reload the page nor anything !
 
 the files of interest are mostly these (the other ones are just boilerplate that
 come with the project when you create it)
-```
+
+```shell
 ./public/
   index.html
 ./src/
@@ -102,7 +109,7 @@ come with the project when you create it)
 but wait, take a closer look, there's a large number of wtf's waiting for you
 (remember the best measurement of code quality is expressed in wtf/mn ;)
 
-![](media/wtf-per-minute.png)
+![wtf per minute](media/wtf-per-minute.png)
 
 but seriously though, here are some points of astonishment, as compared to what
 you might expect wrt html/css/js, that deserve to be outlined:
@@ -125,18 +132,21 @@ The biggest surprises are in the JS code, which is actually written in so-called
 JSX; think of it as a preprocessor that will do a pass on the contents and
 create a plain JavaScript file from that.
 
-Let us start with a quick reading of the quick intro that is here <https://reactjs.org/docs/introducing-jsx.html>
+Let us start with a quick reading of the quick intro that is here
+<https://reactjs.org/docs/introducing-jsx.html>
 
 Then look at the 2 .js files in the repo; I am sure you can guess what they do !
 You should notice at least things like
 
 * the way to import css right from the js side:
+
   ```js
   // explicit import of css
   import './App.css'
   ```
 
 * how JSX allows to mix HTML in the js side:
+
   ```js
   // some sort of mix between JS and HTML
   return (
@@ -152,6 +162,7 @@ You should notice at least things like
   makes the code written in this paradigm much more reusable
 
 * and of course a component can refer to other components, like here
+
   ```js
   // here we have a mix of actual HTML tags (in lowercase)
   // and of components tags(Button, in CamelCase)
@@ -175,6 +186,7 @@ you can also notice in the code how JS variables can be used right in the HTML
 section when mentioned between `{}`, like in the fragment just above
 
 so another very useful feature of React is `useState`; this line
+
 ```js
 tools = require('../js/tools'); tools.init()
 ```
@@ -182,6 +194,7 @@ tools = require('../js/tools'); tools.init()
 ```js
 const [counter, setCounter] = useState(0)
 ```
+
 declares 2 JS variables:
 
 * the first one `counter` being a storage variable (here initialized to 0),
@@ -195,7 +208,6 @@ updated in 2 separate locations, with one single call to `setCounter`.
 not only this is powerful, but it also efficient (under the hood React maintains
 a so-called virtual DOM, that allows it to compute the changes in memory, so it
 can only update the parts that need to be; but that's another story entirely)
-
 
 # app #2: a calculator
 
@@ -225,7 +237,8 @@ about this app:
 
 this time the code structure is a little simpler, this app does not define any
 component, so the files of interest are mostly these:
-```
+
+```shell
 ./public/
   index.html
 ./src/
