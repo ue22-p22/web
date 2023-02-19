@@ -27,7 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
-# practice - additional assignments
+# practice : additional assignments
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
