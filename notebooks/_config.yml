@@ -5,7 +5,7 @@ author: Thierry Parmentelat
 logo: media/logo.png
 
 repository:
-  url: https://github.com/ue22-p21/web-intro
+  url: https://github.com/ue22-p22/web
   branch: main
   path_to_book: notebooks
 
