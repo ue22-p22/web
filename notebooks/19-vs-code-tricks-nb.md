@@ -100,6 +100,15 @@ you can easily wrap a piece of html inside a newly-created tag
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+## matching tags
+
++++
+
+check out the extensions named "`Auto Rename Tags`"  
+with that in place, when you change e.g. a `<div>` into a `<span>`, the matching `</div>` gets renamed automatically as well
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 ## multiple cursors
 
 +++
@@ -115,7 +124,7 @@ several ways to use this feature
 
 for more info, check out this page <https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor>
 
-and/or on youtube, search for `vscode multiple cursor` 
+and/or on youtube, search for `vscode multiple cursor`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
