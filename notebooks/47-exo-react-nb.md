@@ -27,9 +27,9 @@ the git repo for this app is <https://github.com/ue22-p22/web-react-counters>
 
 ## what you'll need to know : getting started
 
-the simplest way to get started is
+the simplest way to get started is (click the arrow to see the details of each step)
 
-<details open><summary>you will need nodejs installed</summary>
+<details><summary>you will need nodejs installed</summary>
 
 * you can for example leverage `conda` for that
 
@@ -49,13 +49,13 @@ the simplest way to get started is
 
 </details>
 
-<details open><summary>clone the repo, and `cd` in there</summary>
+<details><summary>clone the repo, and <code>cd</code> in there</summary>
 
 * *you know how to do this, right ?*
 
 </details>
 
-<details open><summary>install the dependencies</summary>
+<details><summary>install the dependencies</summary>
 
 * you need to run this only once, of course
 
@@ -112,7 +112,7 @@ but wait, take a closer look, there's a large number of wtf's waiting for you
 ![wtf per minute](media/wtf-per-minute.png)
 
 but seriously though, here are some points of astonishment, as compared to what
-you might expect wrt html/css/js, that deserve to be outlined:
+you might expect with respect to html/css/js, that deserve to be outlined:
 
 ### no need to reload
 
@@ -132,7 +132,7 @@ The biggest surprises are in the JS code, which is actually written in so-called
 JSX; think of it as a preprocessor that will do a pass on the contents and
 create a plain JavaScript file from that.
 
-Let us start with a quick reading of the quick intro that is here
+Let us start with a quick reading of the overview that can be found here:
 <https://reactjs.org/docs/introducing-jsx.html>
 
 Then look at the 2 .js files in the repo; I am sure you can guess what they do !
