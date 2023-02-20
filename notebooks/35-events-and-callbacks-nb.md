@@ -111,9 +111,8 @@ this is one of the reasons why JS is so flexible/lenient with respect to argumen
 :tags: [hide_input]
 
 tools.sample_from_stem("../samples/35-events-and-callbacks-01",
-                       {separate_show: true, start_with: 'js', separate_width: "600px",
-                        // xxx: would be cool if we could say height: 'js'
-                        height: "32em"})
+                       {separate_show: true, start_with: 'js', 
+                        separate_width: "600px", height: 'js'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -131,8 +130,7 @@ notice from the example :
 * how `addEventListener()` are cascaded,
 * how we display the events with `console.log()`  
   this is useful technique for debugging / inspecting data
-
-* how we inspect the event object to display meaningful data
+* in particular we could inspect the event object to display meaningful data
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -204,9 +202,8 @@ window.addEventListener(
 :tags: [hide_input]
 
 tools.sample_from_stem("../samples/35-events-and-callbacks-02",
-                       // xxx again here we set height based on the js number of lines
                        {separate_show: true, start_with: 'js', 
-                        separate_width: "600px", height: '33em'})
+                        separate_width: "600px", height: 'js'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -218,6 +215,13 @@ tools.sample_from_stem("../samples/35-events-and-callbacks-02",
 * it is rather frequent that a callback needs to access data that sits **outside of the function context**
 * it is safe to use lexically-bound variables inside the callback
 * see the `context` variable in the example below
+
+<div class=note>
+
+the behaviour might be unexpected as we're moving outside of the notebook's comfort zone here  
+feel free to cut and paste the code into your web browser's console
+
+</div>    
 
 ```{code-cell}
 // here the 'context' variable is not visible

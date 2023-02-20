@@ -10,11 +10,6 @@
 // * require() is not available either, need to fetch from cdnjs
 // * codemirror is not available from the server and must be cdn-fetched as well
 
-// TODO:
-// (1) allow for options to contain height: 'html' (or css or js)
-// which means to use the number of lines in a specific section to compute default height
-// see e.g. notebook 35 on events and callbacks where that would be useful
-
 "use strict"
 
 function hash(word) {
@@ -125,8 +120,14 @@ function sample_from_strings(code, options) {
     start_with = formats[0]
 
   // default height:
+  let code_height = code
+  // setting height: 'js' means use the height of the js code only
+  if (['html', 'css', 'js'].includes(options.height)) {
+    code_height = [code[options.height]]
+    delete options.height
+  }
   // header is approx. 4 lignes
-  const default_height = (sources_show ? `${number_lines(code)+4}em` : "300px")
+  const default_height = (sources_show ? `${number_lines(code_height)+4}em` : "300px")
   let height = options.height || default_height
 
   // default width
