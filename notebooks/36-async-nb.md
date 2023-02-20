@@ -107,7 +107,7 @@ here's the gist of how to use promises
     note that this second argument is sometimes missing
 
 * `function_ok` is a function that consumes the output of the promise  
-  (once it is complete) and produces the output of the `.then()` call  
+  (once it is complete) and produces (returns) the output of the `.then()` call  
 
 * the `.then()` expression also returns .. a promise
   whose result is the result of `function_ok`
@@ -156,25 +156,26 @@ Promise.resolve(5)
 
 +++
 
-try this in a browser console (*):
+try this **in a browser console**
 
-+++
-
-```js
 <div class="note">
 
-(*) our JS code in Jupyter actually runs under a node.js kernel,
+our JS code in Jupyter actually runs under a `node.js` kernel,
 that does not have the `fetch()` function predefined  
 using `fetch()` would be possible of course, but requires installing additional dependencies  
-all this is out of our scope, so let's keep it simple for now, and run stuff in the browser console instead
+all this is out of our scope, so let's keep it simple for now, and **run stuff in the browser console** instead
 
 </div>
 
-```{code-cell}
-// from within the browser this is **NOT NEEDED**
-// and will even likely fail, so let's do the import
-// only if needed
++++ {"hide_input": true, "cell_style": "center"}
 
+```{code-cell}
+// this is a magic recipe to import fetch
+// useful **ONLY** if you're using node.js
+
+
+// it will even likely fail in the browser, 
+// so let's do the import only if needed
 try {
     fetch()
 } catch {
@@ -184,6 +185,10 @@ try {
 ```
 
 ```{code-cell}
+---
+slideshow:
+  slide_type: slide
+---
 // an invalid URL
 URL_broken = 'http://some-invalid/web/site'
 // a valid small DNA sample (60 kb)
