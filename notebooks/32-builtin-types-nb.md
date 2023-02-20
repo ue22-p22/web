@@ -50,7 +50,8 @@ tools = require('../js/tools'); tools.init()
 
 **NOTE** on using **notebooks**  
 as mentioned earlier, all variables should be declared with either `let` or `const`  
-however, in a notebook this is inconvenient because one **cannot declare** the **same variable twice** in the same scope  
+however, in a notebook this is inconvenient because  
+one **cannot declare** the **same variable twice** in the same scope  
 and so using `let` would prevent us from re-evaluating the same cell twice  
 in order to remind you of the necessity to declare everything  
 we will add commented-out `/*let*/` chunks when using a new variable    
@@ -80,8 +81,9 @@ we will add commented-out `/*let*/` chunks when using a new variable
 :cell_style: split
 
 // strings with ' or "
-let s1 = "abc" + 'def'
-let s2 = 'ab' + "cdef"
+
+/*let*/ s1 = "abc" + 'def'
+/*let*/ s2 = 'ab' + "cdef"
 s1 == s2
 ```
 
@@ -110,8 +112,9 @@ google for `bigint` for error-free calculus on integers - like Python's `int`
 // in anticipation
 /*let*/ object = { x: 10, y: 20}
 
-// this in Python would
+// in Python this would
 // trigger an exception
+// but not is JS
 console.log(object.z)
 ```
 
@@ -119,6 +122,7 @@ console.log(object.z)
 :cell_style: split
 
 // unlike Python
+
 3 * "abc"
 ```
 
@@ -199,10 +203,12 @@ for a deeper study :
 :cell_style: split
 
 // arrays can be heterogeous
+
 /*let*/ array1 = [1, "two"]
 
 // you can also create an
 // empty instance explicitly
+
 /*let*/ array2 = new Array()
 ```
 
@@ -231,6 +237,7 @@ array2.pop()
 :cell_style: split
 
 // use the concat method
+
 /*let*/ array = array1.concat(array2)
 array
 ```
@@ -240,6 +247,7 @@ array
 
 // and NOT addition,
 // it does NOT work like in Python
+
 array1 + array2
 ```
 
@@ -247,11 +255,14 @@ array1 + array2
 :cell_style: split
 
 // indexing starts at 0
+
 array[2]
 ```
 
 ```{code-cell}
 :cell_style: split
+
+// getting length is more OO than in Python
 
 array.length
 ```
@@ -270,6 +281,7 @@ array.length
 :cell_style: split
 
 // searching; >=0 means it is found
+
 console.log(array.indexOf(3))
 ```
 
@@ -277,6 +289,7 @@ console.log(array.indexOf(3))
 :cell_style: split
 
 // otherwise -1
+
 console.log(array.indexOf("absent"))
 ```
 
@@ -296,10 +309,15 @@ for (let x of array1) {
 }
 ```
 
-* but make sure to use `for .. of` instead of `for .. in` to iterate over each **value**  
-  we will see the `for .. in` construction below
+* make sure to use `for .. of` instead of ~~`for .. in`~~ to iterate over each **value**  
 
 * also notice how to use `let` to define a variable **local** to the `for` loop
+
+<div class=note>
+
+actually there is also a `for .. in` statement (see below), but it is **a little misleading**
+    
+</div>    
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -307,7 +325,13 @@ for (let x of array1) {
 
 +++ {"cell_style": "split"}
 
-* using `for .. in` iterates over **indices**:
+* using `for .. in` iterates over **indices**
+
+<div class=note>
+
+but see also the warning on next slide
+    
+</div>    
 
 ```{code-cell}
 :cell_style: split
@@ -323,8 +347,8 @@ for (let i in array) {
 
 +++
 
-**WARNING** this is an oversimplification  
-with some data structures, `for (x in obj)` will iterate over more than the natural indices
+**WARNING** comparing `for .. in` with `enumerate()` is an oversimplification  
+with some data structures, `for (x in obj)` will iterate over more than the natural indices !
 
 in fact, the indexes that `for .. in` will iterate over are *strings* !  
 which is, well, insane...
@@ -376,6 +400,7 @@ ref1
 
 // slice() works like Python's [:]
 // so it's a shallow copy
+
 /*let*/ ref2 = ref1.slice()
 ref2
 ```
@@ -384,6 +409,7 @@ ref2
 :cell_style: split
 
 // changing data from ref2
+
 ref2[0][0] = "from 2 - deep"
 ref2[1] = "from 2 - shallow"
 ref2
@@ -535,6 +561,7 @@ map.get(1000)
 :cell_style: split
 
 // iterating over map
+
 for (let k of map.keys()) {
     console.log(`key=${k}, value=${map.get(k)}`)
 }
@@ -572,12 +599,14 @@ console.log(`my name is ${bond.last_name}`)
 :cell_style: split
 
 // check for a key
+
 'first_name' in bond
 ```
 
 <div class="note">
 
-the syntax for JavaScript objects, as well as the *key/value* vocabulary make them **look like** Python dictionaries,
+the syntax for JavaScript objects, as well as the *key/value* vocabulary,  
+make them **look like** Python dictionaries  
 **do not get confused though**, JavaScript objects are much more like Python class instances.
 
 </div>
@@ -595,14 +624,17 @@ the syntax for JavaScript objects, as well as the *key/value* vocabulary make th
 // valid JS expressions
 
 /*let*/ options = {
+    
     // quotes are not needed in the key
     // if it looks like a variable
     margin_left: '10px',
+    
     // but it's allowed to put them
     'margin_right': '20px',
+    
     // and required if the key is odd
-    // here with a space inside
-    // can be any string
+    // (can be any string really)
+    // so here with a space inside
     'margin space': true,
 }
 ```
@@ -669,7 +701,11 @@ for (let key in bond) {
 }
 ```
 
-+++ {"tags": ["level_advanced"], "slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_advanced"]}
+
+#### building objects (advanced)
+
++++ {"tags": ["level_advanced"], "slideshow": {"slide_type": ""}}
 
 and also, because there is no difference between
 
@@ -702,7 +738,8 @@ and also, because there is no difference between
 
 there are a lot of fancy ways to deal with objects; this is also known as deconstructing / reconstructing
 
-and these are truly all over the place in modern JavScript code, so you'd better have heard of these
+and these are truly all over the place in modern JavScript code  
+so you'd better have heard of these
 
 +++
 
@@ -742,7 +779,8 @@ demo()
 
 ### typical usage for optional parameters
 
-the parameter-passing mechanism is not as powerful as Python; but here's a common pattern to define optional parameters with default values
+the parameter-passing mechanism is not as powerful as Python  
+but here's a common pattern to define optional parameters with default values
 
 ```{code-cell}
 ---
