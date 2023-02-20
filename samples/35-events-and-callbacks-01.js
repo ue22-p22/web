@@ -15,7 +15,8 @@ function onkeydown(event) {
     = `typed key ${event.key}`
 }
 
-function onload(event) {
+// we don't really need the event here, so...
+function onload(/*event*/) {
   console.log("page loaded, arming callbacks")
   // attach callbacks
   document.getElementById("textual-input")

@@ -13,8 +13,7 @@
 // TODO:
 // (1) allow for options to contain height: 'html' (or css or js)
 // which means to use the number of lines in a specific section to compute default height
-// (2) min_width (and height) should by default be something like width/2
-// but for that to work we need a way to divide by 2 strings like 45em
+// see e.g. notebook 35 on events and callbacks where that would be useful
 
 "use strict"
 

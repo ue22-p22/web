@@ -111,12 +111,14 @@ this is one of the reasons why JS is so flexible/lenient with respect to argumen
 :tags: [hide_input]
 
 tools.sample_from_stem("../samples/35-events-and-callbacks-01",
-                       {separate_show: true, start_with: 'js', separate_width: "600px"})
+                       {separate_show: true, start_with: 'js', separate_width: "600px",
+                        // xxx: would be cool if we could say height: 'js'
+                        height: "32em"})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/callbacks-chain.png)
+![](media/callbacks-chain.svg)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -202,7 +204,9 @@ window.addEventListener(
 :tags: [hide_input]
 
 tools.sample_from_stem("../samples/35-events-and-callbacks-02",
-                       {separate_show: true, start_with: 'js', separate_width: "600px"})
+                       // xxx again here we set height based on the js number of lines
+                       {separate_show: true, start_with: 'js', 
+                        separate_width: "600px", height: '33em'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
