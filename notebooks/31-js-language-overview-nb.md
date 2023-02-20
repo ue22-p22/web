@@ -323,16 +323,16 @@ it uses a toplevel `let`
 ```{code-cell}
 :tags: [raises-exception]
 
-let y = "outermost"
+let variable = "outermost"
 {
-    let y = "intermediate"
+    letvariabley = "intermediate"
     {
-        let y = "innermost"
-        console.log("level 2", y)
+        let variable = "innermost"
+        console.log("level 2", variable)
     }
-    console.log("level 1", y)
+    console.log("level 1", variable)
 }
-console.log("level 0", y)
+console.log("level 0", variable)
 ```
 
 <div class="note">
