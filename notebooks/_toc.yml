@@ -12,9 +12,6 @@ parts:
 - caption: intro to JS
   chapters:
   - glob: 3*-nb
-# last minute: reordering the exos in a more progressive order
-# do not change numbering though becaus it's too intrusive
-# as we're in the middle of the course
 - caption: practising JS
   chapters:
   - file: 40-general-tips-nb

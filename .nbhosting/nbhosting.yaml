@@ -16,8 +16,18 @@ tracks:
     notebooks:
     - "notebooks/3*-nb.md"
   - name: practising JS
+    # last minute: reordering the exos in a more progressive order
+    # do not change numbering though because it's too intrusive
+    # as we're in the middle of the course
     notebooks:
-    - "notebooks/4*-nb.md"
+    - "notebooks/40-general-tips-nb.md"
+    - "notebooks/41-exo-resume-blinking-nb.md"
+    - "notebooks/45-exo-grid-nb.md"
+    - "notebooks/43-exo-spinning-wheel-nb.md"
+    - "notebooks/42-exo-calculator-nb.md"
+    - "notebooks/44-exos-miscell-nb.md"
+    - "notebooks/46-exo-xkcd-nb.md"
+    - "notebooks/47-exo-react-nb.md"
   - name: optional content
     notebooks:
     - "notebooks/5*-nb.md"
