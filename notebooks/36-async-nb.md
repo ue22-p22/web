@@ -40,17 +40,18 @@ tools = require('../js/tools'); tools.init()
 * remember that fetching data from the Internet is slow (see intro)
 * not wasting time to wait for each component
 * prefer to create content as soon as possible to hide some latency
-* do not use a busy loop that wastes CPU cycles
-* fetch resources concurrently whenever possible
-* run code concurrently whenever possible
+* also, do not use a busy loop that wastes CPU cycles
+* this means to fetch resources **concurrently** whenever possible
+* and so to run code concurrently **whenever** possible
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## page loading issue
 
 * the issue is due to the fact that in most cases, code **order matters**
-* for instance you cannot get an element from code that was not yet created
+* for instance your code cannot spot an element in the DOM if it was not yet created
 * you cannot use a given JavaScript library if its code has not finished loading
+* ...
 * dependency may be very tricky, and can end in a dependency loop  
   as in *`a` requires `b` that requires `a`*
 
@@ -78,10 +79,10 @@ an alternative to callbacks (since ES2015) that tries to address
 the issues known as either
 
 * the 'Callback Hell'
-  <img src="media/callback-hell.png" width="400px">
+  ![](media/callback-hell.png)
 
 * also known as the 'Pyramid of Doom'
-  <img src="media/pyramid-of-doom.png" width="400px">
+  ![](media/pyramid-of-doom.png)
 
 i.e. a programming technique where an essentially **sequential** business  
 ends up creating a **deeply nested** program structure
@@ -167,9 +168,9 @@ all this is out of our scope, so let's keep it simple for now, and **run stuff i
 
 </div>
 
-+++ {"hide_input": true, "cell_style": "center"}
-
 ```{code-cell}
+:hide_input: true
+
 // this is a magic recipe to import fetch
 // useful **ONLY** if you're using node.js
 
@@ -402,7 +403,11 @@ for (let url of [URL_broken, URL_small, URL_large])
 // here we use again get_url1
 // because it actually returns the URL size
 
-Promise.allSettled([URL_broken, URL_small, URL_large].map(get_url1))
+promises = [
+   get_url1(URL_broken), get_url1(URL_small), get_url1(URL_large)
+]
+
+Promise.allSettled(promises)
     .then(console.log)
 ```
 
@@ -534,6 +539,43 @@ async function succeed_or_fail(ms, success, what) {...}
 * question: why is that even needed ?
 * answer: what would happen in `succeed_or_fail` if we remove the `await` ?  
   *hint*: remember that promise are created immediately !
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## `async` + `await`
+
++++
+
+our first attempts with `.then()` can be made much simpler thanks to this syntax
+
+here's our last version of `get_url`, which is legible enough; this time we return the plain text
+
+```js
+const get_url3 = async (url) => {
+    response = await fetch(url)
+    return await response.text()
+}
+```
+
++++
+
+and it can be called like this 
+
+<div class=note>
+
+again you need to run this in your browser console; the notebook won't let you use `await` outside of an `async` function
+    
+</div>
+
+```js
+// the addition will we done after the text shows up eventually
+// also use URL_large it your network is fast
+url = URL_small
+console.log(`the beginning of ${url} reads`)
+//          ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  ← this is a text object 
+console.log((await get_url3(url)).slice(0, 20) + '...')
+10 + 30
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
