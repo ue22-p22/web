@@ -83,3 +83,34 @@ tools.sample_from_stem("../samples/44-fibonacci/fibonacci",
   be it in terms of colors, speed, behaviour, whatever you  
   think could improve the game  
   are you able to implement that change ?
+
++++
+
+## a tic-tac-toe
+
++++
+
+xxx
+*I ran into totally unexpected issues while trying to write
+`sample_from_urls` - so leaving this alone for now*
+
+the intention is to be able to insert pages that come from anywhere,
+as the tic-tac-toe for example could be thought of as a separate repo
+
+```{code-cell}
+delete require.cache[require.resolve('../js/tools')]
+tools = require('../js/tools'); tools.init()
+```
+
+```{code-cell}
+:hide_input: false
+:tags: [hide_input]
+
+// not yet using tic-tac-toe as it is not yet under git
+tools.sample_from_urls(
+    {html: "https://github.com/ue22-p22/web/blob/main/samples/44-pythagore/pythagore.html",
+     css:  "https://github.com/ue22-p22/web/blob/main/samples/44-pythagore/pythagore.css",
+     js:   "https://github.com/ue22-p22/web/blob/main/samples/44-pythagore/pythagore.js",
+    },
+    {sources_show: false, separate_height: '1000px', separate_width: '900px'})
+```

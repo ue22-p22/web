@@ -86,6 +86,41 @@ function sample_from_stem(stem, options) {
   return sample_from_strings({html:html, css: css, js: js}, options)
 }
 
+// xxx not working
+// need to find a way for this synchronous function
+// to actually wait for the result and to return it
+// because that's what the notebook will display
+function sample_from_urls(urls, options) {
+  options = options || {}
+  if (!('id' in options))
+    options.id = `x${hash(urls.html)}`
+
+  const get_url = (url) => fetch(url).then( (resp) => resp.text())
+
+  let code = {}, promises = []
+
+  if (url = urls.html) {
+    promises.push(get_url(url).then((x) => code.html=x))
+  }
+  if (url = urls.css) {
+    promises.push(get_url(url).then((x) => code.css=x))
+  }
+  if (url = urls.js) {
+    promises.push(get_url(url).then((x) => code.js=x))
+  }
+
+  Promise.allSettled(promises).then(
+    () => {
+    if (!code.html && !code.css && !code.js)
+      return $$.html(`<div style='color:red;'>no code found from urls</div>`)
+    console.log(`html has ${code.html.length} bytes`)
+    console.log(`css has ${code.css.length} bytes`)
+    // this is what the arrow function returns
+    // NOT what sample_from_urls returns !
+    return sample_from_strings(code, options)
+    })
+}
+
 function sample_from_strings(code, options) {
   options = options || {}
   let {html, css, js} = code
@@ -526,3 +561,4 @@ if ('Jupyter' in globalThis) {
 exports.init = init
 exports.sample_from_strings = sample_from_strings
 exports.sample_from_stem = sample_from_stem
+exports.sample_from_urls = sample_from_urls
