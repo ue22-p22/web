@@ -86,12 +86,14 @@ function sample_from_stem(stem, options) {
   return sample_from_strings({html:html, css: css, js: js}, options)
 }
 
-// xxx not working
-// need to find a way for this synchronous function
-// to actually wait for the result and to return it
-// because that's what the notebook will display
+// the wait to display the result of a promise
+// as per https://github.com/n-riesco/ijavascript/issues/268
 function sample_from_urls(urls, options) {
-  options = options || {}
+  _sample_from_urls(urls, options).then((html)=>$$.sendResult(html))
+}
+
+async function _sample_from_urls(urls, options) {
+    options = options || {}
   if (!('id' in options))
     options.id = `x${hash(urls.html)}`
 
@@ -111,17 +113,21 @@ function sample_from_urls(urls, options) {
 
   Promise.allSettled(promises).then(
     () => {
-    if (!code.html && !code.css && !code.js)
-      return $$.html(`<div style='color:red;'>no code found from urls</div>`)
-    console.log(`html has ${code.html.length} bytes`)
-    console.log(`css has ${code.css.length} bytes`)
-    // this is what the arrow function returns
-    // NOT what sample_from_urls returns !
-    return sample_from_strings(code, options)
+      if (!code.html && !code.css && !code.js)
+        return $$.html(`<div style='color:red;'>no code found from urls</div>`)
+      console.log(`html has ${code.html.length} bytes`)
+      console.log(`css has ${code.css.length} bytes`)
+      // this is what the arrow function returns
+      // NOT what sample_from_urls returns !
+      return _sample_from_strings(code, options)
     })
 }
 
 function sample_from_strings(code, options) {
+	$$.html(_sample_from_strings (code, options))
+}
+
+function _sample_from_strings(code, options) {
   options = options || {}
   let {html, css, js} = code
   // the default for showing pieces is, are they present at all
@@ -440,8 +446,7 @@ function sample_from_strings(code, options) {
 	}); /* End of all requirements */
   </script>
 	`
-
-	$$.html(embedded)
+  return embedded
 }
 
 
