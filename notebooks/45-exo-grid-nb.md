@@ -35,4 +35,4 @@ tools = require('../js/tools'); tools.init()
 
 see on github
 
-<https://github.com/ue22-p21/web-grid-js>
+<https://github.com/ue22-p22/web-grid>
