@@ -150,3 +150,7 @@ div.CodeMirror-lines div.CodeMirror-code pre.CodeMirror-line {
     background-color: unset;
 }
 
+/* make the right-hand-side index background transparent */
+#bd-toc-nav {
+    background-color: rgb(0, 0, 0, 0);
+}
