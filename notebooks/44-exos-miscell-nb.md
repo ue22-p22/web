@@ -111,3 +111,17 @@ tools.sample_from_stem("../samples/44-fibonacci/fibonacci",
   be it in terms of colors, speed, behaviour, whatever you  
   think could improve the game  
   are you able to implement that change ?
+
++++
+
+## miscellaneous practise on codepen
+
++++
+
+see a collection of assignments here <https://codepen.io/collection/YyapER?grid_type=list>
+
+<div class=note>
+
+do not forget to create an account and to log in `codepen.io` **for your progress to be saved**
+
+</div>
