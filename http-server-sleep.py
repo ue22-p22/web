@@ -9,7 +9,7 @@ from time import sleep
 
 PORT = 8000
 
-class Handler(http.server.SimpleHTTPRequestHandler):
+class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self, *args, **kwargs):
         print(f"do_GET(self, {args}, {kwargs})")
         print(f"{self.headers}")
@@ -33,21 +33,26 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self, *args, **kwargs):
         print(f"do_POST(self, {args}, {kwargs})")
-        self.wfile.write("HTTP/1.1 403 Forbiden\n".encode("ascii"))
+        self.send_response(403, "Forbiden")
+        self.send_header("Content-Length", 0)
+        self.end_headers()
 
     def write_default_response(self, path, delay):
+        body = json.dumps(dict(hello=path, delay=delay)).encode("utf-8")
         # Status response line.
-        self.wfile.write("HTTP/1.1 200 OK\n".encode("ascii"))
-        # HTTP Header key/value here
-        # Add CORS header unconditionally.
-        self.wfile.write("Access-Control-Allow-Origin: *\n".encode('ascii'))
-        self.wfile.write("Access-Control-Allow-Headers: origin, content-type, x-requested-with\n".encode('ascii'))
-        self.wfile.write("Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS\n".encode('ascii'))
-        # Mandatory end of header.
-        self.wfile.write("\n".encode("ascii"))
-        # Add body data of the request header, can be any binary data.
-        self.wfile.write(json.dumps(dict(hello=path, delay=delay)).encode("utf-8"))
+        self.send_response(200, "OK")
+        self.write_CORS_headers()
+        self.send_header("Content-Length", len(body))
+        self.end_headers()
+        self.wfile.write(body)
 
+    def write_CORS_headers(self):
+        # Allow any request origin
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Headers",
+            "origin, content-type, x-requested-with")
+        self.send_header("Access-Control-Allow-Methods",
+            "PUT, GET, POST, DELETE, OPTIONS")
 
 # Forking server will fork on any request
 # This allow to reply to multiple request, but state change will be lost.
