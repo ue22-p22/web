@@ -4,6 +4,7 @@
 import http.server
 import socketserver
 import re
+import json
 from time import sleep
 
 PORT = 8000
@@ -16,11 +17,13 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
         # If request is sleep, just wait before sending response
         m = re.match("/sleep[?]sec=(.+)", self.path)
+        delay = 0
         if m:
-            print("sleep", m)
-            sleep(float(m.group(1)))
+            delay = float(m.group(1))
+            print("sleep", delay)
+            sleep(delay)
 
-        return self.write_default_response()
+        return self.write_default_response(self.path, delay)
 
 
     def do_OPTIONS(self, *args, **kwargs):
@@ -32,7 +35,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         print(f"do_POST(self, {args}, {kwargs})")
         self.wfile.write("HTTP/1.1 403 Forbiden\n".encode("ascii"))
 
-    def write_default_response(self):
+    def write_default_response(self, path, delay):
         # Status response line.
         self.wfile.write("HTTP/1.1 200 OK\n".encode("ascii"))
         # HTTP Header key/value here
@@ -43,6 +46,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         # Mandatory end of header.
         self.wfile.write("\n".encode("ascii"))
         # Add body data of the request header, can be any binary data.
+        self.wfile.write(json.dumps(dict(hello=path, delay=delay)).encode("utf-8"))
 
 
 # Forking server will fork on any request
@@ -50,4 +54,3 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 with socketserver.ForkingTCPServer(("127.0.0.1", PORT), Handler) as httpd:
     print("serving at port", PORT)
     httpd.serve_forever()
-
