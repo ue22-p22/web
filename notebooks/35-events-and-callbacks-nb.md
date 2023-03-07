@@ -30,6 +30,8 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 # JavaScript events and callbacks
 
 ```{code-cell}
+:hide_input: true
+
 tools = require('../js/tools'); tools.init()
 ```
 
@@ -132,6 +134,16 @@ notice from the example :
   this is useful technique for debugging / inspecting data
 * in particular we could inspect the event object to display meaningful data
 
++++
+
+<div class=note>
+
+this code uses **global variables** like e.g. `onclick`  
+and so here, we'd be in trouble if our application used another library that defines a global with the same name  
+we will see in a moment how to rewrite this example into a code that **leaks no global variable**  
+    
+</div>
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## other types of events
@@ -153,9 +165,18 @@ elem.dispatchEvent(event)
 ### time-related events
 
 ```javascript
-setTimeout(foo, 3000); // call foo in 3000 ms
-setInterval(foo, 3000); // call foo every 3000 ms
+setTimeout(foo, 3000)  // call foo once in 3000 ms
+setInterval(foo, 3000) // call foo every 3000 ms
 ```
+
++++
+
+<div class="note">
+
+* for more details and a more exhaustive list of available events  
+  see [this section in javascript.info](https://javascript.info/event-details)
+
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -176,8 +197,15 @@ const mylambda0 = function (arg0, arg1) { /* some code here */ }
 const mylambda0 = (arg0, arg1) => { /* some code here */ }
 ```
 
++++ {"slideshow": {"slide_type": ""}}
+
+<div class=note>
+
 * /!\ Both variants are valid, even if the new one looks nicer
-* also, there are subtle differences, not covered here
+* with the fat arrow, `{}` and `return` can be sometimes omitted
+* also, there are subtle differences about the `this` variable, not covered here  
+    
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -221,21 +249,19 @@ tools.sample_from_stem("../samples/35-events-and-callbacks-02",
 the behaviour might be unexpected as we're moving outside of the notebook's comfort zone here  
 feel free to cut and paste the code into your web browser's console
 
-</div>    
+</div>
 
 ```{code-cell}
 // here the 'context' variable is not visible
 
-{
-  let context = {a:1, b:2};
+{  // <- this is the block where 'context' is visible
+  let context = {a:1, b:2}
   setTimeout(
-    function() {
-      // here the 'context' variable is visible and remain valid
-      // even if we leave the block
-      console.log("context is", context);
-    },
-    2000);
-  console.log("NOW timeout armed");
+  // here the 'context' variable is visible and remain valid
+  // even if we leave the block
+    () => console.log("context is", context),
+    2000)
+  console.log("NOW timeout armed")
 }
 
 // here neither, let us prove it:
@@ -247,7 +273,7 @@ try {
 }
 
 // BUT: wait for 2s and see the callback still triggers properly
-// it means that the 'context' variable is still alive
+// it means that the 'context' variable somehow is still alive
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -280,21 +306,13 @@ slideshow:
 
 +++
 
-* highly recommended to study the [introduction to callbacks in javascript.info](https://javascript.info/callbacks)
+* highly recommended to study  
+  the [introduction to callbacks in javascript.info](https://javascript.info/callbacks)
 * that highlights the fundamental drawback of using callbacks
-* which is that you need to split your code into pieces and fit the pieces into functions
-* it easily becomes hard to read and modify, especially if there is logic involved
-
-+++
-
-<div class="note">
-
-again, so far we have seen a few types of events (e.g. `load`, `keydown`, `click`)
-
-* for more details and a more exhaustive list of available events  
-  see [this section in javascript.info](https://javascript.info/event-details)
-
-</div>
+* which is that you need to split your code into pieces  
+  and fit the pieces into functions
+* it easily becomes hard to read and modify,  
+  especially if there is logic involved
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -306,7 +324,7 @@ again, so far we have seen a few types of events (e.g. `load`, `keydown`, `click
 * it is old-fashioned and **badly broken**
 * see below
   * example with `var` in effect creates a global `i`
-  * whille the one with `let` behaves as expected
+  * while the one with `let` behaves as expected
 
 ```{code-cell}
 :cell_style: split
