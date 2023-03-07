@@ -410,12 +410,18 @@ function sample_from_strings(code, options) {
 }
 
 
-function init() {
+function init(options) {
+  options = options || {}
+  const {init_style, init_script} = options
   // the style that makes the in[] and out[] labels less conspicuous
   let embedded = ``
-  embedded += read_style('../notebooks/_static/style.css')
-  // we inject require here for when running under jupyter book
-  embedded += `
+  // undefined means not specified, so for compat it means true
+  // set to null or false in the options to disable
+  if ((init_style === undefined) || init_style)
+     embedded += read_style('../notebooks/_static/style.css')
+  // ditto
+  if ((init_script === undefined) || init_script) {
+    embedded += `
 <script>
 // Run this script imediatly
 
@@ -520,6 +526,7 @@ if ('Jupyter' in globalThis) {
 }
 
 </script>`
+  }
   $$.html(embedded)
 }
 
