@@ -26,7 +26,7 @@ tracks:
     - "notebooks/43-exo-spinning-wheel-nb.md"
     - "notebooks/42-exo-calculator-nb.md"
     - "notebooks/44-exos-miscell-nb.md"
-    - "notebooks/46-exo-xkcd-nb.md"
+    - "notebooks/46-exos-networking-nb.md"
     - "notebooks/47-exo-react-nb.md"
   - name: optional content
     notebooks:

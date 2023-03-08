@@ -20,7 +20,7 @@ parts:
   - file: 43-exo-spinning-wheel-nb
   - file: 42-exo-calculator-nb
   - file: 44-exos-miscell-nb
-  - file: 46-exo-xkcd-nb
+  - file: 46-exos-networking-nb
   - file: 47-exo-react-nb
 - caption: optional content
   chapters:

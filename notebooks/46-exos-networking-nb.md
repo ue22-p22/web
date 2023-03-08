@@ -27,14 +27,32 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
-# practice : a small networking app
+# practice : a couple networking apps
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
 
-or: how to use a backend from JS
+the common objective here is: how to talk directly to a backend from JS
 
-see on github
++++
+
+## xkcd
+
+
+build a small app that will let us browse the collection of drawings by xkcd
+
+clone the repo below, and follow the instructions
 
 <https://github.com/ue22-p22/web-xkcd.git>
+
++++
+
+## pixel-war
+
+
+build a small app that will let us paint a commonly shared image one pixel at a time
+
+clone the repo below, and follow the instructions
+
+<https://github.com/ue22-p22/web-pixelwar>
