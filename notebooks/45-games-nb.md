@@ -12,7 +12,7 @@ kernelspec:
   language: javascript
   name: javascript
 nbhosting:
-  title: "practice : networking apps"
+  title: 'practice : games'
 rise:
   autolaunch: true
   slideNumber: c/t
@@ -27,32 +27,36 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
-# practice : networking apps
+# practice : games
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
 
-the common objective here is: how to talk directly to a backend from JS
+## tic-tac-toe
 
 +++
 
-## xkcd
+write a tic-tac-toe game, something like this - there is a lot of room for improvement !
 
+```{code-cell}
+:hide_input: true
+:tags: [hide_input]
 
-build a small app that will let us browse the collection of drawings by xkcd
+tools.sample_from_stem("../samples/44-tic-tac-toe/tic-tac-toe",
+                       {sources_show: false, separate_height: '400px', separate_width: '400px'})
+```
 
-clone the repo below, and follow the instructions
-
-<https://github.com/ue22-p22/web-xkcd.git>
+## minesweeper
 
 +++
 
-## pixel-war
+write a minesweeper game; again you can do better than this :)
 
+```{code-cell}
+:hide_input: true
+:tags: [hide_input]
 
-build a small app that will let us paint a commonly shared image one pixel at a time
-
-clone the repo below, and follow the instructions
-
-<https://github.com/ue22-p22/web-pixelwar>
+tools.sample_from_stem("../samples/44-minesweeper/minesweeper",
+                       {sources_show: false, separate_height: '400px', separate_width: '400px'})
+```

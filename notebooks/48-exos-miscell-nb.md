@@ -12,7 +12,7 @@ kernelspec:
   language: javascript
   name: javascript
 nbhosting:
-  title: more exos
+  title: 'practice : additional assignments'
 rise:
   autolaunch: true
   slideNumber: c/t
@@ -31,34 +31,6 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
-```
-
-## tic-tac-toe
-
-+++
-
-write a tic-tac-toe game, something like this - there is a lot of room for improvement !
-
-```{code-cell}
-:hide_input: true
-:tags: [hide_input]
-
-tools.sample_from_stem("../samples/44-tic-tac-toe/tic-tac-toe",
-                       {sources_show: false, separate_height: '400px', separate_width: '400px'})
-```
-
-## minesweeper
-
-+++
-
-write a minesweeper game; again you can do better than this :)
-
-```{code-cell}
-:hide_input: true
-:tags: [hide_input]
-
-tools.sample_from_stem("../samples/44-minesweeper/minesweeper",
-                       {sources_show: false, separate_height: '400px', separate_width: '400px'})
 ```
 
 +++ {"slideshow": {"slide_type": ""}}
@@ -97,31 +69,3 @@ here again the sample app is not responsive, you will need to open it in a separ
 tools.sample_from_stem("../samples/44-fibonacci/fibonacci",
                        {sources_show: false, separate_height: '1000px', separate_width: '900px'})
 ```
-
-## a snake
-
-+++
-
-* clone the github repo from <https://github.com/patorjk/JavaScript-Snake.git>
-* open `index.html` in your browser - check that the game works for you
-* could you read the code ?  
-  if not what percentage can you read ?
-
-* imagine some change that you'd like to make on the game  
-  be it in terms of colors, speed, behaviour, whatever you  
-  think could improve the game  
-  are you able to implement that change ?
-
-+++
-
-## miscellaneous practise on codepen
-
-+++
-
-see a collection of assignments here <https://codepen.io/collection/YyapER?grid_type=list>
-
-<div class=note>
-
-do not forget to create an account and to log in `codepen.io` **for your progress to be saved**
-
-</div>

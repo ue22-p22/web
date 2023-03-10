@@ -12,7 +12,7 @@ kernelspec:
   language: javascript
   name: javascript
 nbhosting:
-  title: "practice : networking apps"
+  title: 'practice : on codepen'
 rise:
   autolaunch: true
   slideNumber: c/t
@@ -27,32 +27,20 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++ {"slideshow": {"slide_type": ""}}
 
-# practice : networking apps
+# practice : on codepen
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
 
-the common objective here is: how to talk directly to a backend from JS
+## miscellaneous practise on codepen
 
 +++
 
-## xkcd
+see a collection of assignments here <https://codepen.io/collection/YyapER?grid_type=list>
 
+<div class=note>
 
-build a small app that will let us browse the collection of drawings by xkcd
+do not forget to create an account and to log in `codepen.io` **for your progress to be saved**
 
-clone the repo below, and follow the instructions
-
-<https://github.com/ue22-p22/web-xkcd.git>
-
-+++
-
-## pixel-war
-
-
-build a small app that will let us paint a commonly shared image one pixel at a time
-
-clone the repo below, and follow the instructions
-
-<https://github.com/ue22-p22/web-pixelwar>
+</div>
