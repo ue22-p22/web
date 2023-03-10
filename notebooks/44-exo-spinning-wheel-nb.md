@@ -41,7 +41,7 @@ tools = require('../js/tools'); tools.init()
 :hide_input: true
 :tags: [hide_input]
 
-tools.sample_from_stem("../samples/43-spinning-wheel/spinning-wheel", {id: 'finished', sources_show: false})
+tools.sample_from_stem("../samples/44-spinning-wheel/spinning-wheel", {id: 'finished', sources_show: false})
 ```
 
 +++ {"slideshow": {"slide_type": ""}}
@@ -156,7 +156,7 @@ your html part could look like the following
 :tags: [hide_input]
 
 tools.sample_from_stem(
-    '../samples/43-spinning-wheel/spinning-wheel',
+    '../samples/44-spinning-wheel/spinning-wheel',
    {id: 'source-only', css_show: false, js_show: false, output_show: false,})
 ```
 

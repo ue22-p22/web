@@ -59,7 +59,7 @@ slideshow:
   slide_type: ''
 tags: [hide_input]
 ---
-tools.sample_from_stem("../samples/42-calculator", {sources_show: false})
+tools.sample_from_stem("../samples/46-calculator", {sources_show: false})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}

@@ -177,7 +177,7 @@ undefined
 // the default is separate_show = true
 
 tools.sample_from_stem(
-    "../samples/43-spinning-wheel/spinning-wheel",
+    "../samples/44-spinning-wheel/spinning-wheel",
     {sources_show: false,
 //     height: '300px',  // not really needed
      separate_label: 'In new window',
@@ -202,7 +202,7 @@ undefined
 // otherwise we mess with the previous sample
 
 tools.sample_from_stem(
-    "../samples/43-spinning-wheel/spinning-wheel",
+    "../samples/44-spinning-wheel/spinning-wheel",
     {id: 'duplicate', height: '20em', sources_show: false, separate_show: false})
 ```
 
@@ -217,7 +217,7 @@ undefined
 
 ```javascript slideshow={"slide_type": ""} hide_input=false scrolled=false
 tools.sample_from_stem(
-    "../samples/42-calculator",
+    "../samples/46-calculator",
     {sources_show: false, separate_show: false, height: '500px'})
 ```
 

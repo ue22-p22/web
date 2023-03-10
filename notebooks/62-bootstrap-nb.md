@@ -68,7 +68,7 @@ slideshow:
   slide_type: slide
 tags: [hide_input]
 ---
-tools.sample_from_stem("../samples/52-bootstrap", {height: "30em"})
+tools.sample_from_stem("../samples/62-bootstrap", {height: "30em"})
 ```
 
 <div class="note">

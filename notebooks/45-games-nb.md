@@ -43,7 +43,7 @@ write a tic-tac-toe game, something like this - there is a lot of room for impro
 :hide_input: true
 :tags: [hide_input]
 
-tools.sample_from_stem("../samples/44-tic-tac-toe/tic-tac-toe",
+tools.sample_from_stem("../samples/45-tic-tac-toe/tic-tac-toe",
                        {sources_show: false, separate_height: '400px', separate_width: '400px'})
 ```
 
@@ -57,6 +57,6 @@ write a minesweeper game; again you can do better than this :)
 :hide_input: true
 :tags: [hide_input]
 
-tools.sample_from_stem("../samples/44-minesweeper/minesweeper",
+tools.sample_from_stem("../samples/45-minesweeper/minesweeper",
                        {sources_show: false, separate_height: '400px', separate_width: '400px'})
 ```

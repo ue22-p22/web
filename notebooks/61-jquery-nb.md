@@ -209,7 +209,7 @@ $(loaded)
 :hide_input: true
 :tags: [hide_input]
 
-tools.sample_from_stem("../samples/51-jquery-colors", {start_with: 'js'})
+tools.sample_from_stem("../samples/61-jquery-colors", {start_with: 'js'})
 ```
 
 <div class="note">
