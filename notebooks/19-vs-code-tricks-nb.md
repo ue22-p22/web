@@ -137,6 +137,7 @@ it is easy to assign these functions to a keyboard shortcut
 * search the function in the palette
 * move the mouse over the function name  
   a gear icon `⚙` appears on the right hand side
+
 * click that
 
 and/or search in the vs-code documentation, or ask google or chatgpt

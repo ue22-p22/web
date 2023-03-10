@@ -317,7 +317,7 @@ for (let x of array1) {
 
 actually there is also a `for .. in` statement (see below), but it is **a little misleading**
     
-</div>    
+</div>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -331,7 +331,7 @@ actually there is also a `for .. in` statement (see below), but it is **a little
 
 but see also the warning on next slide
     
-</div>    
+</div>
 
 ```{code-cell}
 :cell_style: split

@@ -132,6 +132,7 @@ notice from the example :
 * how `addEventListener()` are cascaded,
 * how we display the events with `console.log()`  
   this is useful technique for debugging / inspecting data
+
 * in particular we could inspect the event object to display meaningful data
 
 +++
@@ -308,9 +309,11 @@ slideshow:
 
 * highly recommended to study  
   the [introduction to callbacks in javascript.info](https://javascript.info/callbacks)
+
 * that highlights the fundamental drawback of using callbacks
 * which is that you need to split your code into pieces  
   and fit the pieces into functions
+
 * it easily becomes hard to read and modify,  
   especially if there is logic involved
 

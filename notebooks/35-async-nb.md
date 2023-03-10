@@ -30,7 +30,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 # JavaScript asynchronous behaviour
 
 ```{code-cell}
-tools = require('../js/tools'); tools.init({init_script: false})
+tools = require('../js/tools'); tools.init()
 ```
 
 <div class="note">
@@ -387,7 +387,6 @@ console.log(p)
 // so the promise ends up rejected
 // and this raises an exception
 p = get_url1(URL_broken)
-
 ```
 
 ```{code-cell}

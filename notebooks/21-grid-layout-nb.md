@@ -40,6 +40,7 @@ tools = require('../js/tools'); tools.init()
 * historically a challenging task
   * the `<table>` tag has long been overused  
     to address that sort of needs
+
   * twitter's `bootstrap` has been used for this too at some point
   * **do not use** these tools for that in 202x !
   

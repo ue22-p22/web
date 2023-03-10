@@ -1,5 +1,9 @@
 Licence CC BY-NC-ND, Thierry Parmentelat
 
+```js
+tools = require('../js/tools'); tools.init()
+```
+
 # simple React apps
 
 in this notebook we will see 2 small React apps
@@ -186,10 +190,6 @@ you can also notice in the code how JS variables can be used right in the HTML
 section when mentioned between `{}`, like in the fragment just above
 
 so another very useful feature of React is `useState`; this line
-
-```js
-tools = require('../js/tools'); tools.init()
-```
 
 ```js
 const [counter, setCounter] = useState(0)

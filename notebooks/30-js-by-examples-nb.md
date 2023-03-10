@@ -346,13 +346,14 @@ tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",  {height: "30em"}
 * instances are built with `new Board(...)`  
   which in turn calls `constructor()`  
   much alike Python's `__init__()`
+
 * `the_board` is a JavaScript *object*  
   i.e. composite data keyed on `w`, `h`, etc…  
   (more on this later)
+
 * methods do not need to define a `self` parameter  
   instead the object to which the method was sent  
   can be accessed through the magical `this` variable
-  
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -482,6 +483,7 @@ as far as Web frontend, JavaScript :
 * **full-fledged** modern language, with objects, classes, modules…
 * some globals are specific to web pages in the browser  
   such as `document`, `window`, `console`
+
 * highly influenced by **asynchronicity** / reactive programming
 
 +++ {"slideshow": {"slide_type": "slide"}}

@@ -80,14 +80,19 @@ tools = require('../js/tools'); tools.init()
 
 * add element to the tree  
   `element.appendChild(another_element)`
+
 * add or change an attribute  
   `element.setAttribute("someattribute", somevalue)`
+
 * add or change a given style  
   `element.style.color = "rgb(0,0,0)"`
+
 * add a class to an element  
   `element.classList.add("someclass")`
+
 * remove a class to an element  
   `element.classList.remove("someclass")`
+
 * and many more ...
 
 +++ {"slideshow": {"slide_type": "slide"}}
