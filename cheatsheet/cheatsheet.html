@@ -115,6 +115,33 @@ my_circle = document.createElementNS(svgNS, 'circle')</pre>
     </div>
 
 
+    <div id="DOM-removing" class="group">
+      <div class="title">DOM accessing and removing elements</div>
+
+      <div class="bullets">
+        <code class="code"><pre>child = node.children.item(n)</pre></code>
+        <span class="what">returns the <i>n</i>-th child of <code>node</code></span>
+      </div>
+
+      <div class="bullets-sep"></div>
+
+      <div class="bullets">
+        <code class="code">
+          <pre>node.removeChild(child)</pre>
+        </code>
+        <span class="what">remove element <code>child</code> from its father <code>node</code></span>
+      </div>
+
+      <div class="bullets">
+        <code class="code">
+          <pre>while (node.firstChild) node.removeChild(node.lastChild)
+          </pre>
+        </code>
+        <span class="what">remove all children of <code>node</code></span>
+      </div>
+
+    </div>
+
     <div id="iterating" class="group">
       <div class="title">DOM iterating over elements</div>
 
@@ -138,7 +165,7 @@ my_circle = document.createElementNS(svgNS, 'circle')</pre>
       <div class="title">arming callbacks
         <br>
         <span class="normal">
-        <code>a_function</code> denotes a function object</code></span>
+          <code>a_function</code> denotes a function object</code></span>
       </div>
 
       <div class="bullets">
@@ -161,7 +188,7 @@ my_circle = document.createElementNS(svgNS, 'circle')</pre>
 
         <code class="code">setTimeout(a_function, 400)</code>
         <span class="what">causes <code>a_function()</code>
-           to be called<br><b>once</b> in 400ms
+          to be called<br><b>once</b> in 400ms
         </span>
       </div>
     </div>
@@ -200,4 +227,3 @@ my_circle = document.createElementNS(svgNS, 'circle')</pre>
 
   </div>
 </body>
-
