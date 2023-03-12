@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="minesweeper2.css">
+    <script src="minesweeper2.js"></script>
+</head>
+
+<body>
+    <span id="title">
+        minesweeper
+    </span>
+    <div id="grid">
+    </div>
+    <div id="controls">
+        <span id="reset">reset</span>
+        <div id="stats">
+            <span id="stat-bombs"></span>
+            <span id="stat-cells"></span>
+        </div>
+        <span id="help">?</span>
+    </div>
+    <div id="howto">
+        <h2>how to play</h2>
+        <ul>
+            <li>use click on a hidden cell to see how many of its neighbors are bombs</li>
+            <li>use option-click or meta-click on a hidden cell to mark it as a bomb;
+                a second time will undo that</li>
+            <li>
+                use option-click or meta-click on an unveiled cell: if you have found the right number
+                of bombs in its immediate vicinity, it will clear all the other neighbors
+            </li>
+            <li>if an unveiled cell has been marked as bomb, clicking it will remove the bomb mark</li>
+        </ul>
+    </div>
+</body>
+
+</html>
