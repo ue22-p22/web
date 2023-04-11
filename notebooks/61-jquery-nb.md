@@ -207,7 +207,7 @@ $(loaded)
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 tools.sample_from_stem("../samples/61-jquery-colors", {start_with: 'js'})
 ```

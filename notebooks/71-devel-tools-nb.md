@@ -59,7 +59,7 @@ although with a rather ugly syntax !
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 cssvar_html = `<p>using a CSS variable</p>`;
 cssvar_css = `/* declaration */

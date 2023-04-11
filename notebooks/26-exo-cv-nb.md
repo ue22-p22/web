@@ -61,7 +61,7 @@ tools = require('../js/tools'); tools.init()
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 tools.sample_from_stem("../samples/26-monarque/resume", {sources_show: false})
 ```

@@ -37,7 +37,7 @@ tools = require('../js/tools'); tools.init()
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 text_fragment = `<p> it is wise to always embed your text
 in a text tag like &amp;lt;p&amp;gt;,
@@ -58,7 +58,7 @@ tools.sample_from_strings({html: text_fragment})
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 ul_fragment = `<p> a typical bullet list with a &amp;lt;ul&amp;gt; tag
 <br> <code>ul</code> stands for "unordered list"
@@ -74,7 +74,7 @@ tools.sample_from_strings({html: ul_fragment})
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 ol_fragment = `<p> the same with a &amp;lt;ol&amp;gt; tag instead
 <br> <code>ol</code> stands for "ordered list"
@@ -98,7 +98,7 @@ tools.sample_from_strings({html: ol_fragment})
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 styling_fragment = `<p>
 tags for <b>bold</b> or <i>italics</i>
@@ -124,7 +124,7 @@ here again the right way to go is often to use classes, that we study later on
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 code_fragment = `<p>for inserting code that should be kept as-is
 
@@ -162,7 +162,7 @@ typical **hyperlink** reads like this
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 hyperlink_fragment = `<a href="https://www.google.com/">the hyperlink</a>`;
 tools.sample_from_strings({html: hyperlink_fragment})
@@ -178,7 +178,7 @@ if you need a hyperlink to point, not at the beginning of this page, but somewhe
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 anchor_fragment = `<a name="the-anchor-name">the magic location</a>`;
 tools.sample_from_strings({html: anchor_fragment})
@@ -199,7 +199,7 @@ tools.sample_from_strings({html: anchor_fragment})
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 redirect_fragment = `<p>it is easy to craft a local URL
 <br>
@@ -237,7 +237,7 @@ tools.sample_from_strings({html: redirect_fragment})
 hide_input: true
 slideshow:
   slide_type: ''
-tags: [hide_input]
+tags: [hide-input]
 ---
 group_html = `<p> a paragraph may  
 <span style="background-color: #ddd;">
@@ -273,7 +273,7 @@ elements by changing their background color
 hide_input: true
 slideshow:
   slide_type: ''
-tags: [hide_input]
+tags: [hide-input]
 ---
 group2_html = `<div>
 the &amp;lt;div&amp;gt; tag is an essential unit brick for creating a page layout
@@ -309,7 +309,7 @@ especially if your goal is to create  grid-based layouts, that we will cover lat
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 table_html = `Use a &amp;lt;table&amp;gt; tag <b>only for data</b>
 and not for layouts, there are other,
@@ -345,7 +345,7 @@ tools.sample_from_strings({html: table_html, css: table_css})
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 headers_fragment = `<h1> toplevel title </h1>
 <h2> first sublevel title </h2>

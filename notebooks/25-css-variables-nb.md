@@ -59,7 +59,7 @@ let's see how that can be done
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 tools.sample_from_stem('../samples/25-simple-vars', {'start_with': 'css'})
 ```
@@ -83,7 +83,7 @@ let's see how that can be done
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 tools.sample_from_stem('../samples/25-dashed-headers', {'start_with': 'css', height: '35em'})
 ```

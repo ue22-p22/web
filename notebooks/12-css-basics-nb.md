@@ -101,7 +101,7 @@ this is a detail, and for convenience only, so that unintentionally clicking on 
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 link_html = `<a href="https://www.google.com" target="_">
 link to google

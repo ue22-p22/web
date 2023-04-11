@@ -58,7 +58,7 @@ the overall structure of a HTML document is composed of two parts, a **header** 
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 fragment1 = `<html>
   <head>
@@ -130,7 +130,7 @@ it will look like this
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 // need to set an id as the default is to hash the html content
 // and we will reuse this later down the page
@@ -300,7 +300,7 @@ in the ***Elements*** devel tools tab
 
 ```{code-cell}
 :hide_input: true
-:tags: [raises-exception, hide_input]
+:tags: [raises-exception, hide-input]
 
 fragment_unclosed = `<p> do not do this
 <ul>
@@ -317,7 +317,7 @@ tools.sample_from_strings({html: fragment_unclosed}, {separate_show: false})
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 fragment_closed = `<p> do this instead </p>
 <ul>

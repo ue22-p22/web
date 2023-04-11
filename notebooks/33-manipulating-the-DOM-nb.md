@@ -106,7 +106,7 @@ you can find a cheatsheet that summarizes most of this
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 tools.sample_from_stem("../cheatsheet/cheatsheet", {sources_show: false})
 ```

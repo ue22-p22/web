@@ -52,7 +52,7 @@ cell_style: center
 hide_input: true
 slideshow:
   slide_type: ''
-tags: [hide_input]
+tags: [hide-input]
 ---
 text_html = `<p class="text">
 a sample text</p>`;
@@ -86,7 +86,7 @@ the example below illustrates how to load and use them in your page
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 tools.sample_from_stem("../samples/15-font-demo")
 ```
@@ -159,7 +159,7 @@ tools.sample_from_stem("../samples/15-font-demo")
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 tools.sample_from_strings({
     html : `<div>
@@ -260,7 +260,7 @@ click on 'Open in new window' and use inspector on the `<p>` element
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 box1_html = `<p class="box1">
 a box
@@ -293,7 +293,7 @@ again with also margin and border-radius
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 box2_html = `<p class="box2">
 a second box
@@ -373,7 +373,7 @@ use the inspector from the devel tools to check the individual properties of the
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 shorthand_html = `<p class="shorthand1">
 shorthand properties
@@ -509,7 +509,7 @@ also note that background
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 background_html = `<div>
   <section>

@@ -63,7 +63,7 @@ cell_style: center
 hide_input: true
 slideshow:
   slide_type: ''
-tags: [hide_input]
+tags: [hide-input]
 ---
 separate_html = `
 <html>
@@ -132,7 +132,7 @@ and the same goes with the <code>file:///</code> URL scheme
 hide_input: true
 slideshow:
   slide_type: ''
-tags: [hide_input]
+tags: [hide-input]
 ---
 embedded_html = `<div> CSS can be inlined right into the HTML
     as a &amp;lt;style&amp;gt; tag
@@ -161,7 +161,7 @@ tools.sample_from_strings({html: embedded_html})
 
 ```{code-cell}
 :hide_input: true
-:tags: [hide_input]
+:tags: [hide-input]
 
 embedded_html = `<div
 style="background-color: red;

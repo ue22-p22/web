@@ -72,7 +72,7 @@ next slide demontrates this CSS:
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 grid_html = `<div class="container">
   <div id="item-a">
@@ -169,7 +169,7 @@ mostly the same, but :
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 grid2_css = `.container {
   display: grid;
@@ -225,7 +225,7 @@ in the previous examples :
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 grid3_css = `.container {
   display: grid;
@@ -313,7 +313,7 @@ you may also complete this game  <https://cssgridgarden.com/> at home if you fee
 
 ```{code-cell}
 :hide_input: true
-:tags: [level_intermediate, hide_input]
+:tags: [level_intermediate, hide-input]
 
 autosize_html = `<div class="container">
   <section>

@@ -276,7 +276,7 @@ in the following example :
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 tools.sample_from_stem("../samples/30-js-intro-01-on-off", {start_with: 'js'})
 ```
@@ -333,7 +333,7 @@ in this further example :
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 tools.sample_from_stem("../samples/30-js-intro-02-svgcircles",  {height: "30em"})
 ```
@@ -412,7 +412,7 @@ in this further example :
 hide_input: true
 slideshow:
   slide_type: slide
-tags: [hide_input]
+tags: [hide-input]
 ---
 tools.sample_from_stem("../samples/30-js-intro-03-canvas",
                        {separate_show: true, start_with: 'js'})
