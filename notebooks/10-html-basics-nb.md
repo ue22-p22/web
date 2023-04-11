@@ -52,7 +52,7 @@ an element (a section, a header) is composed by
 
 ## HTML document structure
 
-+++ {"hide_input": true}
++++
 
 the overall structure of a HTML document is composed of two parts, a **header** and a **body**, like this:
 
@@ -271,7 +271,7 @@ this HTML fragment
 </html>
 ```
 
-+++ {"cell_style": "split", "hide_input": true}
++++ {"cell_style": "split"}
 
 will result in this tree
 ![](media/abstract-syntax.svg)

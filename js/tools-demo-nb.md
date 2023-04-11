@@ -245,7 +245,7 @@ tools.sample_from_strings(
 )
 ```
 
-```javascript tags=["raises-exception"] hide_input=false
+```javascript tags=["raises-exception"]
 html_with_tags = `<b> YES ! - need to double escape like this:</b>
 <p> a paragraph with a &amp;lt;tag&amp;gt; tag inside </p>
 `
