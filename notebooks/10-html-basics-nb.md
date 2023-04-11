@@ -119,7 +119,7 @@ without the presence of a server, this is what the <code>file://</code> URLs are
 
 * you will see something like shown on the next slide
 
-+++ {"hide_input": false, "slideshow": {"slide_type": "slide"}, "cell_style": "split"}
++++ {"slideshow": {"slide_type": "slide"}, "cell_style": "split"}
 
 your `hello.html` should look like this
 

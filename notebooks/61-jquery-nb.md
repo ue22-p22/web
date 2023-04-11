@@ -218,7 +218,7 @@ for obscure security-related reasons, this example no longer works in the contex
 
 </div>
 
-+++ {"slideshow": {"slide_type": "slide"}, "hide_input": false}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## chaining
 
