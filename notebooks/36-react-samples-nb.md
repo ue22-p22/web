@@ -1,6 +1,31 @@
+---
+celltoolbar: Slideshow
+jupytext:
+  cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
+  formats: md:myst
+  notebook_metadata_filter: all,-language_info,-toc,-jupytext.text_representation.jupytext_version,-jupytext.text_representation.format_version
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: JavaScript (Node.js)
+  language: javascript
+  name: javascript
+nbhosting:
+  title: React apps basics
+rise:
+  autolaunch: true
+  slideNumber: c/t
+  start_slideshow_at: selected
+  theme: sky
+  transition: cube
+---
+
++++ {"slideshow": {"slide_type": "-"}}
+
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-```js
+```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
 
@@ -15,11 +40,15 @@ in this notebook we will see 2 small React apps
 
 there is also a looooong list of examples here <https://reactjsexample.com>
 
-# app #1: the dual-counters app
++++
+
+## app #1: the dual-counters app
 
 the git repo for this app is <https://github.com/ue22-p22/web-react-counters>
 
-## your assignment
++++
+
+### your assignment
 
 **Note:** read the section '**app #1: the dual counters app**' section entirely before you start anything
 
@@ -29,7 +58,9 @@ the git repo for this app is <https://github.com/ue22-p22/web-react-counters>
   and observe how the notion of component makes this task much easier than with
   the html/css/js paradigm
 
-## what you'll need to know : getting started
++++
+
+### what you'll need to know : getting started
 
 the simplest way to get started is (click the arrow to see the details of each step)
 
@@ -90,7 +121,9 @@ changes made to the files on the disk, and will trigger any recompilation
 needed; bottom line is, you just need to save changes in vs-code, and the app
 reflects them immediately, not need to reload the page nor anything !
 
-## what you'll need to know: the framework
++++
+
+### what you'll need to know: the framework
 
 the files of interest are mostly these (the other ones are just boilerplate that
 come with the project when you create it)
@@ -118,19 +151,25 @@ but wait, take a closer look, there's a large number of wtf's waiting for you
 but seriously though, here are some points of astonishment, as compared to what
 you might expect with respect to html/css/js, that deserve to be outlined:
 
-### no need to reload
++++
+
+#### no need to reload
 
 that's already a plus, as compared with the traditional page setup: just save
 your changes, and you see them right away; for people who code all day long,
 that is genuine relief !
 
-### the HTML is irrelevant
++++
+
+#### the HTML is irrelevant
 
 there is no html file; or rather, there's just one in `public/index.html` and if
 you look into it, it's vastly empty; actually, the html skeleton is entirely
 built from the js code, so there's no need for html
 
-### not quite JS, but JSX
++++
+
+#### not quite JS, but JSX
 
 The biggest surprises are in the JS code, which is actually written in so-called
 JSX; think of it as a preprocessor that will do a pass on the contents and
@@ -184,7 +223,9 @@ You should notice at least things like
     )
   ```
 
-### sharing data with `useState`
++++
+
+#### sharing data with `useState`
 
 you can also notice in the code how JS variables can be used right in the HTML
 section when mentioned between `{}`, like in the fragment just above
@@ -209,7 +250,9 @@ not only this is powerful, but it also efficient (under the hood React maintains
 a so-called virtual DOM, that allows it to compute the changes in memory, so it
 can only update the parts that need to be; but that's another story entirely)
 
-# app #2: a calculator
++++
+
+## app #2: a calculator
 
 about this app:
 
@@ -222,7 +265,9 @@ about this app:
 
 * you can also [check out the live demo](https://vasilykhromykh.github.io/React-Calculator-With-React-Hooks/)
 
-## your assignment
++++
+
+### your assignment
 
 * clone the repo
 * get it to work on your laptop (see above)
@@ -233,7 +278,9 @@ about this app:
   * or add more operations like // and %
   * or whatever you deem interesting
 
-## what you'll need to know: the framework
++++
+
+### what you'll need to know: the framework
 
 this time the code structure is a little simpler, this app does not define any
 component, so the files of interest are mostly these:
@@ -250,7 +297,9 @@ component, so the files of interest are mostly these:
 
 the new thing here is the use of SASS instead of CSS
 
-### not CSS, but SASS
++++
+
+#### not CSS, but SASS
 
 CSS is sometimes considered tedious and boring; so there are a few alternatives
 around, here we've picked SASS - see <https://sass-lang.com/guide> for more
@@ -267,10 +316,14 @@ the most visible differences are
 * support for variables; it's also in plain CSS, but in the old days it was not
 * and a lot more; but on the other hand, that's not the point here that much
 
-# HOWTO start a react app from scratch
++++
+
+## HOWTO start a react app from scratch
 
 Finally, FYI assuming you'd like to write your own app, there's a tool that
 creates the scaffolding for you:
+
++++
 
 ### create project skeleton
 
@@ -280,6 +333,8 @@ it will also download a rather huge amount of libraries and dependencies, that g
 ```shell
 npx create-react-app react-calc
 ```
+
++++
 
 ### run the watcher
 
