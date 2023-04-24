@@ -42,3 +42,7 @@ sphinx:
     html_show_copyright: false
     # not quite convincing but...
     html_extra_path: ['media']
+  # start in light mode - there is a button to swap later if preferred
+  # but since this was written in light mode the result is nicer this way
+  # html_context:
+  #   default_mode: light
