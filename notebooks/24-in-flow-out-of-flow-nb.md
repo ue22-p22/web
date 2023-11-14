@@ -88,9 +88,9 @@ fixed_css = `body {
     box-sizing: border-box;
 
   /* everything below is just cosmetic */
-    font-size: 20px;    
+    font-size: 20px;
     padding: 4px 10px;
-    background-color: rgba(255, 240, 240, .50);
+    background-color: rgb(255 240 240 / 50%);
     border: 3px solid red;
 }
 
@@ -120,7 +120,7 @@ tools.sample_from_strings({html: fixed_html, css: fixed_css},
 * note the use of the `box-sizing` property  
   we want the 120px to be for the **full height** (padding + border included) of the header
 
-* also note the `rgba()` function to define colors with a level of transparency  
+* also note the `rgb()` syntax to define colors with a level of transparency  
   0: totally transparent, 1: totally opaque
 
 * we could have avoided the duplication of that `120px` thing
@@ -151,9 +151,9 @@ sticky_css = `
     top: 6px;
 
   /* everything below is just cosmetic */
-    font-size: 20px;    
+    font-size: 20px;
     padding: 4px 10px;
-    background-color: rgba(255, 240, 240, .50);
+    background-color: rgb(255 240 240 / .50);
     border: 3px solid red;
 }
 

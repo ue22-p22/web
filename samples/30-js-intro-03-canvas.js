@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
     // random255 is an arrow-function (like a lambda)
     const random255 = () => Math.floor(Math.random() * 255)
     const randomColor = () =>
-         `rgba(${random255()},${random255()},${random255()},0.5`
+         `rgb(${random255()} ${random255()} ${random255()} / 50%`
     const randomX = () => (Math.random() * width) - 50
     const randomY = () => (Math.random() * height) - 50
     const randomSide = () => (Math.random() * 100) + 20

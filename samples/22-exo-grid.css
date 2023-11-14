@@ -14,7 +14,7 @@
             "lang";
     }
     div>div:not(#cv) {
-        background-color: rgb(252, 226, 222); /* pink-ish */
+        background-color: rgb(252 226 222); /* pink-ish */
     }
 }
 
@@ -28,7 +28,7 @@
             "lang skills skills"
     }
     div>div {
-        background-color: rgb(248, 250, 228); /* yellow-ish */
+        background-color: rgb(248 250 228); /* yellow-ish */
     }
 }
 
@@ -42,7 +42,7 @@
             ". . skills skills skills skills skills skills . lang";
     }
     div>div:not(#cv) {
-        background-color: rgb(222, 234, 252); /* blue-ish */
+        background-color: rgb(222 234 252); /* blue-ish */
     }
     #edu {
         height: 300px;

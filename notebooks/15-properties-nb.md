@@ -418,9 +418,9 @@ several formats are supported to describe a color :
   * red = 0x80 = 128, green = 0x00 = 0, blue = 0xff = 255
   * all three of course are in the [0-255] range
 * same in decimal:
-  * `rgb(128, 0, 255)`
+  * `rgb(128 0 255)`
 * opacity (in the [0-1.] range can be given as a fourth argument
-  * `rgb(128, 0, 255, 0.2)` will be only 20% opaque, i.e. almost transparent
+  * `rgb(128 0 255 / 20%)` will be only 20% opaque, i.e. almost transparent
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

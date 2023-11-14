@@ -85,7 +85,7 @@ tools = require('../js/tools'); tools.init()
   `element.setAttribute("someattribute", somevalue)`
 
 * add or change a given style  
-  `element.style.color = "rgb(0,0,0)"`
+  `element.style.color = "rgb(0 0 0)"`
 
 * add a class to an element  
   `element.classList.add("someclass")`

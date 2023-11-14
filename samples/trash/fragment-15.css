@@ -49,5 +49,5 @@ p.shorthand1 {
 }
 
 .pretty {
-    background-color: rgb(128, 0, 255, 0.2);
+    background-color: rgb(128 0 255 / 0.2);
 }

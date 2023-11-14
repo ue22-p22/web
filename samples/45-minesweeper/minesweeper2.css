@@ -38,7 +38,7 @@ body {
 }
 
 .cell.hidden.bomb {
-    background-color: rgba(246, 33, 33, 0.939);
+    background-color: rgb(246 33 33 / 0.939);
 }
 
 .cell.suspect::before {
@@ -59,11 +59,11 @@ body {
     flex-flow: column nowrap;
 }
 #controls.alive {
-    background-color: rgb(164, 210, 239);
+    background-color: rgb(164 210 239);
 }
 
 #controls.game-over {
-    background-color:rgb(195, 243, 226);
+    background-color:rgb(195 243 226);
 }
 
 #controls, #controls>* {
@@ -84,12 +84,12 @@ body {
 }
 
 #stats {
-    background-color: rgb(182, 222, 255);
+    background-color: rgb(182 222 255);
     border: black solid 1px;
 }
 
 #help {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(240 240 240);
 }
 #howto {
     display: none;

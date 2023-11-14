@@ -81,7 +81,7 @@ rect {
 }
 
 circle {
-  stroke: rgb(100, 200, 50);
+  stroke: rgb(100 200 50);
   stroke-width: 4;
   fill: yellow;
 }`

@@ -248,13 +248,13 @@ div.where-what-when {
 }
 
 .green-bar {
-    background-color: rgb(43, 194, 83);
-    background-image: linear-gradient(center bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+    background-color: rgb(43 194 83);
+    background-image: linear-gradient(center bottom, rgb(43 194 83) 37%, rgb(84 240 84) 69%);
 }
 
 .blue-bar {
-    background-color: rgb(68, 106, 233);
-    background-image: linear-gradient(center bottom, rgb(68, 106, 233) 37%, rgb(191, 215, 247) 69%);
+    background-color: rgb(68 106 233);
+    background-image: linear-gradient(center bottom, rgb(68 106 233) 37%, rgb(191 215 247) 69%);
 }
 
 .squares {
@@ -289,13 +289,13 @@ div.where-what-when {
 
 .shadow {
     /* 25 50 */
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.20);
+    box-shadow: 5px 10px 10px rgb(0 0 0 / 20%);
 }
 .progress-skills {
-    background-color:rgb(248, 228, 238);
+    background-color:rgb(248 228 238);
 }
 .progress-features {
-    background-color:rgb(222, 252, 242);
+    background-color:rgb(222 252 242);
 }
 
 .crosses {
@@ -433,7 +433,7 @@ input[type=range].skills::-webkit-slider-thumb {
     height: 20px;
     width: 25px;
     border-radius: 12px;
-    background: rgba(30, 154, 166, 0.26);
+    background: rgb(30 154 166 / 26%);
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -6px;
@@ -459,7 +459,7 @@ input[type=range].skills::-moz-range-thumb {
     height: 20px;
     width: 25px;
     border-radius: 12px;
-    background: rgba(30, 154, 166, 0.26);
+    background: rgb(30 154 166 / 26%);
     cursor: pointer;
 }
 
@@ -492,7 +492,7 @@ input[type=range].skills::-ms-thumb {
     height: 20px;
     width: 25px;
     border-radius: 12px;
-    background: rgba(30, 154, 166, 0.26);
+    background: rgb(30 154 166 / 26%);
     cursor: pointer;
     height: 8px;
 }
